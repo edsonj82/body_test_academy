@@ -22,5 +22,7 @@ Senha incorreta
     Fill Text       css=input[name=password]    abc123
     Click           text=Entrar
 
-    Wait For Elements State         css=.Toastify__toast-body       visible         5     
-    Get text                        css=.Toastify__toast-body       should be       Usuário ou senha inválido
+    # Wait For Elements State         css=.Toastify__toast-body       visible         5     
+    # Get text                        css=.Toastify__toast-body       should be       Usuário ou senha inválido
+
+    Wait For Elements State         css=.Toastify__toast-body >> text=Usuário ou senha inválido         visible         5
