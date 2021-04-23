@@ -4,8 +4,9 @@ Documentation           Ações de Autorização
 
 ***Keywords***
 Go To Login Pages
-    New Browser     chromium    True
-    New Page        https://theotokus-bodytest-web.herokuapp.com/
+    # New Browser     chromium    True
+    # New Page        https://theotokus-bodytest-web.herokuapp.com/
+    Go To             https://theotokus-bodytest-web.herokuapp.com/
 
 
 Login With

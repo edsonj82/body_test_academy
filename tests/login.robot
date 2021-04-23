@@ -3,6 +3,8 @@
 Documentation           Suite de testes de Login do Administrador
 Resource    ../resources/base.robot
 
+Suite Setup     Start Browser Session
+
 ***Test Cases***
 Login do Administrador
     auth.Go To Login Pages
