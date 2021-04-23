@@ -27,7 +27,6 @@ Senha incorreta
     Wait For Elements State         css=.Toastify__toast-body >> text=Usuário ou senha inválido         visible         5
 
 Email incorreto
-    [tags]          temp
     New Browser     chromium    False
     New Page        https://theotokus-bodytest-web.herokuapp.com/
     Fill Text       css=input[name=email]       admin&bodytest.com
@@ -35,3 +34,13 @@ Email incorreto
     Click           text=Entrar
 
     Wait For Elements State         css=form span >> text=Informe um e-mail válido         visible         5
+
+Senha não informada
+    [tags]          temp
+    New Browser     chromium    False
+    New Page        https://theotokus-bodytest-web.herokuapp.com/
+    Fill Text       css=input[name=email]       admin@bodytest.com
+    Fill Text       css=input[name=password]    ${EMPTY}
+    Click           text=Entrar
+
+    Wait For Elements State         css=form span >> text=A senha é obrigatória          visible         5
