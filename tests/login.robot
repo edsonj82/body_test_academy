@@ -15,7 +15,6 @@ Login do Administrador
     Take Screenshot
 
 Senha incorreta
-    [tags]          temp
     New Browser     chromium    False
     New Page        https://theotokus-bodytest-web.herokuapp.com/
     Fill Text       css=input[name=email]       admin@bodytest.com
@@ -26,3 +25,13 @@ Senha incorreta
     # Get text                        css=.Toastify__toast-body       should be       Usuário ou senha inválido
 
     Wait For Elements State         css=.Toastify__toast-body >> text=Usuário ou senha inválido         visible         5
+
+Email incorreto
+    [tags]          temp
+    New Browser     chromium    False
+    New Page        https://theotokus-bodytest-web.herokuapp.com/
+    Fill Text       css=input[name=email]       admin&bodytest.com
+    Fill Text       css=input[name=password]    abc123
+    Click           text=Entrar
+
+    Wait For Elements State         css=form span >> text=Informe um e-mail válido         visible         5
