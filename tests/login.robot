@@ -45,7 +45,6 @@ Senha não informada
     Wait For Elements State         css=form span >> text=A senha é obrigatória          visible         5
 
 Email não informado
-    [tags]          temp
     New Browser     chromium    False
     New Page        https://theotokus-bodytest-web.herokuapp.com/
     Fill Text       css=input[name=email]       ${EMPTY}
@@ -53,4 +52,15 @@ Email não informado
     Click           text=Entrar
 
     Wait For Elements State         css=form span >> text=O e-mail é obrigatório          visible         5
+
+Email e Senha não informados
+    [tags]          temp
+    New Browser     chromium    False
+    New Page        https://theotokus-bodytest-web.herokuapp.com/
+    Fill Text       css=input[name=email]       ${EMPTY}
+    Fill Text       css=input[name=password]    ${EMPTY}
+    Click           text=Entrar
+
+    Wait For Elements State         css=form span >> text=O e-mail é obrigatório          visible         5
+    Wait For Elements State         css=form span >> text=A senha é obrigatória          visible         5
 
