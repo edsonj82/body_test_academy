@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0 (Python 3.8.5 on linux)" generated="20210423 16:41:58.678" rpa="false" schemaversion="2">
+<robot generator="Robot 4.0 (Python 3.8.5 on linux)" generated="20210423 16:58:24.261" rpa="false" schemaversion="2">
 <suite id="s1" name="Login" source="/home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/tests/login.robot">
 <test id="s1-t1" name="Login do Administrador">
 <kw name="Go To Login Pages" library="auth">
@@ -10,9 +10,9 @@
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.
 See `Browser, Context and Page` for more information about Browser and related concepts.</doc>
-<msg timestamp="20210423 16:41:59.427" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
-<msg timestamp="20210423 16:41:59.609" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
-<status status="PASS" starttime="20210423 16:41:59.426" endtime="20210423 16:41:59.610"/>
+<msg timestamp="20210423 16:58:25.011" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
+<msg timestamp="20210423 16:58:25.176" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
+<status status="PASS" starttime="20210423 16:58:25.010" endtime="20210423 16:58:25.176"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
@@ -21,10 +21,10 @@ See `Browser, Context and Page` for more information about Browser and related c
 <doc>Open a new Page. A Page is the Playwright equivalent to a tab.
 See `Browser, Context and Page` for more information about Page concept.
 Returns a stable identifier for the created page.</doc>
-<msg timestamp="20210423 16:42:01.538" level="INFO">Successfully initialized new page object and opened url: https://theotokus-bodytest-web.herokuapp.com/</msg>
-<status status="PASS" starttime="20210423 16:41:59.610" endtime="20210423 16:42:01.539"/>
+<msg timestamp="20210423 16:58:27.082" level="INFO">Successfully initialized new page object and opened url: https://theotokus-bodytest-web.herokuapp.com/</msg>
+<status status="PASS" starttime="20210423 16:58:25.177" endtime="20210423 16:58:27.083"/>
 </kw>
-<status status="PASS" starttime="20210423 16:41:59.425" endtime="20210423 16:42:01.539"/>
+<status status="PASS" starttime="20210423 16:58:25.009" endtime="20210423 16:58:27.083"/>
 </kw>
 <kw name="Login With" library="auth">
 <arg>admin@bodytest.com</arg>
@@ -35,8 +35,8 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210423 16:42:01.542" level="INFO">Fills the text 'admin@bodytest.com' in the given field.</msg>
-<status status="PASS" starttime="20210423 16:42:01.541" endtime="20210423 16:42:01.616"/>
+<msg timestamp="20210423 16:58:27.086" level="INFO">Fills the text 'admin@bodytest.com' in the given field.</msg>
+<status status="PASS" starttime="20210423 16:58:27.085" endtime="20210423 16:58:27.158"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>css=input[name=password]</arg>
@@ -44,36 +44,40 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210423 16:42:01.617" level="INFO">Fills the text 'pwd123' in the given field.</msg>
-<status status="PASS" starttime="20210423 16:42:01.616" endtime="20210423 16:42:01.647"/>
+<msg timestamp="20210423 16:58:27.159" level="INFO">Fills the text 'pwd123' in the given field.</msg>
+<status status="PASS" starttime="20210423 16:58:27.158" endtime="20210423 16:58:27.189"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>text=Entrar</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210423 16:42:01.647" endtime="20210423 16:42:01.731"/>
+<status status="PASS" starttime="20210423 16:58:27.189" endtime="20210423 16:58:27.274"/>
 </kw>
-<status status="PASS" starttime="20210423 16:42:01.540" endtime="20210423 16:42:01.731"/>
+<status status="PASS" starttime="20210423 16:58:27.084" endtime="20210423 16:58:27.274"/>
 </kw>
+<kw name="User Should Be Logged In" library="nav">
+<arg>Administrador</arg>
 <kw name="Get Text" library="Browser">
 <arg>css=aside strong</arg>
 <arg>should be</arg>
-<arg>Administrador</arg>
+<arg>${user_name}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.
 See the `Finding elements` section for details about the selectors.</doc>
-<status status="PASS" starttime="20210423 16:42:01.732" endtime="20210423 16:42:02.626"/>
+<status status="PASS" starttime="20210423 16:58:27.276" endtime="20210423 16:58:28.029"/>
+</kw>
+<status status="PASS" starttime="20210423 16:58:27.275" endtime="20210423 16:58:28.030"/>
 </kw>
 <kw name="Take Screenshot" library="Browser">
 <tag>PageContent</tag>
 <doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
-<msg timestamp="20210423 16:42:02.742" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210423 16:42:02.627" endtime="20210423 16:42:02.742"/>
+<msg timestamp="20210423 16:58:28.138" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210423 16:58:28.030" endtime="20210423 16:58:28.138"/>
 </kw>
-<status status="PASS" starttime="20210423 16:41:59.421" endtime="20210423 16:42:02.742"/>
+<status status="PASS" starttime="20210423 16:58:25.004" endtime="20210423 16:58:28.139"/>
 </test>
 <test id="s1-t2" name="Senha incorreta">
 <kw name="Go To Login Pages" library="auth">
@@ -84,9 +88,9 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.
 See `Browser, Context and Page` for more information about Browser and related concepts.</doc>
-<msg timestamp="20210423 16:42:02.798" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
-<msg timestamp="20210423 16:42:02.950" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
-<status status="PASS" starttime="20210423 16:42:02.797" endtime="20210423 16:42:02.950"/>
+<msg timestamp="20210423 16:58:28.195" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
+<msg timestamp="20210423 16:58:28.343" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
+<status status="PASS" starttime="20210423 16:58:28.195" endtime="20210423 16:58:28.344"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
@@ -95,10 +99,10 @@ See `Browser, Context and Page` for more information about Browser and related c
 <doc>Open a new Page. A Page is the Playwright equivalent to a tab.
 See `Browser, Context and Page` for more information about Page concept.
 Returns a stable identifier for the created page.</doc>
-<msg timestamp="20210423 16:42:04.882" level="INFO">Successfully initialized new page object and opened url: https://theotokus-bodytest-web.herokuapp.com/</msg>
-<status status="PASS" starttime="20210423 16:42:02.951" endtime="20210423 16:42:04.882"/>
+<msg timestamp="20210423 16:58:30.196" level="INFO">Successfully initialized new page object and opened url: https://theotokus-bodytest-web.herokuapp.com/</msg>
+<status status="PASS" starttime="20210423 16:58:28.344" endtime="20210423 16:58:30.197"/>
 </kw>
-<status status="PASS" starttime="20210423 16:42:02.796" endtime="20210423 16:42:04.883"/>
+<status status="PASS" starttime="20210423 16:58:28.194" endtime="20210423 16:58:30.197"/>
 </kw>
 <kw name="Login With" library="auth">
 <arg>admin@bodytest.com</arg>
@@ -109,8 +113,8 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210423 16:42:04.885" level="INFO">Fills the text 'admin@bodytest.com' in the given field.</msg>
-<status status="PASS" starttime="20210423 16:42:04.884" endtime="20210423 16:42:04.950"/>
+<msg timestamp="20210423 16:58:30.200" level="INFO">Fills the text 'admin@bodytest.com' in the given field.</msg>
+<status status="PASS" starttime="20210423 16:58:30.199" endtime="20210423 16:58:30.265"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>css=input[name=password]</arg>
@@ -118,29 +122,33 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210423 16:42:04.951" level="INFO">Fills the text 'abc123' in the given field.</msg>
-<status status="PASS" starttime="20210423 16:42:04.950" endtime="20210423 16:42:04.976"/>
+<msg timestamp="20210423 16:58:30.266" level="INFO">Fills the text 'abc123' in the given field.</msg>
+<status status="PASS" starttime="20210423 16:58:30.265" endtime="20210423 16:58:30.296"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>text=Entrar</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210423 16:42:04.977" endtime="20210423 16:42:05.060"/>
+<status status="PASS" starttime="20210423 16:58:30.296" endtime="20210423 16:58:30.371"/>
 </kw>
-<status status="PASS" starttime="20210423 16:42:04.883" endtime="20210423 16:42:05.061"/>
+<status status="PASS" starttime="20210423 16:58:30.197" endtime="20210423 16:58:30.371"/>
 </kw>
+<kw name="Toaster Text Should Be" library="auth">
+<arg>Usuário ou senha inválido</arg>
 <kw name="Wait For Elements State" library="Browser">
-<arg>css=.Toastify__toast-body &gt;&gt; text=Usuário ou senha inválido</arg>
+<arg>css=.Toastify__toast-body &gt;&gt; text=${expect_text}</arg>
 <arg>visible</arg>
 <arg>5</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210423 16:42:05.783" level="INFO">Wait for Element with selector: css=.Toastify__toast-body &gt;&gt; text=Usuário ou senha inválido</msg>
-<status status="PASS" starttime="20210423 16:42:05.061" endtime="20210423 16:42:05.784"/>
+<msg timestamp="20210423 16:58:31.071" level="INFO">Wait for Element with selector: css=.Toastify__toast-body &gt;&gt; text=Usuário ou senha inválido</msg>
+<status status="PASS" starttime="20210423 16:58:30.373" endtime="20210423 16:58:31.071"/>
 </kw>
-<status status="PASS" starttime="20210423 16:42:02.791" endtime="20210423 16:42:05.784"/>
+<status status="PASS" starttime="20210423 16:58:30.372" endtime="20210423 16:58:31.071"/>
+</kw>
+<status status="PASS" starttime="20210423 16:58:28.188" endtime="20210423 16:58:31.072"/>
 </test>
 <test id="s1-t3" name="Email incorreto">
 <kw name="Go To Login Pages" library="auth">
@@ -151,9 +159,9 @@ Returns a stable identifier for the created page.</doc>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.
 See `Browser, Context and Page` for more information about Browser and related concepts.</doc>
-<msg timestamp="20210423 16:42:05.843" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
-<msg timestamp="20210423 16:42:06.021" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
-<status status="PASS" starttime="20210423 16:42:05.841" endtime="20210423 16:42:06.021"/>
+<msg timestamp="20210423 16:58:31.120" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
+<msg timestamp="20210423 16:58:31.267" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
+<status status="PASS" starttime="20210423 16:58:31.119" endtime="20210423 16:58:31.267"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
@@ -162,10 +170,10 @@ See `Browser, Context and Page` for more information about Browser and related c
 <doc>Open a new Page. A Page is the Playwright equivalent to a tab.
 See `Browser, Context and Page` for more information about Page concept.
 Returns a stable identifier for the created page.</doc>
-<msg timestamp="20210423 16:42:07.921" level="INFO">Successfully initialized new page object and opened url: https://theotokus-bodytest-web.herokuapp.com/</msg>
-<status status="PASS" starttime="20210423 16:42:06.022" endtime="20210423 16:42:07.921"/>
+<msg timestamp="20210423 16:58:33.168" level="INFO">Successfully initialized new page object and opened url: https://theotokus-bodytest-web.herokuapp.com/</msg>
+<status status="PASS" starttime="20210423 16:58:31.268" endtime="20210423 16:58:33.169"/>
 </kw>
-<status status="PASS" starttime="20210423 16:42:05.840" endtime="20210423 16:42:07.922"/>
+<status status="PASS" starttime="20210423 16:58:31.118" endtime="20210423 16:58:33.169"/>
 </kw>
 <kw name="Login With" library="auth">
 <arg>admin&amp;bodytest.com</arg>
@@ -176,8 +184,8 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210423 16:42:07.924" level="INFO">Fills the text 'admin&amp;bodytest.com' in the given field.</msg>
-<status status="PASS" starttime="20210423 16:42:07.924" endtime="20210423 16:42:07.982"/>
+<msg timestamp="20210423 16:58:33.172" level="INFO">Fills the text 'admin&amp;bodytest.com' in the given field.</msg>
+<status status="PASS" starttime="20210423 16:58:33.171" endtime="20210423 16:58:33.226"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>css=input[name=password]</arg>
@@ -185,29 +193,33 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210423 16:42:07.984" level="INFO">Fills the text 'abc123' in the given field.</msg>
-<status status="PASS" starttime="20210423 16:42:07.983" endtime="20210423 16:42:08.012"/>
+<msg timestamp="20210423 16:58:33.227" level="INFO">Fills the text 'abc123' in the given field.</msg>
+<status status="PASS" starttime="20210423 16:58:33.227" endtime="20210423 16:58:33.256"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>text=Entrar</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210423 16:42:08.013" endtime="20210423 16:42:08.090"/>
+<status status="PASS" starttime="20210423 16:58:33.256" endtime="20210423 16:58:33.338"/>
 </kw>
-<status status="PASS" starttime="20210423 16:42:07.922" endtime="20210423 16:42:08.090"/>
+<status status="PASS" starttime="20210423 16:58:33.170" endtime="20210423 16:58:33.339"/>
 </kw>
+<kw name="Alert Text Should Be" library="auth">
+<arg>Informe um e-mail válido</arg>
 <kw name="Wait For Elements State" library="Browser">
-<arg>css=form span &gt;&gt; text=Informe um e-mail válido</arg>
+<arg>css=form span &gt;&gt; text=${expect_text}</arg>
 <arg>visible</arg>
 <arg>5</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210423 16:42:08.115" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=Informe um e-mail válido</msg>
-<status status="PASS" starttime="20210423 16:42:08.090" endtime="20210423 16:42:08.115"/>
+<msg timestamp="20210423 16:58:33.362" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=Informe um e-mail válido</msg>
+<status status="PASS" starttime="20210423 16:58:33.340" endtime="20210423 16:58:33.362"/>
 </kw>
-<status status="PASS" starttime="20210423 16:42:05.835" endtime="20210423 16:42:08.115"/>
+<status status="PASS" starttime="20210423 16:58:33.339" endtime="20210423 16:58:33.363"/>
+</kw>
+<status status="PASS" starttime="20210423 16:58:31.112" endtime="20210423 16:58:33.363"/>
 </test>
 <test id="s1-t4" name="Senha não informada">
 <kw name="Go To Login Pages" library="auth">
@@ -218,9 +230,9 @@ Returns a stable identifier for the created page.</doc>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.
 See `Browser, Context and Page` for more information about Browser and related concepts.</doc>
-<msg timestamp="20210423 16:42:08.182" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
-<msg timestamp="20210423 16:42:08.334" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
-<status status="PASS" starttime="20210423 16:42:08.182" endtime="20210423 16:42:08.334"/>
+<msg timestamp="20210423 16:58:33.425" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
+<msg timestamp="20210423 16:58:33.591" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
+<status status="PASS" starttime="20210423 16:58:33.424" endtime="20210423 16:58:33.591"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
@@ -229,10 +241,10 @@ See `Browser, Context and Page` for more information about Browser and related c
 <doc>Open a new Page. A Page is the Playwright equivalent to a tab.
 See `Browser, Context and Page` for more information about Page concept.
 Returns a stable identifier for the created page.</doc>
-<msg timestamp="20210423 16:42:10.223" level="INFO">Successfully initialized new page object and opened url: https://theotokus-bodytest-web.herokuapp.com/</msg>
-<status status="PASS" starttime="20210423 16:42:08.334" endtime="20210423 16:42:10.224"/>
+<msg timestamp="20210423 16:58:35.502" level="INFO">Successfully initialized new page object and opened url: https://theotokus-bodytest-web.herokuapp.com/</msg>
+<status status="PASS" starttime="20210423 16:58:33.592" endtime="20210423 16:58:35.502"/>
 </kw>
-<status status="PASS" starttime="20210423 16:42:08.181" endtime="20210423 16:42:10.224"/>
+<status status="PASS" starttime="20210423 16:58:33.423" endtime="20210423 16:58:35.503"/>
 </kw>
 <kw name="Login With" library="auth">
 <arg>admin@bodytest.com</arg>
@@ -243,8 +255,8 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210423 16:42:10.228" level="INFO">Fills the text 'admin@bodytest.com' in the given field.</msg>
-<status status="PASS" starttime="20210423 16:42:10.227" endtime="20210423 16:42:10.283"/>
+<msg timestamp="20210423 16:58:35.506" level="INFO">Fills the text 'admin@bodytest.com' in the given field.</msg>
+<status status="PASS" starttime="20210423 16:58:35.505" endtime="20210423 16:58:35.564"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>css=input[name=password]</arg>
@@ -252,29 +264,33 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210423 16:42:10.284" level="INFO">Fills the text '' in the given field.</msg>
-<status status="PASS" starttime="20210423 16:42:10.283" endtime="20210423 16:42:10.311"/>
+<msg timestamp="20210423 16:58:35.565" level="INFO">Fills the text '' in the given field.</msg>
+<status status="PASS" starttime="20210423 16:58:35.564" endtime="20210423 16:58:35.597"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>text=Entrar</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210423 16:42:10.311" endtime="20210423 16:42:10.390"/>
+<status status="PASS" starttime="20210423 16:58:35.597" endtime="20210423 16:58:35.665"/>
 </kw>
-<status status="PASS" starttime="20210423 16:42:10.225" endtime="20210423 16:42:10.391"/>
+<status status="PASS" starttime="20210423 16:58:35.503" endtime="20210423 16:58:35.665"/>
 </kw>
+<kw name="Alert Text Should Be" library="auth">
+<arg>A senha é obrigatória</arg>
 <kw name="Wait For Elements State" library="Browser">
-<arg>css=form span &gt;&gt; text=A senha é obrigatória</arg>
+<arg>css=form span &gt;&gt; text=${expect_text}</arg>
 <arg>visible</arg>
 <arg>5</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210423 16:42:10.421" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=A senha é obrigatória</msg>
-<status status="PASS" starttime="20210423 16:42:10.391" endtime="20210423 16:42:10.421"/>
+<msg timestamp="20210423 16:58:35.692" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=A senha é obrigatória</msg>
+<status status="PASS" starttime="20210423 16:58:35.667" endtime="20210423 16:58:35.692"/>
 </kw>
-<status status="PASS" starttime="20210423 16:42:08.177" endtime="20210423 16:42:10.421"/>
+<status status="PASS" starttime="20210423 16:58:35.666" endtime="20210423 16:58:35.693"/>
+</kw>
+<status status="PASS" starttime="20210423 16:58:33.415" endtime="20210423 16:58:35.693"/>
 </test>
 <test id="s1-t5" name="Email não informado">
 <kw name="Go To Login Pages" library="auth">
@@ -285,9 +301,9 @@ Returns a stable identifier for the created page.</doc>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.
 See `Browser, Context and Page` for more information about Browser and related concepts.</doc>
-<msg timestamp="20210423 16:42:10.490" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
-<msg timestamp="20210423 16:42:10.671" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
-<status status="PASS" starttime="20210423 16:42:10.489" endtime="20210423 16:42:10.671"/>
+<msg timestamp="20210423 16:58:35.748" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
+<msg timestamp="20210423 16:58:35.918" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
+<status status="PASS" starttime="20210423 16:58:35.748" endtime="20210423 16:58:35.918"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
@@ -296,10 +312,10 @@ See `Browser, Context and Page` for more information about Browser and related c
 <doc>Open a new Page. A Page is the Playwright equivalent to a tab.
 See `Browser, Context and Page` for more information about Page concept.
 Returns a stable identifier for the created page.</doc>
-<msg timestamp="20210423 16:42:12.561" level="INFO">Successfully initialized new page object and opened url: https://theotokus-bodytest-web.herokuapp.com/</msg>
-<status status="PASS" starttime="20210423 16:42:10.672" endtime="20210423 16:42:12.561"/>
+<msg timestamp="20210423 16:58:37.803" level="INFO">Successfully initialized new page object and opened url: https://theotokus-bodytest-web.herokuapp.com/</msg>
+<status status="PASS" starttime="20210423 16:58:35.919" endtime="20210423 16:58:37.804"/>
 </kw>
-<status status="PASS" starttime="20210423 16:42:10.489" endtime="20210423 16:42:12.562"/>
+<status status="PASS" starttime="20210423 16:58:35.747" endtime="20210423 16:58:37.804"/>
 </kw>
 <kw name="Login With" library="auth">
 <arg>${EMPTY}</arg>
@@ -310,8 +326,8 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210423 16:42:12.567" level="INFO">Fills the text '' in the given field.</msg>
-<status status="PASS" starttime="20210423 16:42:12.566" endtime="20210423 16:42:12.624"/>
+<msg timestamp="20210423 16:58:37.808" level="INFO">Fills the text '' in the given field.</msg>
+<status status="PASS" starttime="20210423 16:58:37.807" endtime="20210423 16:58:37.868"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>css=input[name=password]</arg>
@@ -319,29 +335,33 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210423 16:42:12.625" level="INFO">Fills the text 'pwd123' in the given field.</msg>
-<status status="PASS" starttime="20210423 16:42:12.624" endtime="20210423 16:42:12.649"/>
+<msg timestamp="20210423 16:58:37.869" level="INFO">Fills the text 'pwd123' in the given field.</msg>
+<status status="PASS" starttime="20210423 16:58:37.868" endtime="20210423 16:58:37.893"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>text=Entrar</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210423 16:42:12.649" endtime="20210423 16:42:12.716"/>
+<status status="PASS" starttime="20210423 16:58:37.894" endtime="20210423 16:58:37.957"/>
 </kw>
-<status status="PASS" starttime="20210423 16:42:12.562" endtime="20210423 16:42:12.716"/>
+<status status="PASS" starttime="20210423 16:58:37.805" endtime="20210423 16:58:37.958"/>
 </kw>
+<kw name="Alert Text Should Be" library="auth">
+<arg>O e-mail é obrigatório</arg>
 <kw name="Wait For Elements State" library="Browser">
-<arg>css=form span &gt;&gt; text=O e-mail é obrigatório</arg>
+<arg>css=form span &gt;&gt; text=${expect_text}</arg>
 <arg>visible</arg>
 <arg>5</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210423 16:42:12.740" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=O e-mail é obrigatório</msg>
-<status status="PASS" starttime="20210423 16:42:12.717" endtime="20210423 16:42:12.741"/>
+<msg timestamp="20210423 16:58:37.980" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=O e-mail é obrigatório</msg>
+<status status="PASS" starttime="20210423 16:58:37.959" endtime="20210423 16:58:37.980"/>
 </kw>
-<status status="PASS" starttime="20210423 16:42:10.481" endtime="20210423 16:42:12.742"/>
+<status status="PASS" starttime="20210423 16:58:37.959" endtime="20210423 16:58:37.981"/>
+</kw>
+<status status="PASS" starttime="20210423 16:58:35.742" endtime="20210423 16:58:37.981"/>
 </test>
 <test id="s1-t6" name="Email e Senha não informados">
 <kw name="Go To Login Pages" library="auth">
@@ -352,9 +372,9 @@ Returns a stable identifier for the created page.</doc>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.
 See `Browser, Context and Page` for more information about Browser and related concepts.</doc>
-<msg timestamp="20210423 16:42:12.799" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
-<msg timestamp="20210423 16:42:12.984" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
-<status status="PASS" starttime="20210423 16:42:12.799" endtime="20210423 16:42:12.984"/>
+<msg timestamp="20210423 16:58:38.037" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
+<msg timestamp="20210423 16:58:38.207" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
+<status status="PASS" starttime="20210423 16:58:38.036" endtime="20210423 16:58:38.207"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
@@ -363,10 +383,10 @@ See `Browser, Context and Page` for more information about Browser and related c
 <doc>Open a new Page. A Page is the Playwright equivalent to a tab.
 See `Browser, Context and Page` for more information about Page concept.
 Returns a stable identifier for the created page.</doc>
-<msg timestamp="20210423 16:42:14.885" level="INFO">Successfully initialized new page object and opened url: https://theotokus-bodytest-web.herokuapp.com/</msg>
-<status status="PASS" starttime="20210423 16:42:12.985" endtime="20210423 16:42:14.885"/>
+<msg timestamp="20210423 16:58:40.067" level="INFO">Successfully initialized new page object and opened url: https://theotokus-bodytest-web.herokuapp.com/</msg>
+<status status="PASS" starttime="20210423 16:58:38.207" endtime="20210423 16:58:40.068"/>
 </kw>
-<status status="PASS" starttime="20210423 16:42:12.798" endtime="20210423 16:42:14.886"/>
+<status status="PASS" starttime="20210423 16:58:38.035" endtime="20210423 16:58:40.068"/>
 </kw>
 <kw name="Login With" library="auth">
 <arg>${EMPTY}</arg>
@@ -377,8 +397,8 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210423 16:42:14.889" level="INFO">Fills the text '' in the given field.</msg>
-<status status="PASS" starttime="20210423 16:42:14.889" endtime="20210423 16:42:14.946"/>
+<msg timestamp="20210423 16:58:40.073" level="INFO">Fills the text '' in the given field.</msg>
+<status status="PASS" starttime="20210423 16:58:40.072" endtime="20210423 16:58:40.131"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>css=input[name=password]</arg>
@@ -386,43 +406,51 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210423 16:42:14.947" level="INFO">Fills the text '' in the given field.</msg>
-<status status="PASS" starttime="20210423 16:42:14.946" endtime="20210423 16:42:14.976"/>
+<msg timestamp="20210423 16:58:40.133" level="INFO">Fills the text '' in the given field.</msg>
+<status status="PASS" starttime="20210423 16:58:40.132" endtime="20210423 16:58:40.158"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>text=Entrar</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210423 16:42:14.976" endtime="20210423 16:42:15.049"/>
+<status status="PASS" starttime="20210423 16:58:40.158" endtime="20210423 16:58:40.225"/>
 </kw>
-<status status="PASS" starttime="20210423 16:42:14.886" endtime="20210423 16:42:15.050"/>
+<status status="PASS" starttime="20210423 16:58:40.069" endtime="20210423 16:58:40.225"/>
 </kw>
+<kw name="Alert Text Should Be" library="auth">
+<arg>O e-mail é obrigatório</arg>
 <kw name="Wait For Elements State" library="Browser">
-<arg>css=form span &gt;&gt; text=O e-mail é obrigatório</arg>
+<arg>css=form span &gt;&gt; text=${expect_text}</arg>
 <arg>visible</arg>
 <arg>5</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210423 16:42:15.073" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=O e-mail é obrigatório</msg>
-<status status="PASS" starttime="20210423 16:42:15.050" endtime="20210423 16:42:15.073"/>
+<msg timestamp="20210423 16:58:40.247" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=O e-mail é obrigatório</msg>
+<status status="PASS" starttime="20210423 16:58:40.227" endtime="20210423 16:58:40.247"/>
 </kw>
+<status status="PASS" starttime="20210423 16:58:40.226" endtime="20210423 16:58:40.248"/>
+</kw>
+<kw name="Alert Text Should Be" library="auth">
+<arg>A senha é obrigatória</arg>
 <kw name="Wait For Elements State" library="Browser">
-<arg>css=form span &gt;&gt; text=A senha é obrigatória</arg>
+<arg>css=form span &gt;&gt; text=${expect_text}</arg>
 <arg>visible</arg>
 <arg>5</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210423 16:42:15.091" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=A senha é obrigatória</msg>
-<status status="PASS" starttime="20210423 16:42:15.074" endtime="20210423 16:42:15.091"/>
+<msg timestamp="20210423 16:58:40.268" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=A senha é obrigatória</msg>
+<status status="PASS" starttime="20210423 16:58:40.249" endtime="20210423 16:58:40.269"/>
+</kw>
+<status status="PASS" starttime="20210423 16:58:40.248" endtime="20210423 16:58:40.269"/>
 </kw>
 <tag>temp</tag>
-<status status="PASS" starttime="20210423 16:42:12.793" endtime="20210423 16:42:15.092"/>
+<status status="PASS" starttime="20210423 16:58:38.027" endtime="20210423 16:58:40.270"/>
 </test>
 <doc>Suite de testes de Login do Administrador</doc>
-<status status="PASS" starttime="20210423 16:41:58.680" endtime="20210423 16:42:15.137"/>
+<status status="PASS" starttime="20210423 16:58:24.262" endtime="20210423 16:58:40.312"/>
 </suite>
 <statistics>
 <total>

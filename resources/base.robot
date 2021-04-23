@@ -3,3 +3,4 @@ Documentation           Tudo começa aqui, meu arquivo base do projeto de automa
 
 Library     Browser
 Resource    actions/auth.robot
+Resource    actions/nav.robot
