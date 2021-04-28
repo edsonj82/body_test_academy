@@ -44,7 +44,7 @@ Email não informado
     Alert Text Should Be        O e-mail é obrigatório
 
 Email e Senha não informados
-    Go To Login Pages
+56    Go To Login Pages
     Login With                  ${EMPTY}  ${EMPTY}
     Alert Text Should Be        O e-mail é obrigatório
     Alert Text Should Be        A senha é obrigatória

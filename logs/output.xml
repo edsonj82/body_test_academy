@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0 (Python 3.8.5 on linux)" generated="20210427 15:20:47.411" rpa="false" schemaversion="2">
-<suite id="s1" name="Login" source="/home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/tests/login.robot">
+<robot generator="Robot 4.0 (Python 3.8.5 on linux)" generated="20210428 15:18:15.364" rpa="false" schemaversion="2">
+<suite id="s1" name="Cadastro Alunos" source="/home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/tests/cadastro_alunos.robot">
 <kw name="Start Browser Session" library="base" type="SETUP">
 <kw name="New Browser" library="Browser">
 <arg>chromium</arg>
@@ -9,9 +9,9 @@
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.
 See `Browser, Context and Page` for more information about Browser and related concepts.</doc>
-<msg timestamp="20210427 15:20:48.299" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
-<msg timestamp="20210427 15:20:48.496" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
-<status status="PASS" starttime="20210427 15:20:48.298" endtime="20210427 15:20:48.497"/>
+<msg timestamp="20210428 15:18:16.113" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
+<msg timestamp="20210428 15:18:16.287" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
+<status status="PASS" starttime="20210428 15:18:16.112" endtime="20210428 15:18:16.288"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>about:blank</arg>
@@ -20,22 +20,22 @@ See `Browser, Context and Page` for more information about Browser and related c
 <doc>Open a new Page. A Page is the Playwright equivalent to a tab.
 See `Browser, Context and Page` for more information about Page concept.
 Returns a stable identifier for the created page.</doc>
-<msg timestamp="20210427 15:20:48.616" level="INFO">Successfully initialized new page object and opened url: about:blank</msg>
-<status status="PASS" starttime="20210427 15:20:48.498" endtime="20210427 15:20:48.616"/>
+<msg timestamp="20210428 15:18:16.386" level="INFO">Successfully initialized new page object and opened url: about:blank</msg>
+<status status="PASS" starttime="20210428 15:18:16.288" endtime="20210428 15:18:16.386"/>
 </kw>
-<status status="PASS" starttime="20210427 15:20:48.297" endtime="20210427 15:20:48.617"/>
+<status status="PASS" starttime="20210428 15:18:16.111" endtime="20210428 15:18:16.387"/>
 </kw>
-<test id="s1-t1" name="Login do Administrador">
+<test id="s1-t1" name="Novo aluno">
 <kw name="Go To Login Pages" library="auth">
 <kw name="Go To" library="Browser">
 <arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20210427 15:20:50.955" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
-<status status="PASS" starttime="20210427 15:20:48.636" endtime="20210427 15:20:50.956"/>
+<msg timestamp="20210428 15:18:18.247" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
+<status status="PASS" starttime="20210428 15:18:16.407" endtime="20210428 15:18:18.247"/>
 </kw>
-<status status="PASS" starttime="20210427 15:20:48.635" endtime="20210427 15:20:50.956"/>
+<status status="PASS" starttime="20210428 15:18:16.407" endtime="20210428 15:18:18.248"/>
 </kw>
 <kw name="Login With" library="auth">
 <arg>admin@bodytest.com</arg>
@@ -46,8 +46,8 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210427 15:20:50.959" level="INFO">Fills the text 'admin@bodytest.com' in the given field.</msg>
-<status status="PASS" starttime="20210427 15:20:50.958" endtime="20210427 15:20:51.047"/>
+<msg timestamp="20210428 15:18:18.251" level="INFO">Fills the text 'admin@bodytest.com' in the given field.</msg>
+<status status="PASS" starttime="20210428 15:18:18.249" endtime="20210428 15:18:18.320"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>css=input[name=password]</arg>
@@ -55,17 +55,17 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210427 15:20:51.048" level="INFO">Fills the text 'pwd123' in the given field.</msg>
-<status status="PASS" starttime="20210427 15:20:51.047" endtime="20210427 15:20:51.081"/>
+<msg timestamp="20210428 15:18:18.320" level="INFO">Fills the text 'pwd123' in the given field.</msg>
+<status status="PASS" starttime="20210428 15:18:18.320" endtime="20210428 15:18:18.352"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>text=Entrar</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210427 15:20:51.082" endtime="20210427 15:20:51.171"/>
+<status status="PASS" starttime="20210428 15:18:18.352" endtime="20210428 15:18:18.440"/>
 </kw>
-<status status="PASS" starttime="20210427 15:20:50.957" endtime="20210427 15:20:51.172"/>
+<status status="PASS" starttime="20210428 15:18:18.248" endtime="20210428 15:18:18.440"/>
 </kw>
 <kw name="User Should Be Logged In" library="nav">
 <arg>Administrador</arg>
@@ -78,72 +78,98 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.
 See the `Finding elements` section for details about the selectors.</doc>
-<status status="PASS" starttime="20210427 15:20:51.175" endtime="20210427 15:20:51.967"/>
+<status status="PASS" starttime="20210428 15:18:18.441" endtime="20210428 15:18:19.209"/>
 </kw>
-<status status="PASS" starttime="20210427 15:20:51.172" endtime="20210427 15:20:51.967"/>
-</kw>
-<kw name="Clean Local Storage And Take Screenshot" library="base" type="TEARDOWN">
-<kw name="Take Screenshot" library="Browser">
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
-<msg timestamp="20210427 15:20:52.086" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210427 15:20:51.970" endtime="20210427 15:20:52.087"/>
-</kw>
-<kw name="LocalStorage Clear" library="Browser">
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Remove all saved data from the local storage.</doc>
-<msg timestamp="20210427 15:20:52.097" level="INFO"/>
-<status status="PASS" starttime="20210427 15:20:52.087" endtime="20210427 15:20:52.097"/>
-</kw>
-<status status="PASS" starttime="20210427 15:20:51.969" endtime="20210427 15:20:52.098"/>
-</kw>
-<status status="PASS" starttime="20210427 15:20:48.617" endtime="20210427 15:20:52.098"/>
-</test>
-<test id="s1-t2" name="Senha incorreta">
-<kw name="Go To Login Pages" library="auth">
-<kw name="Go To" library="Browser">
-<arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20210427 15:20:52.648" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
-<status status="PASS" starttime="20210427 15:20:52.122" endtime="20210427 15:20:52.648"/>
-</kw>
-<status status="PASS" starttime="20210427 15:20:52.121" endtime="20210427 15:20:52.649"/>
-</kw>
-<kw name="Login With" library="auth">
-<arg>admin@bodytest.com</arg>
-<arg>abc123</arg>
-<kw name="Fill Text" library="Browser">
-<arg>css=input[name=email]</arg>
-<arg>${email}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210427 15:20:52.651" level="INFO">Fills the text 'admin@bodytest.com' in the given field.</msg>
-<status status="PASS" starttime="20210427 15:20:52.650" endtime="20210427 15:20:52.711"/>
-</kw>
-<kw name="Fill Text" library="Browser">
-<arg>css=input[name=password]</arg>
-<arg>${pass}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210427 15:20:52.712" level="INFO">Fills the text 'abc123' in the given field.</msg>
-<status status="PASS" starttime="20210427 15:20:52.711" endtime="20210427 15:20:52.747"/>
+<status status="PASS" starttime="20210428 15:18:18.441" endtime="20210428 15:18:19.209"/>
 </kw>
 <kw name="Click" library="Browser">
-<arg>text=Entrar</arg>
+<arg>css=a[href$=alunos]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210427 15:20:52.748" endtime="20210427 15:20:52.808"/>
+<status status="PASS" starttime="20210428 15:18:19.210" endtime="20210428 15:18:19.307"/>
 </kw>
-<status status="PASS" starttime="20210427 15:20:52.649" endtime="20210427 15:20:52.809"/>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=h1 &gt;&gt; text=Gestão de Alunos</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210428 15:18:19.336" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Gestão de Alunos</msg>
+<status status="PASS" starttime="20210428 15:18:19.308" endtime="20210428 15:18:19.336"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>css=a[href$="alunos/new"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210428 15:18:19.337" endtime="20210428 15:18:19.426"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=h1 &gt;&gt; text=Novo aluno</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210428 15:18:19.445" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Novo aluno</msg>
+<status status="PASS" starttime="20210428 15:18:19.426" endtime="20210428 15:18:19.445"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=name]</arg>
+<arg>Edson José dos Satos</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210428 15:18:19.447" level="INFO">Fills the text 'Edson José dos Satos' in the given field.</msg>
+<status status="PASS" starttime="20210428 15:18:19.446" endtime="20210428 15:18:19.476"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>edson@theotokus.com</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210428 15:18:19.477" level="INFO">Fills the text 'edson@theotokus.com' in the given field.</msg>
+<status status="PASS" starttime="20210428 15:18:19.476" endtime="20210428 15:18:19.510"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=age]</arg>
+<arg>39</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210428 15:18:19.511" level="INFO">Fills the text '39' in the given field.</msg>
+<status status="PASS" starttime="20210428 15:18:19.510" endtime="20210428 15:18:19.552"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=weight]</arg>
+<arg>81</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210428 15:18:19.553" level="INFO">Fills the text '81' in the given field.</msg>
+<status status="PASS" starttime="20210428 15:18:19.552" endtime="20210428 15:18:19.585"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=feet_tall]</arg>
+<arg>1.82</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210428 15:18:19.587" level="INFO">Fills the text '1.82' in the given field.</msg>
+<status status="PASS" starttime="20210428 15:18:19.586" endtime="20210428 15:18:19.622"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>css=button[form$=Student]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210428 15:18:19.623" endtime="20210428 15:18:19.696"/>
 </kw>
 <kw name="Toaster Text Should Be" library="auth">
-<arg>Usuário e/ou senha inválidos.</arg>
+<arg>Aluno cadastrado com sucesso.</arg>
 <kw name="Wait For Elements State" library="Browser">
 <arg>css=.Toastify__toast-body &gt;&gt; text=${expect_text}</arg>
 <arg>visible</arg>
@@ -151,384 +177,40 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210427 15:20:53.038" level="INFO">Wait for Element with selector: css=.Toastify__toast-body &gt;&gt; text=Usuário e/ou senha inválidos.</msg>
-<status status="PASS" starttime="20210427 15:20:52.811" endtime="20210427 15:20:53.039"/>
+<msg timestamp="20210428 15:18:20.478" level="INFO">Wait for Element with selector: css=.Toastify__toast-body &gt;&gt; text=Aluno cadastrado com sucesso.</msg>
+<status status="PASS" starttime="20210428 15:18:19.697" endtime="20210428 15:18:20.479"/>
 </kw>
-<status status="PASS" starttime="20210427 15:20:52.810" endtime="20210427 15:20:53.039"/>
-</kw>
-<kw name="Thinking And Take Screenshot" library="base" type="TEARDOWN">
-<arg>2</arg>
-<kw name="Sleep" library="BuiltIn">
-<arg>${timeout}</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210427 15:20:55.042" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210427 15:20:53.041" endtime="20210427 15:20:55.042"/>
-</kw>
-<kw name="Take Screenshot" library="Browser">
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
-<msg timestamp="20210427 15:20:55.181" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210427 15:20:55.043" endtime="20210427 15:20:55.181"/>
-</kw>
-<status status="PASS" starttime="20210427 15:20:53.040" endtime="20210427 15:20:55.182"/>
-</kw>
-<status status="PASS" starttime="20210427 15:20:52.106" endtime="20210427 15:20:55.182"/>
-</test>
-<test id="s1-t3" name="Email não cadastrado">
-<kw name="Go To Login Pages" library="auth">
-<kw name="Go To" library="Browser">
-<arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20210427 15:20:55.714" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
-<status status="PASS" starttime="20210427 15:20:55.197" endtime="20210427 15:20:55.715"/>
-</kw>
-<status status="PASS" starttime="20210427 15:20:55.196" endtime="20210427 15:20:55.715"/>
-</kw>
-<kw name="Login With" library="auth">
-<arg>edson@gmail.com</arg>
-<arg>abc123</arg>
-<kw name="Fill Text" library="Browser">
-<arg>css=input[name=email]</arg>
-<arg>${email}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210427 15:20:55.717" level="INFO">Fills the text 'edson@gmail.com' in the given field.</msg>
-<status status="PASS" starttime="20210427 15:20:55.716" endtime="20210427 15:20:55.765"/>
-</kw>
-<kw name="Fill Text" library="Browser">
-<arg>css=input[name=password]</arg>
-<arg>${pass}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210427 15:20:55.766" level="INFO">Fills the text 'abc123' in the given field.</msg>
-<status status="PASS" starttime="20210427 15:20:55.765" endtime="20210427 15:20:55.796"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>text=Entrar</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210427 15:20:55.797" endtime="20210427 15:20:55.871"/>
-</kw>
-<status status="PASS" starttime="20210427 15:20:55.715" endtime="20210427 15:20:55.871"/>
-</kw>
-<kw name="Toaster Text Should Be" library="auth">
-<arg>Usuário e/ou senha inválidos.</arg>
-<kw name="Wait For Elements State" library="Browser">
-<arg>css=.Toastify__toast-body &gt;&gt; text=${expect_text}</arg>
-<arg>visible</arg>
-<arg>5</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210427 15:20:56.251" level="INFO">Wait for Element with selector: css=.Toastify__toast-body &gt;&gt; text=Usuário e/ou senha inválidos.</msg>
-<status status="PASS" starttime="20210427 15:20:55.874" endtime="20210427 15:20:56.252"/>
-</kw>
-<status status="PASS" starttime="20210427 15:20:55.872" endtime="20210427 15:20:56.252"/>
+<status status="PASS" starttime="20210428 15:18:19.696" endtime="20210428 15:18:20.479"/>
 </kw>
 <kw name="Thinking And Take Screenshot" library="base" type="TEARDOWN">
 <arg>2</arg>
 <kw name="Sleep" library="BuiltIn">
 <arg>${timeout}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210427 15:20:58.255" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20210427 15:20:56.254" endtime="20210427 15:20:58.255"/>
+<msg timestamp="20210428 15:18:22.481" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210428 15:18:20.480" endtime="20210428 15:18:22.482"/>
 </kw>
 <kw name="Take Screenshot" library="Browser">
 <tag>PageContent</tag>
 <doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
-<msg timestamp="20210427 15:20:58.386" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-3.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210427 15:20:58.255" endtime="20210427 15:20:58.386"/>
+<msg timestamp="20210428 15:18:22.615" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210428 15:18:22.482" endtime="20210428 15:18:22.616"/>
 </kw>
-<status status="PASS" starttime="20210427 15:20:56.253" endtime="20210427 15:20:58.387"/>
+<status status="PASS" starttime="20210428 15:18:20.480" endtime="20210428 15:18:22.616"/>
 </kw>
-<status status="PASS" starttime="20210427 15:20:55.189" endtime="20210427 15:20:58.387"/>
+<status status="PASS" starttime="20210428 15:18:16.387" endtime="20210428 15:18:22.616"/>
 </test>
-<test id="s1-t4" name="Email incorreto">
-<kw name="Go To Login Pages" library="auth">
-<kw name="Go To" library="Browser">
-<arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20210427 15:20:58.909" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
-<status status="PASS" starttime="20210427 15:20:58.411" endtime="20210427 15:20:58.910"/>
-</kw>
-<status status="PASS" starttime="20210427 15:20:58.410" endtime="20210427 15:20:58.910"/>
-</kw>
-<kw name="Login With" library="auth">
-<arg>admin&amp;bodytest.com</arg>
-<arg>abc123</arg>
-<kw name="Fill Text" library="Browser">
-<arg>css=input[name=email]</arg>
-<arg>${email}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210427 15:20:58.912" level="INFO">Fills the text 'admin&amp;bodytest.com' in the given field.</msg>
-<status status="PASS" starttime="20210427 15:20:58.912" endtime="20210427 15:20:58.961"/>
-</kw>
-<kw name="Fill Text" library="Browser">
-<arg>css=input[name=password]</arg>
-<arg>${pass}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210427 15:20:58.962" level="INFO">Fills the text 'abc123' in the given field.</msg>
-<status status="PASS" starttime="20210427 15:20:58.961" endtime="20210427 15:20:58.993"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>text=Entrar</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210427 15:20:58.993" endtime="20210427 15:20:59.075"/>
-</kw>
-<status status="PASS" starttime="20210427 15:20:58.911" endtime="20210427 15:20:59.076"/>
-</kw>
-<kw name="Alert Text Should Be" library="auth">
-<arg>Informe um e-mail válido</arg>
-<kw name="Wait For Elements State" library="Browser">
-<arg>css=form span &gt;&gt; text=${expect_text}</arg>
-<arg>visible</arg>
-<arg>5</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210427 15:20:59.115" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=Informe um e-mail válido</msg>
-<status status="PASS" starttime="20210427 15:20:59.077" endtime="20210427 15:20:59.115"/>
-</kw>
-<status status="PASS" starttime="20210427 15:20:59.076" endtime="20210427 15:20:59.115"/>
-</kw>
-<kw name="Take Screenshot" library="Browser" type="TEARDOWN">
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
-<msg timestamp="20210427 15:20:59.262" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-4.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210427 15:20:59.116" endtime="20210427 15:20:59.262"/>
-</kw>
-<status status="PASS" starttime="20210427 15:20:58.400" endtime="20210427 15:20:59.263"/>
-</test>
-<test id="s1-t5" name="Senha não informada">
-<kw name="Go To Login Pages" library="auth">
-<kw name="Go To" library="Browser">
-<arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20210427 15:20:59.793" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
-<status status="PASS" starttime="20210427 15:20:59.291" endtime="20210427 15:20:59.793"/>
-</kw>
-<status status="PASS" starttime="20210427 15:20:59.290" endtime="20210427 15:20:59.793"/>
-</kw>
-<kw name="Login With" library="auth">
-<arg>admin@bodytest.com</arg>
-<arg>${EMPTY}</arg>
-<kw name="Fill Text" library="Browser">
-<arg>css=input[name=email]</arg>
-<arg>${email}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210427 15:20:59.796" level="INFO">Fills the text 'admin@bodytest.com' in the given field.</msg>
-<status status="PASS" starttime="20210427 15:20:59.795" endtime="20210427 15:20:59.845"/>
-</kw>
-<kw name="Fill Text" library="Browser">
-<arg>css=input[name=password]</arg>
-<arg>${pass}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210427 15:20:59.846" level="INFO">Fills the text '' in the given field.</msg>
-<status status="PASS" starttime="20210427 15:20:59.845" endtime="20210427 15:20:59.877"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>text=Entrar</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210427 15:20:59.877" endtime="20210427 15:20:59.938"/>
-</kw>
-<status status="PASS" starttime="20210427 15:20:59.794" endtime="20210427 15:20:59.938"/>
-</kw>
-<kw name="Alert Text Should Be" library="auth">
-<arg>A senha é obrigatória</arg>
-<kw name="Wait For Elements State" library="Browser">
-<arg>css=form span &gt;&gt; text=${expect_text}</arg>
-<arg>visible</arg>
-<arg>5</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210427 15:20:59.962" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=A senha é obrigatória</msg>
-<status status="PASS" starttime="20210427 15:20:59.940" endtime="20210427 15:20:59.962"/>
-</kw>
-<status status="PASS" starttime="20210427 15:20:59.939" endtime="20210427 15:20:59.962"/>
-</kw>
-<kw name="Take Screenshot" library="Browser" type="TEARDOWN">
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
-<msg timestamp="20210427 15:21:00.122" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-5.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210427 15:20:59.963" endtime="20210427 15:21:00.122"/>
-</kw>
-<status status="PASS" starttime="20210427 15:20:59.279" endtime="20210427 15:21:00.122"/>
-</test>
-<test id="s1-t6" name="Email não informado">
-<kw name="Go To Login Pages" library="auth">
-<kw name="Go To" library="Browser">
-<arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20210427 15:21:00.649" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
-<status status="PASS" starttime="20210427 15:21:00.141" endtime="20210427 15:21:00.650"/>
-</kw>
-<status status="PASS" starttime="20210427 15:21:00.140" endtime="20210427 15:21:00.650"/>
-</kw>
-<kw name="Login With" library="auth">
-<arg>${EMPTY}</arg>
-<arg>pwd123</arg>
-<kw name="Fill Text" library="Browser">
-<arg>css=input[name=email]</arg>
-<arg>${email}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210427 15:21:00.653" level="INFO">Fills the text '' in the given field.</msg>
-<status status="PASS" starttime="20210427 15:21:00.653" endtime="20210427 15:21:00.710"/>
-</kw>
-<kw name="Fill Text" library="Browser">
-<arg>css=input[name=password]</arg>
-<arg>${pass}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210427 15:21:00.711" level="INFO">Fills the text 'pwd123' in the given field.</msg>
-<status status="PASS" starttime="20210427 15:21:00.710" endtime="20210427 15:21:00.746"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>text=Entrar</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210427 15:21:00.747" endtime="20210427 15:21:00.804"/>
-</kw>
-<status status="PASS" starttime="20210427 15:21:00.651" endtime="20210427 15:21:00.805"/>
-</kw>
-<kw name="Alert Text Should Be" library="auth">
-<arg>O e-mail é obrigatório</arg>
-<kw name="Wait For Elements State" library="Browser">
-<arg>css=form span &gt;&gt; text=${expect_text}</arg>
-<arg>visible</arg>
-<arg>5</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210427 15:21:00.853" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=O e-mail é obrigatório</msg>
-<status status="PASS" starttime="20210427 15:21:00.807" endtime="20210427 15:21:00.853"/>
-</kw>
-<status status="PASS" starttime="20210427 15:21:00.805" endtime="20210427 15:21:00.853"/>
-</kw>
-<kw name="Take Screenshot" library="Browser" type="TEARDOWN">
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
-<msg timestamp="20210427 15:21:01.006" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-6.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210427 15:21:00.854" endtime="20210427 15:21:01.006"/>
-</kw>
-<status status="PASS" starttime="20210427 15:21:00.129" endtime="20210427 15:21:01.007"/>
-</test>
-<test id="s1-t7" name="Email e Senha não informados">
-<kw name="Go To Login Pages" library="auth">
-<kw name="Go To" library="Browser">
-<arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20210427 15:21:01.519" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
-<status status="PASS" starttime="20210427 15:21:01.024" endtime="20210427 15:21:01.519"/>
-</kw>
-<status status="PASS" starttime="20210427 15:21:01.023" endtime="20210427 15:21:01.520"/>
-</kw>
-<kw name="Login With" library="auth">
-<arg>${EMPTY}</arg>
-<arg>${EMPTY}</arg>
-<kw name="Fill Text" library="Browser">
-<arg>css=input[name=email]</arg>
-<arg>${email}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210427 15:21:01.526" level="INFO">Fills the text '' in the given field.</msg>
-<status status="PASS" starttime="20210427 15:21:01.523" endtime="20210427 15:21:01.574"/>
-</kw>
-<kw name="Fill Text" library="Browser">
-<arg>css=input[name=password]</arg>
-<arg>${pass}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210427 15:21:01.576" level="INFO">Fills the text '' in the given field.</msg>
-<status status="PASS" starttime="20210427 15:21:01.575" endtime="20210427 15:21:01.600"/>
-</kw>
-<kw name="Click" library="Browser">
-<arg>text=Entrar</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210427 15:21:01.600" endtime="20210427 15:21:01.668"/>
-</kw>
-<status status="PASS" starttime="20210427 15:21:01.520" endtime="20210427 15:21:01.668"/>
-</kw>
-<kw name="Alert Text Should Be" library="auth">
-<arg>O e-mail é obrigatório</arg>
-<kw name="Wait For Elements State" library="Browser">
-<arg>css=form span &gt;&gt; text=${expect_text}</arg>
-<arg>visible</arg>
-<arg>5</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210427 15:21:01.699" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=O e-mail é obrigatório</msg>
-<status status="PASS" starttime="20210427 15:21:01.670" endtime="20210427 15:21:01.699"/>
-</kw>
-<status status="PASS" starttime="20210427 15:21:01.669" endtime="20210427 15:21:01.699"/>
-</kw>
-<kw name="Alert Text Should Be" library="auth">
-<arg>A senha é obrigatória</arg>
-<kw name="Wait For Elements State" library="Browser">
-<arg>css=form span &gt;&gt; text=${expect_text}</arg>
-<arg>visible</arg>
-<arg>5</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210427 15:21:01.720" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=A senha é obrigatória</msg>
-<status status="PASS" starttime="20210427 15:21:01.701" endtime="20210427 15:21:01.721"/>
-</kw>
-<status status="PASS" starttime="20210427 15:21:01.700" endtime="20210427 15:21:01.721"/>
-</kw>
-<kw name="Take Screenshot" library="Browser" type="TEARDOWN">
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
-<msg timestamp="20210427 15:21:01.843" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-7.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210427 15:21:01.722" endtime="20210427 15:21:01.843"/>
-</kw>
-<status status="PASS" starttime="20210427 15:21:01.015" endtime="20210427 15:21:01.843"/>
-</test>
-<doc>Suite de testes de Login do Administrador</doc>
-<status status="PASS" starttime="20210427 15:20:47.413" endtime="20210427 15:21:01.852"/>
+<doc>Cadastro de alunos</doc>
+<status status="PASS" starttime="20210428 15:18:15.365" endtime="20210428 15:18:22.626"/>
 </suite>
 <statistics>
 <total>
-<stat pass="7" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="7" fail="0" skip="0" id="s1" name="Login">Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cadastro Alunos">Cadastro Alunos</stat>
 </suite>
 </statistics>
 <errors>
