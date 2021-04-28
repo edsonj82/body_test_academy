@@ -12,6 +12,12 @@ Start Browser Session
     New Browser     chromium    true
     New Page        about:blank
 
+Start Admin Session
+    Start Browser Session
+    Go To Login Pages
+    Login With                  admin@bodytest.com  pwd123
+    User Should Be Logged In    Administrador  
+
 Clean Local Storage And Take Screenshot
     Take Screenshot
     LocalStorage Clear
@@ -20,3 +26,6 @@ Thinking And Take Screenshot
     [Arguments]     ${timeout}
     Sleep           ${timeout}
     Take Screenshot  
+
+
+

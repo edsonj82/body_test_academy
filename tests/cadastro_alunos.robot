@@ -3,15 +3,10 @@ Documentation       Cadastro de alunos
 
 Resource    ../resources/base.robot
 
-Suite Setup     Start Browser Session
+Suite Setup     Start Admin Session
 
 ***Test Cases***
 Novo aluno
-    #pré condição
-    Go To Login Pages
-    Login With                  admin@bodytest.com  pwd123
-    User Should Be Logged In    Administrador  
-
     Go to Students
     Go to Form Student
     #ações do cenário
