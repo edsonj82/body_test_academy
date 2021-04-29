@@ -7,11 +7,12 @@ Suite Setup     Start Admin Session
 
 ***Test Cases***
 Novo aluno
+    ${email}        Set Variable        edson@theotokus.com
     Remove Student          edson@theotokus.com
     Go to Students
     Go to Form Student
     #ações do cenário
-    New Student  Edson José dos Santos  edson@theotokus.com  39  81  1.82
+    New Student  Edson José dos Santos  ${email}  39  81  1.82
     #validação
     Toaster Text Should Be      Aluno cadastrado com sucesso.
 
