@@ -3,10 +3,6 @@
 Documentation       Ações de features de gestão de alunos
 
 **Keywords***
-Go to Students
-    Click                       css=a[href$=alunos]
-    Wait For elements State     css=h1 >> text=Gestão de Alunos     visible         5
-
 Go to Form Student
     Click                       css=a[href$="alunos/new"]
     Wait For elements State     css=h1 >> text=Novo aluno     visible         5
