@@ -7,12 +7,14 @@ Suite Setup     Start Admin Session
 
 ***Test Cases***
 Novo aluno
-    ${email}        Set Variable        edson@theotokus.com
-    Remove Student          edson@theotokus.com
+
+    &{student}      Create Dictionary   name=Edson José dos Santos  email=edson@theotokus.com   age=39  weight=81   feet_tall=1.82  
+    
+    Remove Student          ${student.email}
     Go to Students
     Go to Form Student
     #ações do cenário
-    New Student  Edson José dos Santos  ${email}  39  81  1.82
+    New Student  ${student}
     #validação
     Toaster Text Should Be      Aluno cadastrado com sucesso.
 
