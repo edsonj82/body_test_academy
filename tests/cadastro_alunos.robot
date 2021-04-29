@@ -7,6 +7,7 @@ Suite Setup     Start Admin Session
 
 ***Test Cases***
 Novo aluno
+    Remove Student          edson@theotokus.com
     Go to Students
     Go to Form Student
     #ações do cenário
