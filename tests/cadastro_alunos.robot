@@ -19,3 +19,14 @@ Novo aluno
     Toaster Text Should Be      Aluno cadastrado com sucesso.
 
     [Teardown]                  Thinking And Take Screenshot  2
+
+Não deve permitir email duplicado
+
+     &{student}      Create Dictionary   name=Edson José dos Santos  email=edson@theotokus.com   age=39  weight=81   feet_tall=1.82  
+    
+    Go to Students
+    Go to Form Student
+    New Student  ${student}
+    Toaster Text Should Be      Email já existe no sistema.
+
+    [Teardown]                  Thinking And Take Screenshot  2
