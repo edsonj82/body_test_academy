@@ -23,7 +23,8 @@ Novo aluno
 Não deve permitir email duplicado
     [tags]  duplicado
     &{student}      Create Dictionary   name=Ricardo de Mauro  email=ricardo@theotokus.com   age=34  weight=98   feet_tall=1.75  
-    Insert Student              $(student)
+        
+    Insert Student              ${student}
 
     Go to Students
     Go to Form Student
