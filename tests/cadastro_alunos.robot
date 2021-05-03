@@ -55,22 +55,26 @@ Todos os campos devem ser obrigatórios
     # Alert Text Should Be        a Altura é obrigatória
 
     FOR     ${index}        IN RANGE   1   6
-        ${span}             Get Required Alerts     ${index} 
-        Append To List      ${got_alerts}           ${span}
+        ${span}                     Get Required Alerts     ${index} 
+        Append To List              ${got_alerts}           ${span}
     END
 
     Log     ${expected_alerts}
     Log     ${got_alerts}
 
-    List Should Be Equal        ${expected_alerts}      ${got_alerts}
+    List Should Be Equal            ${expected_alerts}      ${got_alerts}
 
 Validate Number Type
-    [Tags]              temp
-    [Template]          Check Numeric Field On Student Form     
-    css=input[name=age]
-    css=input[name=weight]
-    css=input[name=feet_tall]
+    [Tags]  temp
+    [Template]                      Check Type Field On Student Form     
+    css=input[name=age]             number
+    css=input[name=weight]          number
+    css=input[name=feet_tall]       number
 
+Validate Email Type
+    [Tags]  temp
+    [Template]                      Check Type Field On Student Form    
+    css=input[name=email]           email
 # Check Age Numeric Field
 #     [Tags]  temp
 #     Go to Students
@@ -100,8 +104,8 @@ Validate Number Type
 #     Field Should Be Number          css=input[name=feet_tall]
 
 **Keywords***
-Check Numeric Field On Student Form
-    [Arguments]         ${element}
+Check Type Field On Student Form
+    [Arguments]                     ${element}      ${type}
     Go to Students
     Go to Form Student
-    Field Should Be Number      ${element}
+    Field Should Be Type            ${element}      ${type}

@@ -16,7 +16,7 @@ Get Required Alerts
     ${span}         Get Text        xpath=(//form//span)[${index}])
     [Return]    ${span}
 
-Field Should Be Number
-    [Arguments]     ${element}
-        ${attr}     Get Attribute       ${element}     type
-    Should Be Equal     ${attr}     number
+Field Should Be Type
+    [Arguments]         ${element}          ${type}
+        ${attr}         Get Attribute       ${element}     type
+    Should Be Equal     ${attr}             ${type}
