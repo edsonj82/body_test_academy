@@ -5,6 +5,8 @@ Resource            ../resources/base.robot
 
 Suite Setup         Start Admin Session
 
+Library             Collections
+
 ***Test Cases***
 Novo aluno
 
@@ -32,3 +34,32 @@ Não deve permitir email duplicado
     Toaster Text Should Be      Email já existe no sistema.
 
     [Teardown]                  Thinking And Take Screenshot  2
+
+Todos os campos devem ser obrigatórios
+    [Tags]  temp
+    # &{student}      Create Dictionary   name=${EMPTY}  email=${EMPTY}   age=${EMPTY}  weight=${EMPTY}   feet_tall=${EMPTY}  
+    @{expected_alerts}          Set variable    Nome é obrigatório      O e-mail é obrigatório      idade é obrigatória     o peso é obrigatório        a Altura é obrigatória     
+    @{got_alerts}               Create List
+
+    Go to Students
+    Go to Form Student
+    Submit Student Form
+
+       # FOR     ${alert}    IN      @{expected_alerts}
+    #     Alert Text Should Be    ${alert}
+    # END
+    # Alert Text Should Be        Nome é obrigatório
+    # Alert Text Should Be        O e-mail é obrigatório
+    # Alert Text Should Be        idade é obrigatória
+    # Alert Text Should Be        o peso é obrigatório
+    # Alert Text Should Be        a Altura é obrigatória
+
+    FOR     ${index}    IN  RANGE   1   6
+        ${span}         Get Required Alerts     ${index} 
+        Append To List      ${got_alerts}       ${span}
+    END
+
+    Log     ${expected_alerts}
+    Log     ${got_alerts}
+
+    List Should Be Equal        ${expected_alerts}      ${got_alerts}

@@ -11,7 +11,7 @@ Resource    actions/components.robot
 
 **Keywords***
 Start Browser Session
-    New Browser     chromium    true
+    New Browser     chromium    false
     New Page        about:blank
 
 Start Admin Session
