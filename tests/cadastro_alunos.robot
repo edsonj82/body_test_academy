@@ -36,7 +36,7 @@ Não deve permitir email duplicado
     [Teardown]                  Thinking And Take Screenshot  2
 
 Todos os campos devem ser obrigatórios
-    [Tags]  temp
+    [Tags]  fail
     # &{student}      Create Dictionary   name=${EMPTY}  email=${EMPTY}   age=${EMPTY}  weight=${EMPTY}   feet_tall=${EMPTY}  
     @{expected_alerts}          Set variable    Nome é obrigatório      O e-mail é obrigatório      idade é obrigatória     o peso é obrigatório        a Altura é obrigatória     
     @{got_alerts}               Create List
@@ -54,12 +54,54 @@ Todos os campos devem ser obrigatórios
     # Alert Text Should Be        o peso é obrigatório
     # Alert Text Should Be        a Altura é obrigatória
 
-    FOR     ${index}    IN  RANGE   1   6
-        ${span}         Get Required Alerts     ${index} 
-        Append To List      ${got_alerts}       ${span}
+    FOR     ${index}        IN RANGE   1   6
+        ${span}             Get Required Alerts     ${index} 
+        Append To List      ${got_alerts}           ${span}
     END
 
     Log     ${expected_alerts}
     Log     ${got_alerts}
 
     List Should Be Equal        ${expected_alerts}      ${got_alerts}
+
+Validate Number Type
+    [Tags]              temp
+    [Template]          Check Numeric Field On Student Form     
+    css=input[name=age]
+    css=input[name=weight]
+    css=input[name=feet_tall]
+
+# Check Age Numeric Field
+#     [Tags]  temp
+#     Go to Students
+    
+# Check Weight Numeric Field
+#     [Tags]  temp
+#     Go to Students
+#     Go to Form Student
+#     Field Should Be Number          css=input[name=weight]
+
+# Check Feet Tall Numeric Field
+#     [Tags]  temp
+#     Go to Students
+#     Go to Form Student
+#     Field Should Be Number          css=input[name=feet_tall]
+
+# Check Weight Numeric Field
+#     [Tags]  temp
+#     Go to Students
+#     Go to Form Student
+#     Field Should Be Number          css=input[name=weight]
+
+# Check Feet Tall Numeric Field
+#     [Tags]  temp
+#     Go to Students
+#     Go to Form Student
+#     Field Should Be Number          css=input[name=feet_tall]
+
+**Keywords***
+Check Numeric Field On Student Form
+    [Arguments]         ${element}
+    Go to Students
+    Go to Form Student
+    Field Should Be Number      ${element}
