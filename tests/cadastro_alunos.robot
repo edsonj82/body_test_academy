@@ -67,14 +67,14 @@ Todos os campos devem ser obrigatórios
 Validate Number Type
     [Tags]  temp
     [Template]                      Check Type Field On Student Form     
-    css=input[name=age]             number
-    css=input[name=weight]          number
-    css=input[name=feet_tall]       number
+    ${AGE_FIELD}                    number
+    ${WEIGTH_FIELD}                 number
+    ${FEET_TALL_FIELD}              number
 
 Validate Email Type
     [Tags]  temp
     [Template]                      Check Type Field On Student Form    
-    css=input[name=email]           email
+    ${EMAIL_FIELD}                  email
 # Check Age Numeric Field
 #     [Tags]  temp
 #     Go to Students
