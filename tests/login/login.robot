@@ -1,7 +1,7 @@
 ***Settings***
 Documentation           Suite de testes de Login do Administrador
 
-Resource    ../../resources/base.robot
+Resource    ${EXECDIR}/resources/base.robot
 
 Suite Setup     Start Browser Session
 Test Teardown   Take Screenshot            
