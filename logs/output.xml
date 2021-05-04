@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0 (Python 3.8.5 on linux)" generated="20210503 16:07:29.923" rpa="false" schemaversion="2">
-<suite id="s1" name="Cadastro Alunos" source="/home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/tests/cadastro_alunos.robot">
+<robot generator="Robot 4.0 (Python 3.8.5 on linux)" generated="20210504 09:21:32.445" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="/home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/tests">
+<suite id="s1-s1" name="Cadastro Alunos" source="/home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/tests/cadastro_alunos.robot">
 <kw name="Start Admin Session" library="base" type="SETUP">
 <kw name="Start Browser Session" library="base">
 <kw name="New Browser" library="Browser">
@@ -10,9 +11,9 @@
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.
 See `Browser, Context and Page` for more information about Browser and related concepts.</doc>
-<msg timestamp="20210503 16:07:30.855" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
-<msg timestamp="20210503 16:07:31.060" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
-<status status="PASS" starttime="20210503 16:07:30.854" endtime="20210503 16:07:31.060"/>
+<msg timestamp="20210504 09:21:33.385" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
+<msg timestamp="20210504 09:21:33.576" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
+<status status="PASS" starttime="20210504 09:21:33.384" endtime="20210504 09:21:33.577"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>about:blank</arg>
@@ -21,10 +22,10 @@ See `Browser, Context and Page` for more information about Browser and related c
 <doc>Open a new Page. A Page is the Playwright equivalent to a tab.
 See `Browser, Context and Page` for more information about Page concept.
 Returns a stable identifier for the created page.</doc>
-<msg timestamp="20210503 16:07:31.180" level="INFO">Successfully initialized new page object and opened url: about:blank</msg>
-<status status="PASS" starttime="20210503 16:07:31.061" endtime="20210503 16:07:31.181"/>
+<msg timestamp="20210504 09:21:33.685" level="INFO">Successfully initialized new page object and opened url: about:blank</msg>
+<status status="PASS" starttime="20210504 09:21:33.577" endtime="20210504 09:21:33.686"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:30.853" endtime="20210503 16:07:31.181"/>
+<status status="PASS" starttime="20210504 09:21:33.383" endtime="20210504 09:21:33.686"/>
 </kw>
 <kw name="Go To Login Pages" library="auth">
 <kw name="Go To" library="Browser">
@@ -32,10 +33,10 @@ Returns a stable identifier for the created page.</doc>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Navigates to the given ``url``.</doc>
-<msg timestamp="20210503 16:07:34.078" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
-<status status="PASS" starttime="20210503 16:07:31.182" endtime="20210503 16:07:34.079"/>
+<msg timestamp="20210504 09:21:35.579" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
+<status status="PASS" starttime="20210504 09:21:33.687" endtime="20210504 09:21:35.579"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:31.182" endtime="20210503 16:07:34.079"/>
+<status status="PASS" starttime="20210504 09:21:33.687" endtime="20210504 09:21:35.580"/>
 </kw>
 <kw name="Login With" library="auth">
 <arg>admin@bodytest.com</arg>
@@ -46,8 +47,8 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210503 16:07:34.081" level="INFO">Fills the text 'admin@bodytest.com' in the given field.</msg>
-<status status="PASS" starttime="20210503 16:07:34.080" endtime="20210503 16:07:34.162"/>
+<msg timestamp="20210504 09:21:35.582" level="INFO">Fills the text 'admin@bodytest.com' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:35.581" endtime="20210504 09:21:35.657"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>css=input[name=password]</arg>
@@ -55,17 +56,17 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
-<msg timestamp="20210503 16:07:34.163" level="INFO">Fills the text 'pwd123' in the given field.</msg>
-<status status="PASS" starttime="20210503 16:07:34.163" endtime="20210503 16:07:34.199"/>
+<msg timestamp="20210504 09:21:35.658" level="INFO">Fills the text 'pwd123' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:35.657" endtime="20210504 09:21:35.690"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>text=Entrar</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210503 16:07:34.199" endtime="20210503 16:07:34.283"/>
+<status status="PASS" starttime="20210504 09:21:35.691" endtime="20210504 09:21:35.788"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:34.079" endtime="20210503 16:07:34.284"/>
+<status status="PASS" starttime="20210504 09:21:35.580" endtime="20210504 09:21:35.788"/>
 </kw>
 <kw name="User Should Be Logged In" library="nav">
 <arg>Administrador</arg>
@@ -78,13 +79,464 @@ Returns a stable identifier for the created page.</doc>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.
 See the `Finding elements` section for details about the selectors.</doc>
-<status status="PASS" starttime="20210503 16:07:34.285" endtime="20210503 16:07:35.080"/>
+<status status="PASS" starttime="20210504 09:21:35.789" endtime="20210504 09:21:36.542"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:34.284" endtime="20210503 16:07:35.081"/>
+<status status="PASS" starttime="20210504 09:21:35.788" endtime="20210504 09:21:36.543"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:30.852" endtime="20210503 16:07:35.081"/>
+<status status="PASS" starttime="20210504 09:21:33.382" endtime="20210504 09:21:36.543"/>
 </kw>
-<test id="s1-t1" name="Validate Number Type">
+<test id="s1-s1-t1" name="Cenario: Novo aluno">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{student}</var>
+<arg>name=Edson José dos Santos</arg>
+<arg>email=edson@theotokus.com</arg>
+<arg>age=39</arg>
+<arg>weight=81</arg>
+<arg>feet_tall=1.82</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210504 09:21:36.564" level="INFO">&amp;{student} = { name=Edson José dos Santos | email=edson@theotokus.com | age=39 | weight=81 | feet_tall=1.82 }</msg>
+<status status="PASS" starttime="20210504 09:21:36.563" endtime="20210504 09:21:36.564"/>
+</kw>
+<kw name="Remove Student" library="DeloreanLibrary">
+<arg>${student.email}</arg>
+<msg timestamp="20210504 09:21:36.566" level="INFO">delete from students where email = 'edson@theotokus.com'</msg>
+<status status="PASS" starttime="20210504 09:21:36.565" endtime="20210504 09:21:37.696"/>
+</kw>
+<kw name="Go to Students" library="nav">
+<kw name="Click" library="Browser">
+<arg>css=a[href$=alunos]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210504 09:21:37.698" endtime="20210504 09:21:37.809"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=h1 &gt;&gt; text=Gestão de Alunos</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210504 09:21:37.841" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Gestão de Alunos</msg>
+<status status="PASS" starttime="20210504 09:21:37.810" endtime="20210504 09:21:37.841"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:37.697" endtime="20210504 09:21:37.842"/>
+</kw>
+<kw name="Go to Form Student" library="students">
+<kw name="Click" library="Browser">
+<arg>css=a[href$="alunos/new"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210504 09:21:37.843" endtime="20210504 09:21:37.953"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=h1 &gt;&gt; text=Novo aluno</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210504 09:21:37.967" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Novo aluno</msg>
+<status status="PASS" starttime="20210504 09:21:37.953" endtime="20210504 09:21:37.967"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:37.842" endtime="20210504 09:21:37.968"/>
+</kw>
+<kw name="New Student" library="students">
+<arg>${student}</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${NAME_FIELD}</arg>
+<arg>${student.name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:37.970" level="INFO">Fills the text 'Edson José dos Santos' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:37.969" endtime="20210504 09:21:38.018"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${EMAIL_FIELD}</arg>
+<arg>${student.email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:38.021" level="INFO">Fills the text 'edson@theotokus.com' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:38.018" endtime="20210504 09:21:38.058"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${AGE_FIELD}</arg>
+<arg>${student.age}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:38.067" level="INFO">Fills the text '39' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:38.059" endtime="20210504 09:21:38.126"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${WEIGTH_FIELD}</arg>
+<arg>${student.weight}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:38.128" level="INFO">Fills the text '81' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:38.126" endtime="20210504 09:21:38.159"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${FEET_TALL_FIELD}</arg>
+<arg>${student.feet_tall}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:38.161" level="INFO">Fills the text '1.82' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:38.160" endtime="20210504 09:21:38.205"/>
+</kw>
+<kw name="Submit Student Form" library="students">
+<kw name="Click" library="Browser">
+<arg>css=button[form$=Student]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210504 09:21:38.206" endtime="20210504 09:21:38.267"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:38.205" endtime="20210504 09:21:38.268"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:37.968" endtime="20210504 09:21:38.268"/>
+</kw>
+<kw name="Toaster Text Should Be" library="components">
+<arg>Aluno cadastrado com sucesso.</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=.Toastify__toast-body &gt;&gt; text=${expect_text}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210504 09:21:38.646" level="INFO">Wait for Element with selector: css=.Toastify__toast-body &gt;&gt; text=Aluno cadastrado com sucesso.</msg>
+<status status="PASS" starttime="20210504 09:21:38.269" endtime="20210504 09:21:38.646"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:38.268" endtime="20210504 09:21:38.647"/>
+</kw>
+<kw name="Thinking And Take Screenshot" library="base" type="TEARDOWN">
+<arg>2</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>${timeout}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210504 09:21:40.649" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210504 09:21:38.648" endtime="20210504 09:21:40.649"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
+<msg timestamp="20210504 09:21:40.782" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210504 09:21:40.650" endtime="20210504 09:21:40.782"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:38.647" endtime="20210504 09:21:40.783"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:36.543" endtime="20210504 09:21:40.783"/>
+</test>
+<test id="s1-s1-t2" name="Cenario: Não deve permitir email duplicado">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{student}</var>
+<arg>name=Ricardo de Mauro</arg>
+<arg>email=ricardo@theotokus.com</arg>
+<arg>age=34</arg>
+<arg>weight=98</arg>
+<arg>feet_tall=1.75</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210504 09:21:40.805" level="INFO">&amp;{student} = { name=Ricardo de Mauro | email=ricardo@theotokus.com | age=34 | weight=98 | feet_tall=1.75 }</msg>
+<status status="PASS" starttime="20210504 09:21:40.804" endtime="20210504 09:21:40.805"/>
+</kw>
+<kw name="Insert Student" library="DeloreanLibrary">
+<arg>${student}</arg>
+<msg timestamp="20210504 09:21:40.806" level="INFO">delete from students where email = 'ricardo@theotokus.com'</msg>
+<msg timestamp="20210504 09:21:41.905" level="INFO">insert into students(name, email, age, weight, feet_tall, created_at, updated_at)values('Ricardo de Mauro','ricardo@theotokus.com',34,98,1.75,NOW(),NOW());</msg>
+<status status="PASS" starttime="20210504 09:21:40.805" endtime="20210504 09:21:42.997"/>
+</kw>
+<kw name="Go to Students" library="nav">
+<kw name="Click" library="Browser">
+<arg>css=a[href$=alunos]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210504 09:21:42.999" endtime="20210504 09:21:43.064"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=h1 &gt;&gt; text=Gestão de Alunos</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210504 09:21:43.080" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Gestão de Alunos</msg>
+<status status="PASS" starttime="20210504 09:21:43.064" endtime="20210504 09:21:43.080"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:42.998" endtime="20210504 09:21:43.081"/>
+</kw>
+<kw name="Go to Form Student" library="students">
+<kw name="Click" library="Browser">
+<arg>css=a[href$="alunos/new"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210504 09:21:43.082" endtime="20210504 09:21:43.158"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=h1 &gt;&gt; text=Novo aluno</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210504 09:21:43.174" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Novo aluno</msg>
+<status status="PASS" starttime="20210504 09:21:43.158" endtime="20210504 09:21:43.174"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:43.081" endtime="20210504 09:21:43.175"/>
+</kw>
+<kw name="New Student" library="students">
+<arg>${student}</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${NAME_FIELD}</arg>
+<arg>${student.name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:43.177" level="INFO">Fills the text 'Ricardo de Mauro' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:43.176" endtime="20210504 09:21:43.224"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${EMAIL_FIELD}</arg>
+<arg>${student.email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:43.227" level="INFO">Fills the text 'ricardo@theotokus.com' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:43.225" endtime="20210504 09:21:43.252"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${AGE_FIELD}</arg>
+<arg>${student.age}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:43.255" level="INFO">Fills the text '34' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:43.253" endtime="20210504 09:21:43.289"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${WEIGTH_FIELD}</arg>
+<arg>${student.weight}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:43.291" level="INFO">Fills the text '98' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:43.290" endtime="20210504 09:21:43.322"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${FEET_TALL_FIELD}</arg>
+<arg>${student.feet_tall}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:43.324" level="INFO">Fills the text '1.75' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:43.323" endtime="20210504 09:21:43.356"/>
+</kw>
+<kw name="Submit Student Form" library="students">
+<kw name="Click" library="Browser">
+<arg>css=button[form$=Student]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210504 09:21:43.357" endtime="20210504 09:21:43.430"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:43.356" endtime="20210504 09:21:43.430"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:43.175" endtime="20210504 09:21:43.430"/>
+</kw>
+<kw name="Toaster Text Should Be" library="components">
+<arg>Email já existe no sistema.</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=.Toastify__toast-body &gt;&gt; text=${expect_text}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210504 09:21:43.720" level="INFO">Wait for Element with selector: css=.Toastify__toast-body &gt;&gt; text=Email já existe no sistema.</msg>
+<status status="PASS" starttime="20210504 09:21:43.431" endtime="20210504 09:21:43.721"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:43.430" endtime="20210504 09:21:43.721"/>
+</kw>
+<kw name="Thinking And Take Screenshot" library="base" type="TEARDOWN">
+<arg>2</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>${timeout}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210504 09:21:45.724" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210504 09:21:43.723" endtime="20210504 09:21:45.724"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
+<msg timestamp="20210504 09:21:45.863" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210504 09:21:45.725" endtime="20210504 09:21:45.863"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:43.722" endtime="20210504 09:21:45.863"/>
+</kw>
+<tag>duplicado</tag>
+<status status="PASS" starttime="20210504 09:21:40.796" endtime="20210504 09:21:45.863"/>
+</test>
+<test id="s1-s1-t3" name="Cenario: Todos os campos devem ser obrigatórios">
+<kw name="Set Variable" library="BuiltIn">
+<var>@{expected_alerts}</var>
+<arg>Nome é obrigatório</arg>
+<arg>O e-mail é obrigatório</arg>
+<arg>idade é obrigatória</arg>
+<arg>o peso é obrigatório</arg>
+<arg>a Altura é obrigatória</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210504 09:21:45.881" level="INFO">@{expected_alerts} = [ Nome é obrigatório | O e-mail é obrigatório | idade é obrigatória | o peso é obrigatório | a Altura é obrigatória ]</msg>
+<status status="PASS" starttime="20210504 09:21:45.880" endtime="20210504 09:21:45.881"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>@{got_alerts}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20210504 09:21:45.882" level="INFO">@{got_alerts} = [ ]</msg>
+<status status="PASS" starttime="20210504 09:21:45.881" endtime="20210504 09:21:45.882"/>
+</kw>
+<kw name="Go to Students" library="nav">
+<kw name="Click" library="Browser">
+<arg>css=a[href$=alunos]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210504 09:21:45.887" endtime="20210504 09:21:46.019"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=h1 &gt;&gt; text=Gestão de Alunos</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210504 09:21:46.040" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Gestão de Alunos</msg>
+<status status="PASS" starttime="20210504 09:21:46.019" endtime="20210504 09:21:46.040"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:45.886" endtime="20210504 09:21:46.040"/>
+</kw>
+<kw name="Go to Form Student" library="students">
+<kw name="Click" library="Browser">
+<arg>css=a[href$="alunos/new"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210504 09:21:46.042" endtime="20210504 09:21:46.136"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=h1 &gt;&gt; text=Novo aluno</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210504 09:21:46.161" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Novo aluno</msg>
+<status status="PASS" starttime="20210504 09:21:46.137" endtime="20210504 09:21:46.162"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:46.041" endtime="20210504 09:21:46.162"/>
+</kw>
+<kw name="Submit Student Form" library="students">
+<kw name="Click" library="Browser">
+<arg>css=button[form$=Student]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210504 09:21:46.163" endtime="20210504 09:21:46.242"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:46.163" endtime="20210504 09:21:46.243"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${index}</var>
+<value>1</value>
+<value>6</value>
+<iter>
+<var name="${index}">1</var>
+<kw name="Get Required Alerts" library="components">
+<var>${span}</var>
+<arg>${index}</arg>
+<kw name="Get Text" library="Browser">
+<var>${span}</var>
+<arg>xpath=(//form//span)[${index}])</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<msg timestamp="20210504 09:21:47.432" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Cenario_Todos_os_campos_devem_ser_obrigatrios_FAILURE_SCREENSHOT_2.png"&gt;&lt;img src="Cenario_Todos_os_campos_devem_ser_obrigatrios_FAILURE_SCREENSHOT_2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20210504 09:21:47.434" level="FAIL">Error: page.waitForSelector: Evaluation failed: DOMException: Failed to execute 'evaluate' on 'Document': The string '(//form//span)[1])' is not a valid XPath expression.
+    at Object.query (&lt;anonymous&gt;:2868:29)
+    at InjectedScript._queryEngine (&lt;anonymous&gt;:1591:47)
+    at InjectedScript._querySelectorRecursively (&lt;anonymous&gt;:1547:25)
+    at InjectedScript.querySelector (&lt;anonymous&gt;:1538:25)
+    at eval (eval at evaluate (:303:29), &lt;anonymous&gt;:4:38)
+    at onRaf (&lt;anonymous&gt;:1667:37)
+    at &lt;anonymous&gt;:1677:13
+    at Object.run (&lt;anonymous&gt;:1735:28)
+    at eval (eval at evaluate (:303:29), &lt;anonymous&gt;:1:14)
+    at UtilityScript.evaluate (&lt;anonymous&gt;:305:22)
+=========================== logs ===========================
+waiting for selector "xpath=(//form//span)[1])"
+============================================================
+Note: use DEBUG=pw:api environment variable to capture Playwright logs.</msg>
+<status status="FAIL" starttime="20210504 09:21:46.245" endtime="20210504 09:21:47.434"/>
+</kw>
+<status status="FAIL" starttime="20210504 09:21:46.244" endtime="20210504 09:21:47.434"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${got_alerts}</arg>
+<arg>${span}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20210504 09:21:47.435" endtime="20210504 09:21:47.435"/>
+</kw>
+<status status="FAIL" starttime="20210504 09:21:46.244" endtime="20210504 09:21:47.435"/>
+</iter>
+<status status="FAIL" starttime="20210504 09:21:46.243" endtime="20210504 09:21:47.435"/>
+</for>
+<kw name="Log" library="BuiltIn">
+<arg>${expected_alerts}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20210504 09:21:47.436" endtime="20210504 09:21:47.436"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${got_alerts}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20210504 09:21:47.436" endtime="20210504 09:21:47.436"/>
+</kw>
+<kw name="List Should Be Equal">
+<arg>${expected_alerts}</arg>
+<arg>${got_alerts}</arg>
+<status status="NOT RUN" starttime="20210504 09:21:47.444" endtime="20210504 09:21:47.445"/>
+</kw>
+<kw name="Take Screenshot" library="Browser" type="TEARDOWN">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
+<msg timestamp="20210504 09:21:47.592" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-3.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210504 09:21:47.446" endtime="20210504 09:21:47.592"/>
+</kw>
+<tag>fail</tag>
+<status status="FAIL" starttime="20210504 09:21:45.871" endtime="20210504 09:21:47.593">Error: page.waitForSelector: Evaluation failed: DOMException: Failed to execute 'evaluate' on 'Document': The string '(//form//span)[1])' is not a valid XPath expression.
+    at Object.query (&lt;anonymous&gt;:2868:29)
+    at InjectedScript._queryEngine (&lt;anonymous&gt;:1591:47)
+    at InjectedScript._querySelectorRecursively (&lt;anonymous&gt;:1547:25)
+    at InjectedScript.querySelector (&lt;anonymous&gt;:1538:25)
+    at eval (eval at evaluate (:303:29), &lt;anonymous&gt;:4:38)
+    at onRaf (&lt;anonymous&gt;:1667:37)
+    at &lt;anonymous&gt;:1677:13
+    at Object.run (&lt;anonymous&gt;:1735:28)
+    at eval (eval at evaluate (:303:29), &lt;anonymous&gt;:1:14)
+    at UtilityScript.evaluate (&lt;anonymous&gt;:305:22)
+=========================== logs ===========================
+waiting for selector "xpath=(//form//span)[1])"
+============================================================
+Note: use DEBUG=pw:api environment variable to capture Playwright logs.</status>
+</test>
+<test id="s1-s1-t4" name="Cenario: Validação dos Campos Numéricos">
 <kw name="Check Type Field On Student Form">
 <arg>${AGE_FIELD}</arg>
 <arg>number</arg>
@@ -94,7 +546,7 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210503 16:07:35.097" endtime="20210503 16:07:35.211"/>
+<status status="PASS" starttime="20210504 09:21:47.613" endtime="20210504 09:21:47.714"/>
 </kw>
 <kw name="Wait For Elements State" library="Browser">
 <arg>css=h1 &gt;&gt; text=Gestão de Alunos</arg>
@@ -103,10 +555,10 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210503 16:07:35.236" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Gestão de Alunos</msg>
-<status status="PASS" starttime="20210503 16:07:35.211" endtime="20210503 16:07:35.236"/>
+<msg timestamp="20210504 09:21:47.742" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Gestão de Alunos</msg>
+<status status="PASS" starttime="20210504 09:21:47.714" endtime="20210504 09:21:47.743"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:35.096" endtime="20210503 16:07:35.237"/>
+<status status="PASS" starttime="20210504 09:21:47.613" endtime="20210504 09:21:47.743"/>
 </kw>
 <kw name="Go to Form Student" library="students">
 <kw name="Click" library="Browser">
@@ -114,7 +566,7 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210503 16:07:35.237" endtime="20210503 16:07:35.337"/>
+<status status="PASS" starttime="20210504 09:21:47.744" endtime="20210504 09:21:47.852"/>
 </kw>
 <kw name="Wait For Elements State" library="Browser">
 <arg>css=h1 &gt;&gt; text=Novo aluno</arg>
@@ -123,10 +575,10 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210503 16:07:35.352" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Novo aluno</msg>
-<status status="PASS" starttime="20210503 16:07:35.337" endtime="20210503 16:07:35.352"/>
+<msg timestamp="20210504 09:21:47.884" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Novo aluno</msg>
+<status status="PASS" starttime="20210504 09:21:47.853" endtime="20210504 09:21:47.884"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:35.237" endtime="20210503 16:07:35.352"/>
+<status status="PASS" starttime="20210504 09:21:47.743" endtime="20210504 09:21:47.884"/>
 </kw>
 <kw name="Field Should Be Type" library="components">
 <arg>${element}</arg>
@@ -139,18 +591,18 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
-<msg timestamp="20210503 16:07:35.387" level="INFO">${attr} = number</msg>
-<status status="PASS" starttime="20210503 16:07:35.354" endtime="20210503 16:07:35.387"/>
+<msg timestamp="20210504 09:21:47.928" level="INFO">${attr} = number</msg>
+<status status="PASS" starttime="20210504 09:21:47.886" endtime="20210504 09:21:47.929"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${attr}</arg>
 <arg>${type}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20210503 16:07:35.387" endtime="20210503 16:07:35.388"/>
+<status status="PASS" starttime="20210504 09:21:47.929" endtime="20210504 09:21:47.930"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:35.353" endtime="20210503 16:07:35.388"/>
+<status status="PASS" starttime="20210504 09:21:47.885" endtime="20210504 09:21:47.930"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:35.095" endtime="20210503 16:07:35.389"/>
+<status status="PASS" starttime="20210504 09:21:47.612" endtime="20210504 09:21:47.930"/>
 </kw>
 <kw name="Check Type Field On Student Form">
 <arg>${WEIGTH_FIELD}</arg>
@@ -161,7 +613,7 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210503 16:07:35.390" endtime="20210503 16:07:35.476"/>
+<status status="PASS" starttime="20210504 09:21:47.932" endtime="20210504 09:21:48.030"/>
 </kw>
 <kw name="Wait For Elements State" library="Browser">
 <arg>css=h1 &gt;&gt; text=Gestão de Alunos</arg>
@@ -170,10 +622,10 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210503 16:07:35.498" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Gestão de Alunos</msg>
-<status status="PASS" starttime="20210503 16:07:35.476" endtime="20210503 16:07:35.498"/>
+<msg timestamp="20210504 09:21:48.049" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Gestão de Alunos</msg>
+<status status="PASS" starttime="20210504 09:21:48.031" endtime="20210504 09:21:48.049"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:35.390" endtime="20210503 16:07:35.498"/>
+<status status="PASS" starttime="20210504 09:21:47.932" endtime="20210504 09:21:48.050"/>
 </kw>
 <kw name="Go to Form Student" library="students">
 <kw name="Click" library="Browser">
@@ -181,7 +633,7 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210503 16:07:35.500" endtime="20210503 16:07:35.594"/>
+<status status="PASS" starttime="20210504 09:21:48.053" endtime="20210504 09:21:48.143"/>
 </kw>
 <kw name="Wait For Elements State" library="Browser">
 <arg>css=h1 &gt;&gt; text=Novo aluno</arg>
@@ -190,10 +642,10 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210503 16:07:35.618" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Novo aluno</msg>
-<status status="PASS" starttime="20210503 16:07:35.595" endtime="20210503 16:07:35.618"/>
+<msg timestamp="20210504 09:21:48.169" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Novo aluno</msg>
+<status status="PASS" starttime="20210504 09:21:48.143" endtime="20210504 09:21:48.170"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:35.499" endtime="20210503 16:07:35.618"/>
+<status status="PASS" starttime="20210504 09:21:48.050" endtime="20210504 09:21:48.170"/>
 </kw>
 <kw name="Field Should Be Type" library="components">
 <arg>${element}</arg>
@@ -206,18 +658,18 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
-<msg timestamp="20210503 16:07:35.648" level="INFO">${attr} = number</msg>
-<status status="PASS" starttime="20210503 16:07:35.620" endtime="20210503 16:07:35.648"/>
+<msg timestamp="20210504 09:21:48.208" level="INFO">${attr} = number</msg>
+<status status="PASS" starttime="20210504 09:21:48.172" endtime="20210504 09:21:48.208"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${attr}</arg>
 <arg>${type}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20210503 16:07:35.648" endtime="20210503 16:07:35.649"/>
+<status status="PASS" starttime="20210504 09:21:48.208" endtime="20210504 09:21:48.209"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:35.619" endtime="20210503 16:07:35.649"/>
+<status status="PASS" starttime="20210504 09:21:48.171" endtime="20210504 09:21:48.209"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:35.389" endtime="20210503 16:07:35.649"/>
+<status status="PASS" starttime="20210504 09:21:47.931" endtime="20210504 09:21:48.210"/>
 </kw>
 <kw name="Check Type Field On Student Form">
 <arg>${FEET_TALL_FIELD}</arg>
@@ -228,7 +680,7 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210503 16:07:35.651" endtime="20210503 16:07:35.739"/>
+<status status="PASS" starttime="20210504 09:21:48.213" endtime="20210504 09:21:48.301"/>
 </kw>
 <kw name="Wait For Elements State" library="Browser">
 <arg>css=h1 &gt;&gt; text=Gestão de Alunos</arg>
@@ -237,10 +689,10 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210503 16:07:35.762" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Gestão de Alunos</msg>
-<status status="PASS" starttime="20210503 16:07:35.740" endtime="20210503 16:07:35.763"/>
+<msg timestamp="20210504 09:21:48.340" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Gestão de Alunos</msg>
+<status status="PASS" starttime="20210504 09:21:48.302" endtime="20210504 09:21:48.341"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:35.651" endtime="20210503 16:07:35.763"/>
+<status status="PASS" starttime="20210504 09:21:48.212" endtime="20210504 09:21:48.341"/>
 </kw>
 <kw name="Go to Form Student" library="students">
 <kw name="Click" library="Browser">
@@ -248,7 +700,7 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210503 16:07:35.764" endtime="20210503 16:07:35.847"/>
+<status status="PASS" starttime="20210504 09:21:48.343" endtime="20210504 09:21:48.431"/>
 </kw>
 <kw name="Wait For Elements State" library="Browser">
 <arg>css=h1 &gt;&gt; text=Novo aluno</arg>
@@ -257,10 +709,10 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210503 16:07:35.866" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Novo aluno</msg>
-<status status="PASS" starttime="20210503 16:07:35.847" endtime="20210503 16:07:35.866"/>
+<msg timestamp="20210504 09:21:48.451" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Novo aluno</msg>
+<status status="PASS" starttime="20210504 09:21:48.432" endtime="20210504 09:21:48.451"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:35.763" endtime="20210503 16:07:35.866"/>
+<status status="PASS" starttime="20210504 09:21:48.341" endtime="20210504 09:21:48.451"/>
 </kw>
 <kw name="Field Should Be Type" library="components">
 <arg>${element}</arg>
@@ -273,23 +725,29 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
-<msg timestamp="20210503 16:07:35.897" level="INFO">${attr} = number</msg>
-<status status="PASS" starttime="20210503 16:07:35.867" endtime="20210503 16:07:35.897"/>
+<msg timestamp="20210504 09:21:48.480" level="INFO">${attr} = number</msg>
+<status status="PASS" starttime="20210504 09:21:48.453" endtime="20210504 09:21:48.480"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${attr}</arg>
 <arg>${type}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20210503 16:07:35.897" endtime="20210503 16:07:35.898"/>
+<status status="PASS" starttime="20210504 09:21:48.480" endtime="20210504 09:21:48.481"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:35.867" endtime="20210503 16:07:35.898"/>
+<status status="PASS" starttime="20210504 09:21:48.451" endtime="20210504 09:21:48.482"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:35.650" endtime="20210503 16:07:35.899"/>
+<status status="PASS" starttime="20210504 09:21:48.211" endtime="20210504 09:21:48.482"/>
+</kw>
+<kw name="Take Screenshot" library="Browser" type="TEARDOWN">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
+<msg timestamp="20210504 09:21:48.624" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-4.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210504 09:21:48.483" endtime="20210504 09:21:48.624"/>
 </kw>
 <tag>temp</tag>
-<status status="PASS" starttime="20210503 16:07:35.081" endtime="20210503 16:07:35.899"/>
+<status status="PASS" starttime="20210504 09:21:47.600" endtime="20210504 09:21:48.625"/>
 </test>
-<test id="s1-t2" name="Validate Email Type">
+<test id="s1-s1-t5" name="Cenario: Validação dos Campos do Tipo E-mail">
 <kw name="Check Type Field On Student Form">
 <arg>${EMAIL_FIELD}</arg>
 <arg>email</arg>
@@ -299,7 +757,7 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210503 16:07:35.926" endtime="20210503 16:07:35.999"/>
+<status status="PASS" starttime="20210504 09:21:48.641" endtime="20210504 09:21:48.700"/>
 </kw>
 <kw name="Wait For Elements State" library="Browser">
 <arg>css=h1 &gt;&gt; text=Gestão de Alunos</arg>
@@ -308,10 +766,10 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210503 16:07:36.021" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Gestão de Alunos</msg>
-<status status="PASS" starttime="20210503 16:07:36.000" endtime="20210503 16:07:36.022"/>
+<msg timestamp="20210504 09:21:48.733" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Gestão de Alunos</msg>
+<status status="PASS" starttime="20210504 09:21:48.700" endtime="20210504 09:21:48.733"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:35.925" endtime="20210503 16:07:36.023"/>
+<status status="PASS" starttime="20210504 09:21:48.640" endtime="20210504 09:21:48.734"/>
 </kw>
 <kw name="Go to Form Student" library="students">
 <kw name="Click" library="Browser">
@@ -319,7 +777,7 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20210503 16:07:36.024" endtime="20210503 16:07:36.106"/>
+<status status="PASS" starttime="20210504 09:21:48.735" endtime="20210504 09:21:48.825"/>
 </kw>
 <kw name="Wait For Elements State" library="Browser">
 <arg>css=h1 &gt;&gt; text=Novo aluno</arg>
@@ -328,10 +786,10 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20210503 16:07:36.121" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Novo aluno</msg>
-<status status="PASS" starttime="20210503 16:07:36.107" endtime="20210503 16:07:36.121"/>
+<msg timestamp="20210504 09:21:48.862" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Novo aluno</msg>
+<status status="PASS" starttime="20210504 09:21:48.826" endtime="20210504 09:21:48.863"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:36.024" endtime="20210503 16:07:36.122"/>
+<status status="PASS" starttime="20210504 09:21:48.734" endtime="20210504 09:21:48.863"/>
 </kw>
 <kw name="Field Should Be Type" library="components">
 <arg>${element}</arg>
@@ -344,34 +802,567 @@ See the `Finding elements` section for details about the selectors.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
-<msg timestamp="20210503 16:07:36.160" level="INFO">${attr} = email</msg>
-<status status="PASS" starttime="20210503 16:07:36.124" endtime="20210503 16:07:36.160"/>
+<msg timestamp="20210504 09:21:48.897" level="INFO">${attr} = email</msg>
+<status status="PASS" starttime="20210504 09:21:48.865" endtime="20210504 09:21:48.898"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${attr}</arg>
 <arg>${type}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20210503 16:07:36.160" endtime="20210503 16:07:36.161"/>
+<status status="PASS" starttime="20210504 09:21:48.898" endtime="20210504 09:21:48.898"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:36.122" endtime="20210503 16:07:36.162"/>
+<status status="PASS" starttime="20210504 09:21:48.863" endtime="20210504 09:21:48.899"/>
 </kw>
-<status status="PASS" starttime="20210503 16:07:35.924" endtime="20210503 16:07:36.162"/>
+<status status="PASS" starttime="20210504 09:21:48.639" endtime="20210504 09:21:48.899"/>
+</kw>
+<kw name="Take Screenshot" library="Browser" type="TEARDOWN">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
+<msg timestamp="20210504 09:21:49.029" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-5.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210504 09:21:48.899" endtime="20210504 09:21:49.030"/>
 </kw>
 <tag>temp</tag>
-<status status="PASS" starttime="20210503 16:07:35.912" endtime="20210503 16:07:36.163"/>
+<status status="PASS" starttime="20210504 09:21:48.632" endtime="20210504 09:21:49.030"/>
 </test>
 <doc>Cadastro de alunos</doc>
-<status status="PASS" starttime="20210503 16:07:29.925" endtime="20210503 16:07:36.172"/>
+<status status="FAIL" starttime="20210504 09:21:32.485" endtime="20210504 09:21:49.039"/>
+</suite>
+<suite id="s1-s2" name="Login" source="/home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/tests/login.robot">
+<kw name="Start Browser Session" library="base" type="SETUP">
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>true</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.
+See `Browser, Context and Page` for more information about Browser and related concepts.</doc>
+<msg timestamp="20210504 09:21:49.120" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
+<msg timestamp="20210504 09:21:49.326" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
+<status status="PASS" starttime="20210504 09:21:49.120" endtime="20210504 09:21:49.326"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>about:blank</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page. A Page is the Playwright equivalent to a tab.
+See `Browser, Context and Page` for more information about Page concept.
+Returns a stable identifier for the created page.</doc>
+<msg timestamp="20210504 09:21:49.430" level="INFO">Successfully initialized new page object and opened url: about:blank</msg>
+<status status="PASS" starttime="20210504 09:21:49.327" endtime="20210504 09:21:49.431"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:49.119" endtime="20210504 09:21:49.431"/>
+</kw>
+<test id="s1-s2-t1" name="Cenario: Login do Administrador">
+<kw name="Go To Login Pages" library="auth">
+<kw name="Go To" library="Browser">
+<arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<msg timestamp="20210504 09:21:51.315" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
+<status status="PASS" starttime="20210504 09:21:49.453" endtime="20210504 09:21:51.316"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:49.452" endtime="20210504 09:21:51.316"/>
+</kw>
+<kw name="Login With" library="auth">
+<arg>admin@bodytest.com</arg>
+<arg>pwd123</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:51.319" level="INFO">Fills the text 'admin@bodytest.com' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:51.318" endtime="20210504 09:21:51.395"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=password]</arg>
+<arg>${pass}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:51.397" level="INFO">Fills the text 'pwd123' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:51.396" endtime="20210504 09:21:51.429"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>text=Entrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210504 09:21:51.429" endtime="20210504 09:21:51.513"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:51.317" endtime="20210504 09:21:51.513"/>
+</kw>
+<kw name="User Should Be Logged In" library="nav">
+<arg>Administrador</arg>
+<kw name="Get Text" library="Browser">
+<arg>css=aside strong</arg>
+<arg>should be</arg>
+<arg>${user_name}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210504 09:21:51.515" endtime="20210504 09:21:52.235"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:51.514" endtime="20210504 09:21:52.235"/>
+</kw>
+<kw name="Clean Local Storage And Take Screenshot" library="base" type="TEARDOWN">
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
+<msg timestamp="20210504 09:21:52.361" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-6.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210504 09:21:52.237" endtime="20210504 09:21:52.361"/>
+</kw>
+<kw name="LocalStorage Clear" library="Browser">
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Remove all saved data from the local storage.</doc>
+<msg timestamp="20210504 09:21:52.370" level="INFO"/>
+<status status="PASS" starttime="20210504 09:21:52.362" endtime="20210504 09:21:52.370"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:52.236" endtime="20210504 09:21:52.371"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:49.431" endtime="20210504 09:21:52.371"/>
+</test>
+<test id="s1-s2-t2" name="Cenario: Senha incorreta">
+<kw name="Go To Login Pages" library="auth">
+<kw name="Go To" library="Browser">
+<arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<msg timestamp="20210504 09:21:52.948" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
+<status status="PASS" starttime="20210504 09:21:52.389" endtime="20210504 09:21:52.948"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:52.388" endtime="20210504 09:21:52.948"/>
+</kw>
+<kw name="Login With" library="auth">
+<arg>admin@bodytest.com</arg>
+<arg>abc123</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:52.951" level="INFO">Fills the text 'admin@bodytest.com' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:52.950" endtime="20210504 09:21:53.001"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=password]</arg>
+<arg>${pass}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:53.002" level="INFO">Fills the text 'abc123' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:53.001" endtime="20210504 09:21:53.045"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>text=Entrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210504 09:21:53.045" endtime="20210504 09:21:53.130"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:52.949" endtime="20210504 09:21:53.131"/>
+</kw>
+<kw name="Toaster Text Should Be" library="components">
+<arg>Usuário e/ou senha inválidos.</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=.Toastify__toast-body &gt;&gt; text=${expect_text}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210504 09:21:53.352" level="INFO">Wait for Element with selector: css=.Toastify__toast-body &gt;&gt; text=Usuário e/ou senha inválidos.</msg>
+<status status="PASS" starttime="20210504 09:21:53.132" endtime="20210504 09:21:53.353"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:53.131" endtime="20210504 09:21:53.353"/>
+</kw>
+<kw name="Thinking And Take Screenshot" library="base" type="TEARDOWN">
+<arg>2</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>${timeout}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210504 09:21:55.358" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210504 09:21:53.357" endtime="20210504 09:21:55.358"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
+<msg timestamp="20210504 09:21:55.492" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-7.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210504 09:21:55.359" endtime="20210504 09:21:55.492"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:53.356" endtime="20210504 09:21:55.492"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:52.380" endtime="20210504 09:21:55.492"/>
+</test>
+<test id="s1-s2-t3" name="Cenario: Email não cadastrado">
+<kw name="Go To Login Pages" library="auth">
+<kw name="Go To" library="Browser">
+<arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<msg timestamp="20210504 09:21:56.037" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
+<status status="PASS" starttime="20210504 09:21:55.508" endtime="20210504 09:21:56.037"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:55.507" endtime="20210504 09:21:56.037"/>
+</kw>
+<kw name="Login With" library="auth">
+<arg>edson@gmail.com</arg>
+<arg>abc123</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:56.039" level="INFO">Fills the text 'edson@gmail.com' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:56.038" endtime="20210504 09:21:56.092"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=password]</arg>
+<arg>${pass}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:56.093" level="INFO">Fills the text 'abc123' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:56.092" endtime="20210504 09:21:56.137"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>text=Entrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210504 09:21:56.137" endtime="20210504 09:21:56.224"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:56.038" endtime="20210504 09:21:56.224"/>
+</kw>
+<kw name="Toaster Text Should Be" library="components">
+<arg>Usuário e/ou senha inválidos.</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=.Toastify__toast-body &gt;&gt; text=${expect_text}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210504 09:21:56.511" level="INFO">Wait for Element with selector: css=.Toastify__toast-body &gt;&gt; text=Usuário e/ou senha inválidos.</msg>
+<status status="PASS" starttime="20210504 09:21:56.226" endtime="20210504 09:21:56.512"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:56.225" endtime="20210504 09:21:56.512"/>
+</kw>
+<kw name="Thinking And Take Screenshot" library="base" type="TEARDOWN">
+<arg>2</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>${timeout}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210504 09:21:58.516" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210504 09:21:56.515" endtime="20210504 09:21:58.517"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
+<msg timestamp="20210504 09:21:58.643" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-8.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210504 09:21:58.517" endtime="20210504 09:21:58.644"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:56.513" endtime="20210504 09:21:58.644"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:55.500" endtime="20210504 09:21:58.644"/>
+</test>
+<test id="s1-s2-t4" name="Cenario: Email incorreto">
+<kw name="Go To Login Pages" library="auth">
+<kw name="Go To" library="Browser">
+<arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<msg timestamp="20210504 09:21:59.200" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
+<status status="PASS" starttime="20210504 09:21:58.662" endtime="20210504 09:21:59.201"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:58.661" endtime="20210504 09:21:59.201"/>
+</kw>
+<kw name="Login With" library="auth">
+<arg>admin&amp;bodytest.com</arg>
+<arg>abc123</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:59.204" level="INFO">Fills the text 'admin&amp;bodytest.com' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:59.203" endtime="20210504 09:21:59.258"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=password]</arg>
+<arg>${pass}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:21:59.259" level="INFO">Fills the text 'abc123' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:21:59.258" endtime="20210504 09:21:59.292"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>text=Entrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210504 09:21:59.293" endtime="20210504 09:21:59.363"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:59.202" endtime="20210504 09:21:59.364"/>
+</kw>
+<kw name="Alert Text Should Be" library="components">
+<arg>Informe um e-mail válido</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=form span &gt;&gt; text=${expect_text}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210504 09:21:59.394" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=Informe um e-mail válido</msg>
+<status status="PASS" starttime="20210504 09:21:59.365" endtime="20210504 09:21:59.395"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:59.364" endtime="20210504 09:21:59.395"/>
+</kw>
+<kw name="Take Screenshot" library="Browser" type="TEARDOWN">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
+<msg timestamp="20210504 09:21:59.567" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-9.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210504 09:21:59.396" endtime="20210504 09:21:59.567"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:58.653" endtime="20210504 09:21:59.567"/>
+</test>
+<test id="s1-s2-t5" name="Cenario: Senha não informada">
+<kw name="Go To Login Pages" library="auth">
+<kw name="Go To" library="Browser">
+<arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<msg timestamp="20210504 09:22:00.096" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
+<status status="PASS" starttime="20210504 09:21:59.586" endtime="20210504 09:22:00.096"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:59.585" endtime="20210504 09:22:00.096"/>
+</kw>
+<kw name="Login With" library="auth">
+<arg>admin@bodytest.com</arg>
+<arg>${EMPTY}</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:22:00.098" level="INFO">Fills the text 'admin@bodytest.com' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:22:00.098" endtime="20210504 09:22:00.143"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=password]</arg>
+<arg>${pass}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:22:00.145" level="INFO">Fills the text '' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:22:00.144" endtime="20210504 09:22:00.190"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>text=Entrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210504 09:22:00.190" endtime="20210504 09:22:00.264"/>
+</kw>
+<status status="PASS" starttime="20210504 09:22:00.096" endtime="20210504 09:22:00.264"/>
+</kw>
+<kw name="Alert Text Should Be" library="components">
+<arg>A senha é obrigatória</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=form span &gt;&gt; text=${expect_text}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210504 09:22:00.294" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=A senha é obrigatória</msg>
+<status status="PASS" starttime="20210504 09:22:00.265" endtime="20210504 09:22:00.295"/>
+</kw>
+<status status="PASS" starttime="20210504 09:22:00.264" endtime="20210504 09:22:00.295"/>
+</kw>
+<kw name="Take Screenshot" library="Browser" type="TEARDOWN">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
+<msg timestamp="20210504 09:22:00.468" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-10.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210504 09:22:00.298" endtime="20210504 09:22:00.468"/>
+</kw>
+<status status="PASS" starttime="20210504 09:21:59.575" endtime="20210504 09:22:00.468"/>
+</test>
+<test id="s1-s2-t6" name="Cenario: Email não informado">
+<kw name="Go To Login Pages" library="auth">
+<kw name="Go To" library="Browser">
+<arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<msg timestamp="20210504 09:22:01.010" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
+<status status="PASS" starttime="20210504 09:22:00.488" endtime="20210504 09:22:01.010"/>
+</kw>
+<status status="PASS" starttime="20210504 09:22:00.486" endtime="20210504 09:22:01.011"/>
+</kw>
+<kw name="Login With" library="auth">
+<arg>${EMPTY}</arg>
+<arg>pwd123</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:22:01.014" level="INFO">Fills the text '' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:22:01.013" endtime="20210504 09:22:01.060"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=password]</arg>
+<arg>${pass}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:22:01.061" level="INFO">Fills the text 'pwd123' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:22:01.060" endtime="20210504 09:22:01.097"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>text=Entrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210504 09:22:01.097" endtime="20210504 09:22:01.173"/>
+</kw>
+<status status="PASS" starttime="20210504 09:22:01.011" endtime="20210504 09:22:01.173"/>
+</kw>
+<kw name="Alert Text Should Be" library="components">
+<arg>O e-mail é obrigatório</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=form span &gt;&gt; text=${expect_text}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210504 09:22:01.219" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=O e-mail é obrigatório</msg>
+<status status="PASS" starttime="20210504 09:22:01.175" endtime="20210504 09:22:01.219"/>
+</kw>
+<status status="PASS" starttime="20210504 09:22:01.174" endtime="20210504 09:22:01.220"/>
+</kw>
+<kw name="Take Screenshot" library="Browser" type="TEARDOWN">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
+<msg timestamp="20210504 09:22:01.405" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-11.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210504 09:22:01.221" endtime="20210504 09:22:01.405"/>
+</kw>
+<status status="PASS" starttime="20210504 09:22:00.476" endtime="20210504 09:22:01.406"/>
+</test>
+<test id="s1-s2-t7" name="Cenario: Email e Senha não informados">
+<kw name="Go To Login Pages" library="auth">
+<kw name="Go To" library="Browser">
+<arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<msg timestamp="20210504 09:22:01.929" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
+<status status="PASS" starttime="20210504 09:22:01.424" endtime="20210504 09:22:01.930"/>
+</kw>
+<status status="PASS" starttime="20210504 09:22:01.423" endtime="20210504 09:22:01.930"/>
+</kw>
+<kw name="Login With" library="auth">
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:22:01.934" level="INFO">Fills the text '' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:22:01.933" endtime="20210504 09:22:01.985"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=password]</arg>
+<arg>${pass}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210504 09:22:01.986" level="INFO">Fills the text '' in the given field.</msg>
+<status status="PASS" starttime="20210504 09:22:01.985" endtime="20210504 09:22:02.027"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>text=Entrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210504 09:22:02.027" endtime="20210504 09:22:02.089"/>
+</kw>
+<status status="PASS" starttime="20210504 09:22:01.930" endtime="20210504 09:22:02.089"/>
+</kw>
+<kw name="Alert Text Should Be" library="components">
+<arg>O e-mail é obrigatório</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=form span &gt;&gt; text=${expect_text}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210504 09:22:02.116" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=O e-mail é obrigatório</msg>
+<status status="PASS" starttime="20210504 09:22:02.090" endtime="20210504 09:22:02.117"/>
+</kw>
+<status status="PASS" starttime="20210504 09:22:02.090" endtime="20210504 09:22:02.118"/>
+</kw>
+<kw name="Alert Text Should Be" library="components">
+<arg>A senha é obrigatória</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=form span &gt;&gt; text=${expect_text}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210504 09:22:02.180" level="INFO">Wait for Element with selector: css=form span &gt;&gt; text=A senha é obrigatória</msg>
+<status status="PASS" starttime="20210504 09:22:02.119" endtime="20210504 09:22:02.180"/>
+</kw>
+<status status="PASS" starttime="20210504 09:22:02.118" endtime="20210504 09:22:02.181"/>
+</kw>
+<kw name="Take Screenshot" library="Browser" type="TEARDOWN">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
+<msg timestamp="20210504 09:22:02.326" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-12.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210504 09:22:02.181" endtime="20210504 09:22:02.326"/>
+</kw>
+<status status="PASS" starttime="20210504 09:22:01.416" endtime="20210504 09:22:02.326"/>
+</test>
+<doc>Suite de testes de Login do Administrador</doc>
+<status status="PASS" starttime="20210504 09:21:49.099" endtime="20210504 09:22:02.335"/>
+</suite>
+<status status="FAIL" starttime="20210504 09:21:32.448" endtime="20210504 09:22:02.392"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="11" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">duplicado</stat>
+<stat pass="0" fail="1" skip="0">fail</stat>
 <stat pass="2" fail="0" skip="0">temp</stat>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Cadastro Alunos">Cadastro Alunos</stat>
+<stat pass="11" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="4" fail="1" skip="0" id="s1-s1" name="Cadastro Alunos">Tests.Cadastro Alunos</stat>
+<stat pass="7" fail="0" skip="0" id="s1-s2" name="Login">Tests.Login</stat>
 </suite>
 </statistics>
 <errors>

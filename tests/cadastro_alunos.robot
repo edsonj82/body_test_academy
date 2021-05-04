@@ -4,11 +4,12 @@ Documentation       Cadastro de alunos
 Resource            ../resources/base.robot
 
 Suite Setup         Start Admin Session
+Test Teardown       Take Screenshot
 
-Library             Collections
+
 
 ***Test Cases***
-Novo aluno
+Cenario: Novo aluno
 
     &{student}      Create Dictionary   name=Edson José dos Santos  email=edson@theotokus.com   age=39  weight=81   feet_tall=1.82  
     
@@ -22,7 +23,7 @@ Novo aluno
 
     [Teardown]                  Thinking And Take Screenshot  2
 
-Não deve permitir email duplicado
+Cenario: Não deve permitir email duplicado
     [tags]  duplicado
     &{student}      Create Dictionary   name=Ricardo de Mauro  email=ricardo@theotokus.com   age=34  weight=98   feet_tall=1.75  
         
@@ -35,7 +36,7 @@ Não deve permitir email duplicado
 
     [Teardown]                  Thinking And Take Screenshot  2
 
-Todos os campos devem ser obrigatórios
+Cenario: Todos os campos devem ser obrigatórios
     [Tags]  fail
     # &{student}      Create Dictionary   name=${EMPTY}  email=${EMPTY}   age=${EMPTY}  weight=${EMPTY}   feet_tall=${EMPTY}  
     @{expected_alerts}          Set variable    Nome é obrigatório      O e-mail é obrigatório      idade é obrigatória     o peso é obrigatório        a Altura é obrigatória     
@@ -64,14 +65,14 @@ Todos os campos devem ser obrigatórios
 
     List Should Be Equal            ${expected_alerts}      ${got_alerts}
 
-Validate Number Type
+Cenario: Validação dos Campos Numéricos
     [Tags]  temp
     [Template]                      Check Type Field On Student Form     
     ${AGE_FIELD}                    number
     ${WEIGTH_FIELD}                 number
     ${FEET_TALL_FIELD}              number
 
-Validate Email Type
+Cenario: Validação dos Campos do Tipo E-mail
     [Tags]  temp
     [Template]                      Check Type Field On Student Form    
     ${EMAIL_FIELD}                  email
