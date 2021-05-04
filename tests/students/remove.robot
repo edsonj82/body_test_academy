@@ -3,7 +3,8 @@ Documentation       Remoção de alunos
 
 Resource            ${EXECDIR}/resources/base.robot
 
-Suite Setup         Start Admin Session
+Test Setup         Start Admin Session
+# Suite Setup         Start Admin Session (com Reload)
 Test Teardown       Take Screenshot
 
 ***Test Cases***
@@ -18,3 +19,13 @@ Cenario: Remover aluno cadastrado
     Student Should Not Visible      ${student.email}
 
     [Teardown]                  Thinking And Take Screenshot  2
+
+Cenario: Desistir da exclusão
+    &{student}      Create Dictionary   name=Izabel Santos  email=izabel@xpto.com   age=63  weight=80   feet_tall=1.56
+    
+    Insert Student                 ${student}
+    Go To Students
+    # Reload
+    Request Removal By Email       ${student.email}
+    Cancel Removal
+    Student Should Be Visible       ${student.email}
