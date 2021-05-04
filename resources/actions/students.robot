@@ -34,3 +34,7 @@ Request Removal By Email
 
 Confirm Removal
     Click           text=SIM, pode apagar!
+
+Student Should Not Visible
+    [Arguments]     ${email}
+    Wait For Elements State           xpath=//td[contains(text(),"${email}")]   detached    5

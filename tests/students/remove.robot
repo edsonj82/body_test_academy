@@ -15,5 +15,6 @@ Cenario: Remover aluno cadastrado
     Request Removal By Email       ${student.email}
     Confirm Removal
     Toaster Text Should Be         Aluno removido com sucesso.
-    
+    Student Should Not Visible      ${student.email}
+
     [Teardown]                  Thinking And Take Screenshot  2
