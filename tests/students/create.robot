@@ -61,7 +61,7 @@ Cenario: Todos os campos devem ser obrigatórios
     Log     ${expected_alerts}
     Log     ${got_alerts}
 
-    List Should Be Equal            ${expected_alerts}      ${got_alerts}
+    Lists Should Be Equal            ${expected_alerts}      ${got_alerts}
 
 Cenario: Validação dos Campos Numéricos
     [Tags]  temp
