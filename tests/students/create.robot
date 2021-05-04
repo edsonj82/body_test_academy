@@ -53,9 +53,9 @@ Cenario: Todos os campos devem ser obrigatórios
     # Alert Text Should Be        o peso é obrigatório
     # Alert Text Should Be        a Altura é obrigatória
 
-    FOR     ${index}        IN RANGE   1   6
-        ${span}                     Get Required Alerts     ${index} 
-        Append To List              ${got_alerts}           ${span}
+    FOR     ${index}    IN RANGE   1   6
+        ${span}         Get Required Alerts     ${index} 
+        Append To List  ${got_alerts}           ${span}
     END
 
     Log     ${expected_alerts}

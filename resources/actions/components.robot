@@ -14,7 +14,7 @@ Alert Text Should Be
 Get Required Alerts 
     [Arguments]     ${index}
     ${span}         Get Text        xpath=(//form//span)[${index}])
-    [Return]    ${span}
+    [return]    ${span}
 
 Field Should Be Type
     [Arguments]         ${element}          ${type}

@@ -27,3 +27,10 @@ New Student
     Fill Text                   ${WEIGTH_FIELD}          ${student.weight}
     Fill Text                   ${FEET_TALL_FIELD}       ${student.feet_tall}
     Submit Student Form
+
+Request Removal By Email
+    [Arguments]     ${email}
+    Click           xpath=//td[contains(text(),"${email}")]/../td/button[@id="trash"]
+
+Confirm Removal
+    Click           text=SIM, pode apagar!
