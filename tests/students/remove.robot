@@ -13,6 +13,7 @@ Cenario: Remover aluno cadastrado
     
     Insert Student                 ${student}
     Go To Students
+    Search Student By Name          ${student.name}
     Request Removal By Email       ${student.email}
     Confirm Removal
     Toaster Text Should Be         Aluno removido com sucesso.
@@ -26,6 +27,7 @@ Cenario: Desistir da exclusão
     Insert Student                 ${student}
     Go To Students
     # Reload
+    Search Student By Name          ${student.name}
     Request Removal By Email       ${student.email}
     Cancel Removal
     Student Should Be Visible       ${student.email}

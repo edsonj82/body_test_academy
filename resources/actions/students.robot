@@ -46,3 +46,7 @@ Student Should Not Visible
 Student Should Be Visible
     [Arguments]     ${email}
     Wait For Elements State           xpath=//td[contains(text(),"${email}")]   visible    5
+
+Search Student By Name
+    [Arguments]         ${name}
+    Fill Text        css=input[placeholder="Buscar aluno"]       ${name}
