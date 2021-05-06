@@ -38,11 +38,6 @@ Confirm Removal
 Cancel Removal
     Click           text=NÃO
 
-
-Student Should Not Visible
-    [Arguments]     ${email}
-    Wait For Elements State           xpath=//td[contains(text(),"${email}")]   detached    5
-
 Student Should Be Visible
     [Arguments]     ${email}
     Wait For Elements State           xpath=//td[contains(text(),"${email}")]   visible    5
@@ -50,3 +45,7 @@ Student Should Be Visible
 Search Student By Name
     [Arguments]         ${name}
     Fill Text        css=input[placeholder="Buscar aluno"]       ${name}
+
+Student Should Not Visible
+    [Arguments]     ${email}
+    Wait For Elements State           xpath=//td[contains(text(),"${email}")]   detached    5

@@ -18,14 +18,10 @@ Cenario: Busca exata
     Student Should Be Visible   ${student.name}
     Total Items Should Be       1
     
-***Keywords***
-Student Name Should Be Visible
-    [Arguments]                 ${name}
-    Wait For Elements State     css=table tbody tr >> text=${name}      visible     5
 
-Total Items Should Be
-    [Arguments]                 ${number}
-    ${element}                  Set Variable       css=#pagination .total  
-
-    Wait For Elements State     ${element}          visible     5
-    Get Text                    ${element}          ==          Total: ${number}
+Cenario: Registro Não Encontrado
+    ${name}                  Set Variable       Barão Zemo  
+    Remove Student By Name          ${name}
+    Go to Students
+    Search Student By Name          ${name}
+    Register Should Not Be Found
