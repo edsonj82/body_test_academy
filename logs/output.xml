@@ -1,75 +1,312 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0 (Python 3.8.5 on linux)" generated="20210507 14:04:59.365" rpa="false" schemaversion="2">
+<robot generator="Robot 4.0 (Python 3.8.5 on linux)" generated="20210507 14:44:39.293" rpa="false" schemaversion="2">
 <suite id="s1" name="Search" source="/home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/tests/students/search.robot">
+<kw name="Start Admin Session" library="base" type="SETUP">
+<kw name="Start Browser Session" library="base">
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>true</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.
+See `Browser, Context and Page` for more information about Browser and related concepts.</doc>
+<msg timestamp="20210507 14:44:40.237" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0}</msg>
+<msg timestamp="20210507 14:44:40.422" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0}</msg>
+<status status="PASS" starttime="20210507 14:44:40.236" endtime="20210507 14:44:40.422"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>about:blank</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page. A Page is the Playwright equivalent to a tab.
+See `Browser, Context and Page` for more information about Page concept.
+Returns a stable identifier for the created page.</doc>
+<msg timestamp="20210507 14:44:40.550" level="INFO">Successfully initialized new page object and opened url: about:blank</msg>
+<status status="PASS" starttime="20210507 14:44:40.423" endtime="20210507 14:44:40.551"/>
+</kw>
+<status status="PASS" starttime="20210507 14:44:40.235" endtime="20210507 14:44:40.551"/>
+</kw>
+<kw name="Go To Login Pages" library="auth">
+<kw name="Go To" library="Browser">
+<arg>https://theotokus-bodytest-web.herokuapp.com/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<msg timestamp="20210507 14:44:42.788" level="INFO">Succesfully opened URL https://theotokus-bodytest-web.herokuapp.com/</msg>
+<status status="PASS" starttime="20210507 14:44:40.552" endtime="20210507 14:44:42.789"/>
+</kw>
+<status status="PASS" starttime="20210507 14:44:40.552" endtime="20210507 14:44:42.789"/>
+</kw>
+<kw name="Login With" library="auth">
+<arg>admin@bodytest.com</arg>
+<arg>pwd123</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210507 14:44:42.791" level="INFO">Fills the text 'admin@bodytest.com' in the given field.</msg>
+<status status="PASS" starttime="20210507 14:44:42.791" endtime="20210507 14:44:42.872"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=password]</arg>
+<arg>${pass}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210507 14:44:42.873" level="INFO">Fills the text 'pwd123' in the given field.</msg>
+<status status="PASS" starttime="20210507 14:44:42.872" endtime="20210507 14:44:42.910"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>text=Entrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210507 14:44:42.911" endtime="20210507 14:44:42.996"/>
+</kw>
+<status status="PASS" starttime="20210507 14:44:42.789" endtime="20210507 14:44:42.996"/>
+</kw>
+<kw name="User Should Be Logged In" library="nav">
+<arg>Administrador</arg>
+<kw name="Get Text" library="Browser">
+<arg>css=aside strong</arg>
+<arg>should be</arg>
+<arg>${user_name}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210507 14:44:42.998" endtime="20210507 14:44:43.964"/>
+</kw>
+<status status="PASS" starttime="20210507 14:44:42.997" endtime="20210507 14:44:43.965"/>
+</kw>
+<status status="PASS" starttime="20210507 14:44:40.233" endtime="20210507 14:44:43.965"/>
+</kw>
 <test id="s1-t1" name="Cenario: Busca alunos por um único termo">
+<kw name="Get JSON" library="base">
+<var>${fixtures}</var>
+<arg>students-search.json</arg>
 <kw name="Get File" library="OperatingSystem">
 <var>${file}</var>
-<arg>${EXECDIR}/resources/fixtures/students-search.json</arg>
+<arg>${EXECDIR}/resources/fixtures/${file_name}</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20210507 14:05:00.327" level="INFO" html="true">Getting file '&lt;a href="file:///home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/resources/fixtures/students-search.json"&gt;/home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/resources/fixtures/students-search.json&lt;/a&gt;'.</msg>
-<msg timestamp="20210507 14:05:00.327" level="INFO">${file} = {
+<msg timestamp="20210507 14:44:43.980" level="INFO" html="true">Getting file '&lt;a href="file:///home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/resources/fixtures/students-search.json"&gt;/home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/resources/fixtures/students-search.json&lt;/a&gt;'.</msg>
+<msg timestamp="20210507 14:44:43.980" level="INFO">${file} = {
+    "word":"David",
+    "total":3,
     "students":[
         {
             "name":"David Guetta",
             "email":"dguetta@gmail.com",
             "age":35,
-            "feet_tall":1.75
-        },
-
-        {
-            "name":"Da...</msg>
-<status status="PASS" starttime="20210507 14:05:00.326" endtime="20210507 14:05:00.327"/>
+            "weight":75,
+            "...</msg>
+<status status="PASS" starttime="20210507 14:44:43.979" endtime="20210507 14:44:43.980"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${json_object}</var>
 <arg>json.loads($file)</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20210507 14:05:00.338" level="INFO">${json_object} = {'students': [{'name': 'David Guetta', 'email': 'dguetta@gmail.com', 'age': 35, 'feet_tall': 1.75}, {'name': 'David Bowie', 'email': 'dbowie@gmail.com', 'age': 35, 'feet_tall': 1.75}, {'name': 'David ...</msg>
-<status status="PASS" starttime="20210507 14:05:00.328" endtime="20210507 14:05:00.338"/>
+<msg timestamp="20210507 14:44:43.990" level="INFO">${json_object} = {'word': 'David', 'total': 3, 'students': [{'name': 'David Guetta', 'email': 'dguetta@gmail.com', 'age': 35, 'weight': 75, 'feet_tall': 1.75}, {'name': 'David Bowie', 'email': 'dbowie@gmail.com', 'age...</msg>
+<status status="PASS" starttime="20210507 14:44:43.981" endtime="20210507 14:44:43.991"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${json_object['students']}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20210507 14:05:00.339" endtime="20210507 14:05:00.344"/>
+<msg timestamp="20210507 14:44:43.991" level="INFO">${fixtures} = {'word': 'David', 'total': 3, 'students': [{'name': 'David Guetta', 'email': 'dguetta@gmail.com', 'age': 35, 'weight': 75, 'feet_tall': 1.75}, {'name': 'David Bowie', 'email': 'dbowie@gmail.com', 'age...</msg>
+<status status="PASS" starttime="20210507 14:44:43.978" endtime="20210507 14:44:43.991"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${students}</var>
+<arg>${fixtures['students']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210507 14:44:43.994" level="INFO">${students} = [{'name': 'David Guetta', 'email': 'dguetta@gmail.com', 'age': 35, 'weight': 75, 'feet_tall': 1.75}, {'name': 'David Bowie', 'email': 'dbowie@gmail.com', 'age': 35, 'weight': 75, 'feet_tall': 1.75}, {...</msg>
+<status status="PASS" starttime="20210507 14:44:43.992" endtime="20210507 14:44:43.994"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${word}</var>
+<arg>${fixtures['word']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210507 14:44:43.995" level="INFO">${word} = David</msg>
+<status status="PASS" starttime="20210507 14:44:43.994" endtime="20210507 14:44:43.996"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${total}</var>
+<arg>${fixtures['total']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210507 14:44:43.998" level="INFO">${total} = 3</msg>
+<status status="PASS" starttime="20210507 14:44:43.996" endtime="20210507 14:44:43.998"/>
 </kw>
 <for flavor="IN">
 <var>${item}</var>
-<value>@{json_object['students']}</value>
+<value>@{students}</value>
 <iter>
-<var name="${item}">{'name': 'David Guetta', 'email': 'dguetta@gmail.com', 'age': 35, 'feet_tall': 1.75}</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${item['name']}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20210507 14:05:00.347" endtime="20210507 14:05:00.350"/>
+<var name="${item}">{'name': 'David Guetta', 'email': 'dguetta@gmail.com', 'age': 35, 'weight': 75, 'feet_tall': 1.75}</var>
+<kw name="Insert Student" library="DeloreanLibrary">
+<arg>${item}</arg>
+<msg timestamp="20210507 14:44:44.001" level="INFO">delete from students where email = 'dguetta@gmail.com'</msg>
+<msg timestamp="20210507 14:44:45.086" level="INFO">insert into students(name, email, age, weight, feet_tall, created_at, updated_at)values('David Guetta','dguetta@gmail.com',35,75,1.75,NOW(),NOW());</msg>
+<status status="PASS" starttime="20210507 14:44:44.000" endtime="20210507 14:44:46.190"/>
 </kw>
-<status status="PASS" starttime="20210507 14:05:00.347" endtime="20210507 14:05:00.350"/>
+<status status="PASS" starttime="20210507 14:44:44.000" endtime="20210507 14:44:46.190"/>
 </iter>
 <iter>
-<var name="${item}">{'name': 'David Bowie', 'email': 'dbowie@gmail.com', 'age': 35, 'feet_tall': 1.75}</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${item['name']}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20210507 14:05:00.351" endtime="20210507 14:05:00.352"/>
+<var name="${item}">{'name': 'David Bowie', 'email': 'dbowie@gmail.com', 'age': 35, 'weight': 75, 'feet_tall': 1.75}</var>
+<kw name="Insert Student" library="DeloreanLibrary">
+<arg>${item}</arg>
+<msg timestamp="20210507 14:44:46.192" level="INFO">delete from students where email = 'dbowie@gmail.com'</msg>
+<msg timestamp="20210507 14:44:47.409" level="INFO">insert into students(name, email, age, weight, feet_tall, created_at, updated_at)values('David Bowie','dbowie@gmail.com',35,75,1.75,NOW(),NOW());</msg>
+<status status="PASS" starttime="20210507 14:44:46.191" endtime="20210507 14:44:48.541"/>
 </kw>
-<status status="PASS" starttime="20210507 14:05:00.350" endtime="20210507 14:05:00.352"/>
+<status status="PASS" starttime="20210507 14:44:46.191" endtime="20210507 14:44:48.541"/>
 </iter>
 <iter>
-<var name="${item}">{'name': 'David Beckham', 'email': 'dbeckham@yahoo.com', 'age': 35, 'feet_tall': 1.75}</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${item['name']}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20210507 14:05:00.353" endtime="20210507 14:05:00.355"/>
+<var name="${item}">{'name': 'David Beckham', 'email': 'dbeckham@yahoo.com', 'age': 35, 'weight': 75, 'feet_tall': 1.75}</var>
+<kw name="Insert Student" library="DeloreanLibrary">
+<arg>${item}</arg>
+<msg timestamp="20210507 14:44:48.542" level="INFO">delete from students where email = 'dbeckham@yahoo.com'</msg>
+<msg timestamp="20210507 14:44:49.720" level="INFO">insert into students(name, email, age, weight, feet_tall, created_at, updated_at)values('David Beckham','dbeckham@yahoo.com',35,75,1.75,NOW(),NOW());</msg>
+<status status="PASS" starttime="20210507 14:44:48.542" endtime="20210507 14:44:50.831"/>
 </kw>
-<status status="PASS" starttime="20210507 14:05:00.353" endtime="20210507 14:05:00.355"/>
+<status status="PASS" starttime="20210507 14:44:48.541" endtime="20210507 14:44:50.831"/>
 </iter>
-<status status="PASS" starttime="20210507 14:05:00.345" endtime="20210507 14:05:00.355"/>
+<status status="PASS" starttime="20210507 14:44:43.999" endtime="20210507 14:44:50.831"/>
 </for>
+<kw name="Go to Students" library="nav">
+<kw name="Click" library="Browser">
+<arg>css=a[href$=alunos]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210507 14:44:50.832" endtime="20210507 14:44:50.944"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=h1 &gt;&gt; text=Gestão de Alunos</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210507 14:44:50.973" level="INFO">Wait for Element with selector: css=h1 &gt;&gt; text=Gestão de Alunos</msg>
+<status status="PASS" starttime="20210507 14:44:50.945" endtime="20210507 14:44:50.973"/>
+</kw>
+<status status="PASS" starttime="20210507 14:44:50.831" endtime="20210507 14:44:50.974"/>
+</kw>
+<kw name="Search Student By Name" library="students">
+<arg>${word}</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[placeholder="Buscar aluno"]</arg>
+<arg>${name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``text`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210507 14:44:50.976" level="INFO">Fills the text 'David' in the given field.</msg>
+<status status="PASS" starttime="20210507 14:44:50.975" endtime="20210507 14:44:51.018"/>
+</kw>
+<status status="PASS" starttime="20210507 14:44:50.974" endtime="20210507 14:44:51.019"/>
+</kw>
+<for flavor="IN">
+<var>${item}</var>
+<value>@{students}</value>
+<iter>
+<var name="${item}">{'name': 'David Guetta', 'email': 'dguetta@gmail.com', 'age': 35, 'weight': 75, 'feet_tall': 1.75}</var>
+<kw name="Student Name Should Be Visible" library="components">
+<arg>${item['name']}</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=table tbody tr &gt;&gt; text=${name}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210507 14:44:51.279" level="INFO">Wait for Element with selector: css=table tbody tr &gt;&gt; text=David Guetta</msg>
+<status status="PASS" starttime="20210507 14:44:51.027" endtime="20210507 14:44:51.279"/>
+</kw>
+<status status="PASS" starttime="20210507 14:44:51.020" endtime="20210507 14:44:51.280"/>
+</kw>
+<status status="PASS" starttime="20210507 14:44:51.019" endtime="20210507 14:44:51.280"/>
+</iter>
+<iter>
+<var name="${item}">{'name': 'David Bowie', 'email': 'dbowie@gmail.com', 'age': 35, 'weight': 75, 'feet_tall': 1.75}</var>
+<kw name="Student Name Should Be Visible" library="components">
+<arg>${item['name']}</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=table tbody tr &gt;&gt; text=${name}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210507 14:44:51.304" level="INFO">Wait for Element with selector: css=table tbody tr &gt;&gt; text=David Bowie</msg>
+<status status="PASS" starttime="20210507 14:44:51.282" endtime="20210507 14:44:51.304"/>
+</kw>
+<status status="PASS" starttime="20210507 14:44:51.280" endtime="20210507 14:44:51.305"/>
+</kw>
+<status status="PASS" starttime="20210507 14:44:51.280" endtime="20210507 14:44:51.305"/>
+</iter>
+<iter>
+<var name="${item}">{'name': 'David Beckham', 'email': 'dbeckham@yahoo.com', 'age': 35, 'weight': 75, 'feet_tall': 1.75}</var>
+<kw name="Student Name Should Be Visible" library="components">
+<arg>${item['name']}</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=table tbody tr &gt;&gt; text=${name}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210507 14:44:51.321" level="INFO">Wait for Element with selector: css=table tbody tr &gt;&gt; text=David Beckham</msg>
+<status status="PASS" starttime="20210507 14:44:51.307" endtime="20210507 14:44:51.322"/>
+</kw>
+<status status="PASS" starttime="20210507 14:44:51.305" endtime="20210507 14:44:51.322"/>
+</kw>
+<status status="PASS" starttime="20210507 14:44:51.305" endtime="20210507 14:44:51.322"/>
+</iter>
+<status status="PASS" starttime="20210507 14:44:51.019" endtime="20210507 14:44:51.323"/>
+</for>
+<kw name="Total Items Should Be" library="components">
+<arg>${total}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${element}</var>
+<arg>css=#pagination .total</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210507 14:44:51.326" level="INFO">${element} = css=#pagination .total</msg>
+<status status="PASS" starttime="20210507 14:44:51.325" endtime="20210507 14:44:51.326"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${element}</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20210507 14:44:51.348" level="INFO">Wait for Element with selector: css=#pagination .total</msg>
+<status status="PASS" starttime="20210507 14:44:51.326" endtime="20210507 14:44:51.349"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>${element}</arg>
+<arg>==</arg>
+<arg>Total: ${number}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210507 14:44:51.349" endtime="20210507 14:44:51.887"/>
+</kw>
+<status status="PASS" starttime="20210507 14:44:51.324" endtime="20210507 14:44:51.887"/>
+</kw>
+<kw name="Take Screenshot" library="Browser" type="TEARDOWN">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window and saves it to ``path``. Saves it as a png.</doc>
+<msg timestamp="20210507 14:44:52.028" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210507 14:44:51.888" endtime="20210507 14:44:52.028"/>
+</kw>
 <tag>temp</tag>
-<status status="PASS" starttime="20210507 14:05:00.320" endtime="20210507 14:05:00.356"/>
+<status status="PASS" starttime="20210507 14:44:43.965" endtime="20210507 14:44:52.028"/>
 </test>
 <doc>Buscar alunos</doc>
-<status status="PASS" starttime="20210507 14:04:59.366" endtime="20210507 14:05:00.360"/>
+<status status="PASS" starttime="20210507 14:44:39.295" endtime="20210507 14:44:52.037"/>
 </suite>
 <statistics>
 <total>

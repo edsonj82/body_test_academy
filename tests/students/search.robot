@@ -1,12 +1,12 @@
 ***Settings***
 Documentation       Buscar alunos
 
-Library             OperatingSystem
+
 
 Resource            ${EXECDIR}/resources/base.robot
 
-# Suite Setup         Start Admin Session
-# Test Teardown       Take Screenshot
+Suite Setup         Start Admin Session
+Test Teardown       Take Screenshot
 
 ***Test Cases***
 Cenario: Busca exata
@@ -30,10 +30,22 @@ Cenario: Registro Não Encontrado
 
 Cenario: Busca alunos por um único termo
     [Tags]  temp
-    ${file}=            Get File        ${EXECDIR}/resources/fixtures/students-search.json
-    ${json_object}      Evaluate        json.loads($file)     json
-    Log To Console      ${json_object['students']}
+    # David Bowie, David Guetta, David Beckham
 
-    FOR     ${item}     IN      @{json_object['students']}
-        Log To Console      ${item['name']}
+    ${fixtures}         Get JSON        students-search.json
+    ${students}         Set Variable        ${fixtures['students']}
+    ${word}             Set Variable        ${fixtures['word']}
+    ${total}             Set Variable        ${fixtures['total']}
+    # Remove Student By Name      David
+
+    FOR     ${item}     IN      @{students}
+        Insert Student      ${item}
     END
+
+    Go to Students
+    Search Student By Name          ${word}
+
+    FOR     ${item}     IN      @{students}
+        Student Name Should Be Visible  ${item['name']}
+    END
+    Total Items Should Be  ${total}

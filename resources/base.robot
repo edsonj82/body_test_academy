@@ -3,6 +3,7 @@ Documentation           Tudo começa aqui, meu arquivo base do projeto de automa
 
 Library     Browser
 Library     Collections
+Library     OperatingSystem
 Library     libs/DeloreanLibrary.py
 
 Resource    actions/auth.robot
@@ -30,5 +31,12 @@ Thinking And Take Screenshot
     Sleep           ${timeout}
     Take Screenshot  
 
+###Helpers
+Get JSON
+    [Arguments]         ${file_name}
+  
+    ${file}=            Get File        ${EXECDIR}/resources/fixtures/${file_name}
+    ${json_object}      Evaluate        json.loads($file)     json
 
+    [Return]        ${json_object}
 
