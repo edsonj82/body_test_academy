@@ -32,4 +32,8 @@ Cenario: Busca alunos por um único termo
     [Tags]  temp
     ${file}=            Get File        ${EXECDIR}/resources/fixtures/students-search.json
     ${json_object}      Evaluate        json.loads($file)     json
-    Log To Console      ${json_object}
+    Log To Console      ${json_object['students']}
+
+    FOR     ${item}     IN      @{json_object['students']}
+        Log To Console      ${item['name']}
+    END

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0 (Python 3.8.5 on linux)" generated="20210507 13:59:50.207" rpa="false" schemaversion="2">
+<robot generator="Robot 4.0 (Python 3.8.5 on linux)" generated="20210507 14:04:59.365" rpa="false" schemaversion="2">
 <suite id="s1" name="Search" source="/home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/tests/students/search.robot">
 <test id="s1-t1" name="Cenario: Busca alunos por um único termo">
 <kw name="Get File" library="OperatingSystem">
 <var>${file}</var>
 <arg>${EXECDIR}/resources/fixtures/students-search.json</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20210507 13:59:51.000" level="INFO" html="true">Getting file '&lt;a href="file:///home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/resources/fixtures/students-search.json"&gt;/home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/resources/fixtures/students-search.json&lt;/a&gt;'.</msg>
-<msg timestamp="20210507 13:59:51.000" level="INFO">${file} = {
+<msg timestamp="20210507 14:05:00.327" level="INFO" html="true">Getting file '&lt;a href="file:///home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/resources/fixtures/students-search.json"&gt;/home/edson/workspace/courses/qa_ninja/robot_framework/bodytest/resources/fixtures/students-search.json&lt;/a&gt;'.</msg>
+<msg timestamp="20210507 14:05:00.327" level="INFO">${file} = {
     "students":[
         {
             "name":"David Guetta",
@@ -18,26 +18,58 @@
 
         {
             "name":"Da...</msg>
-<status status="PASS" starttime="20210507 13:59:50.999" endtime="20210507 13:59:51.001"/>
+<status status="PASS" starttime="20210507 14:05:00.326" endtime="20210507 14:05:00.327"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${json_object}</var>
 <arg>json.loads($file)</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20210507 13:59:51.012" level="INFO">${json_object} = {'students': [{'name': 'David Guetta', 'email': 'dguetta@gmail.com', 'age': 35, 'feet_tall': 1.75}, {'name': 'David Bowie', 'email': 'dbowie@gmail.com', 'age': 35, 'feet_tall': 1.75}, {'name': 'David ...</msg>
-<status status="PASS" starttime="20210507 13:59:51.002" endtime="20210507 13:59:51.012"/>
+<msg timestamp="20210507 14:05:00.338" level="INFO">${json_object} = {'students': [{'name': 'David Guetta', 'email': 'dguetta@gmail.com', 'age': 35, 'feet_tall': 1.75}, {'name': 'David Bowie', 'email': 'dbowie@gmail.com', 'age': 35, 'feet_tall': 1.75}, {'name': 'David ...</msg>
+<status status="PASS" starttime="20210507 14:05:00.328" endtime="20210507 14:05:00.338"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${json_object}</arg>
+<arg>${json_object['students']}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20210507 13:59:51.012" endtime="20210507 13:59:51.013"/>
+<status status="PASS" starttime="20210507 14:05:00.339" endtime="20210507 14:05:00.344"/>
 </kw>
+<for flavor="IN">
+<var>${item}</var>
+<value>@{json_object['students']}</value>
+<iter>
+<var name="${item}">{'name': 'David Guetta', 'email': 'dguetta@gmail.com', 'age': 35, 'feet_tall': 1.75}</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${item['name']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210507 14:05:00.347" endtime="20210507 14:05:00.350"/>
+</kw>
+<status status="PASS" starttime="20210507 14:05:00.347" endtime="20210507 14:05:00.350"/>
+</iter>
+<iter>
+<var name="${item}">{'name': 'David Bowie', 'email': 'dbowie@gmail.com', 'age': 35, 'feet_tall': 1.75}</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${item['name']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210507 14:05:00.351" endtime="20210507 14:05:00.352"/>
+</kw>
+<status status="PASS" starttime="20210507 14:05:00.350" endtime="20210507 14:05:00.352"/>
+</iter>
+<iter>
+<var name="${item}">{'name': 'David Beckham', 'email': 'dbeckham@yahoo.com', 'age': 35, 'feet_tall': 1.75}</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${item['name']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210507 14:05:00.353" endtime="20210507 14:05:00.355"/>
+</kw>
+<status status="PASS" starttime="20210507 14:05:00.353" endtime="20210507 14:05:00.355"/>
+</iter>
+<status status="PASS" starttime="20210507 14:05:00.345" endtime="20210507 14:05:00.355"/>
+</for>
 <tag>temp</tag>
-<status status="PASS" starttime="20210507 13:59:50.993" endtime="20210507 13:59:51.014"/>
+<status status="PASS" starttime="20210507 14:05:00.320" endtime="20210507 14:05:00.356"/>
 </test>
 <doc>Buscar alunos</doc>
-<status status="PASS" starttime="20210507 13:59:50.209" endtime="20210507 13:59:51.020"/>
+<status status="PASS" starttime="20210507 14:04:59.366" endtime="20210507 14:05:00.360"/>
 </suite>
 <statistics>
 <total>
