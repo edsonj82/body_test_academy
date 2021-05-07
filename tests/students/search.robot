@@ -1,10 +1,12 @@
 ***Settings***
 Documentation       Buscar alunos
 
+Library             OperatingSystem
+
 Resource            ${EXECDIR}/resources/base.robot
 
-Suite Setup         Start Admin Session
-Test Teardown       Take Screenshot
+# Suite Setup         Start Admin Session
+# Test Teardown       Take Screenshot
 
 ***Test Cases***
 Cenario: Busca exata
@@ -25,3 +27,9 @@ Cenario: Registro Não Encontrado
     Go to Students
     Search Student By Name          ${name}
     Register Should Not Be Found
+
+Cenario: Busca alunos por um único termo
+    [Tags]  temp
+    ${file}=            Get File        ${EXECDIR}/resources/fixtures/students-search.json
+    ${json_object}      Evaluate        json.loads($file)     json
+    Log To Console      ${json_object}
