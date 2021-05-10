@@ -8,5 +8,5 @@ Go to Students
     Wait For elements State     css=h1 >> text=Gestão de Alunos     visible         5
 
 User Should Be Logged In
-    [Arguments]     ${user_name}
-    Get Text        css=aside strong            should be       ${user_name}
+    [Arguments]                 ${user_name}
+    Get Text                    css=aside strong            should be       ${user_name}

@@ -27,17 +27,4 @@ Cenario: Atualizar um aluno já cadastrado
     Toaster Text Should Be          Aluno atualizado com sucesso.
     [Teardown]                  Thinking And Take Screenshot  2
 
-***Keywords***
-Go To Student Update Form
-    [Arguments]                 ${email}
-    Click                       xpath=//td[contains(text(),'${email}')]/..//a[@class='edit']
-    Wait For elements State     css=h1 >> text=Edição de aluno     visible         5
-
-Update a Student
-    [Arguments]                 ${student}
-    Fill Text                   ${NAME_FIELD}            ${student['name']}
-    Fill Text                   ${EMAIL_FIELD}           ${student['email']}
-    Fill Text                   ${AGE_FIELD}             ${student['age']}
-    Fill Text                   ${WEIGTH_FIELD}          ${student['weight']}
-    Fill Text                   ${FEET_TALL_FIELD}       ${student['feet_tall']}
     Submit Student Form
