@@ -1,12 +1,11 @@
-{"level":30,"time":"2021-05-11T14:48:41.102Z","pid":15527,"hostname":"Pantokrator","msg":"Listening on 44507"}
-{"level":30,"time":"2021-05-11T14:48:41.383Z","pid":15527,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-11T14:48:41.438Z","pid":15527,"hostname":"Pantokrator","msg":"Video path: undefined"}
-{"level":30,"time":"2021-05-11T14:48:41.438Z","pid":15527,"hostname":"Pantokrator","msg":"Changed active page"}
-{"level":30,"time":"2021-05-11T14:48:44.370Z","pid":15527,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
-{"level":30,"time":"2021-05-11T14:48:44.812Z","pid":15527,"hostname":"Pantokrator","msg":"Retrieved attribute for element css=input[name=total] containing R$ 239,88"}
-{"level":30,"time":"2021-05-11T14:48:44.951Z","pid":15527,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-11T14:48:44.952Z","pid":15527,"hostname":"Pantokrator","msg":"Changing current active page"}
-{"level":30,"time":"2021-05-11T14:48:44.952Z","pid":15527,"hostname":"Pantokrator","msg":"Changed active page"}
-{"level":30,"time":"2021-05-11T14:48:44.972Z","pid":15527,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-11T14:48:44.972Z","pid":15527,"hostname":"Pantokrator","msg":"Changing current active page"}
-{"level":30,"time":"2021-05-11T14:48:44.972Z","pid":15527,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-12T14:20:29.609Z","pid":17386,"hostname":"Pantokrator","msg":"Listening on 52047"}
+{"level":30,"time":"2021-05-12T14:20:30.121Z","pid":17386,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-12T14:20:30.399Z","pid":17386,"hostname":"Pantokrator","msg":"Video path: undefined"}
+{"level":30,"time":"2021-05-12T14:20:30.403Z","pid":17386,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-12T14:20:33.652Z","pid":17386,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
+{"level":30,"time":"2021-05-12T14:20:36.801Z","pid":17386,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-12T14:20:36.802Z","pid":17386,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-12T14:20:36.802Z","pid":17386,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-12T14:20:36.830Z","pid":17386,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-12T14:20:36.830Z","pid":17386,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-12T14:20:36.830Z","pid":17386,"hostname":"Pantokrator","msg":"Changed active page"}

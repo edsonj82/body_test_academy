@@ -15,3 +15,15 @@ Cenario: Calcular Preço Total do Plano
     Go To Form Plan
     Fill Plan Forms         ${plan}
     Total Plan Should Be    ${plan.total}
+
+Cenario: Novo Plano
+    [Tags]  temp
+    &{plan}         Create Dictionary       title=Edson Teste       duration=12     price=19,99     total=R$ 239,88
+
+    Go To Plans
+    Go To Form Plan
+    Fill Plan Forms             ${plan}
+    Submit Plan Form
+    Toaster Text Should Be      Plano cadastrado com sucesso
+
+    [Teardown]                  Thinking And Take Screenshot  2

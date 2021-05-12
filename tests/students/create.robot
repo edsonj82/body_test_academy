@@ -74,33 +74,7 @@ Cenario: Validação dos Campos do Tipo E-mail
     [Tags]  temp
     [Template]                      Check Type Field On Student Form    
     ${EMAIL_FIELD}                  email
-# Check Age Numeric Field
-#     [Tags]  temp
-#     Go to Students
-    
-# Check Weight Numeric Field
-#     [Tags]  temp
-#     Go to Students
-#     Go to Form Student
-#     Field Should Be Number          css=input[name=weight]
 
-# Check Feet Tall Numeric Field
-#     [Tags]  temp
-#     Go to Students
-#     Go to Form Student
-#     Field Should Be Number          css=input[name=feet_tall]
-
-# Check Weight Numeric Field
-#     [Tags]  temp
-#     Go to Students
-#     Go to Form Student
-#     Field Should Be Number          css=input[name=weight]
-
-# Check Feet Tall Numeric Field
-#     [Tags]  temp
-#     Go to Students
-#     Go to Form Student
-#     Field Should Be Number          css=input[name=feet_tall]
 Cenario: Menor de 14 anos não pode fazer cadastro
     &{student}      Create Dictionary   name=Livia da Silva  email=livia@theotokus.com   age=13  weight=50   feet_tall=1.65  
     
