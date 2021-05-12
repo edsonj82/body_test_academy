@@ -17,7 +17,6 @@ Cenario: Calcular Preço Total do Plano
     Total Plan Should Be    ${plan.total}
 
 Cenario: Novo Plano
-    [Tags]  temp
     &{plan}         Create Dictionary       title=Edson Teste       duration=12     price=19,99     total=R$ 239,88
 
     Go To Plans
@@ -27,3 +26,22 @@ Cenario: Novo Plano
     Toaster Text Should Be      Plano cadastrado com sucesso
 
     [Teardown]                  Thinking And Take Screenshot  2
+
+Cenario: Campos Título e Duração devem ser obrigatoriios
+    [Tags]      temp
+    @{expected_alerts}          Set variable    Informe o título do plano       Informe a duração do plano em meses
+    @{got_alerts}               Create List
+
+    Go To Plans
+    Go To Form Plan
+    Submit Plan Form
+
+    FOR     ${index}    IN RANGE   1   3
+        ${span}         Get Required Alerts     ${index} 
+        Append To List  ${got_alerts}           ${span}
+    END
+
+    Log     ${expected_alerts}
+    Log     ${got_alerts}
+
+    Lists Should Be Equal            ${expected_alerts}      ${got_alerts}
