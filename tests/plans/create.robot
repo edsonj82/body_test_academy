@@ -28,7 +28,6 @@ Cenario: Novo Plano
     [Teardown]                  Thinking And Take Screenshot  2
 
 Cenario: Campos Título e Duração devem ser obrigatoriios
-    [Tags]      temp
     @{expected_alerts}          Set variable    Informe o título do plano       Informe a duração do plano em meses
     @{got_alerts}               Create List
 
@@ -45,3 +44,12 @@ Cenario: Campos Título e Duração devem ser obrigatoriios
     Log     ${got_alerts}
 
     Lists Should Be Equal            ${expected_alerts}      ${got_alerts}
+
+Cenario: A duração deve ser no mínimo 1 mês
+    &{plan}         Create Dictionary       title=Edson Teste       duration=0     price=19,99     total=R$ 239,88
+
+    Go To Plans
+    Go To Form Plan
+    Fill Plan Forms         ${plan}
+    Submit Plan Form
+    Alert Text Should Be        A duração dever ser no mínimo 1 mês
