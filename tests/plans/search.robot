@@ -1,0 +1,19 @@
+***Settings***
+Documentation       Buscar planos
+
+Resource            ${EXECDIR}/resources/base.robot
+
+Suite Setup         Start Admin Session
+Test Teardown       Take Screenshot
+
+***Test Cases***
+Cenario: Busca exata
+    [Tags]  search
+    &{plan}         Create Dictionary       title=Edson Teste       duration=12     price=19.99     total=R$ 239,88
+
+    Remove Plan By Title      ${plan.title}
+    Insert Plan              ${plan}
+    Go To Plans     
+    Search Plan By Title      ${plan.title}
+    Plan Should Be Visible   ${plan.title}
+    Total Items Should Be       1

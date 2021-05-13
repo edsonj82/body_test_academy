@@ -29,3 +29,14 @@ Go To Form Plan
 Total Plan Should Be
     [Arguments]     ${total}
     Get Attribute       ${TOTAL_FIELD}      value       ==      ${total}
+
+
+
+#####
+Search Plan By Title
+    [Arguments]                 ${title}
+    Fill Text                   css=input[placeholder="Buscar plano"]       ${title}
+
+Plan Should Be Visible
+    [Arguments]                 ${title}
+    Wait For Elements State     xpath=//td[contains(text(),"${title}")]   visible    5
