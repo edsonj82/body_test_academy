@@ -4,18 +4,18 @@
     "plans":[
         {
             "title":"Plano Alpha",
-            "duration":"12",
+            "duration":12,
             "price":50
         },
 
         {
             "title":"Plano Beta",
-            "duration":"12",
+            "duration":12,
             "price":50
         },
         {
             "title":"Plano Omega",
-            "duration":"12",
+            "duration":12,
             "price":50
         }
     ]

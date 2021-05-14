@@ -33,6 +33,10 @@ Student Name Should Be Visible
     [Arguments]                     ${name}
     Wait For Elements State         css=table tbody tr >> text=${name}      visible     5
 
+Plan Title Should Be Visible
+    [Arguments]                     ${title}
+    Wait For Elements State         css=table tbody tr >> text=${title}      visible     5
+
 ## Return Elements
 Get Required Alerts 
     [Arguments]                     ${index}

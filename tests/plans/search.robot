@@ -27,4 +27,19 @@ Cenario: Registro não Encontrado
 
 Cenario: Buscar títulos por um único termo
     [Tags]  search
-    
+    ${fixtures}     Get JSON            plans-search.json
+    ${plans}        Set Variable        ${fixtures['plans']} 
+    ${word}         Set Variable        ${fixtures['word']}
+    ${total}         Set Variable        ${fixtures['total']}
+
+    FOR     ${item}     IN      @{plans}
+        Insert Plan     ${item}
+    END
+
+    Go To Plans
+    Search Plan By Title        ${word}
+
+    FOR     ${item}     IN      @{plans}
+        Plan Title Should Be Visible    ${item['title']}
+    END
+    Total Items Should Be  ${total}    
