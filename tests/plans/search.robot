@@ -8,7 +8,6 @@ Test Teardown       Take Screenshot
 
 ***Test Cases***
 Cenario: Busca exata
-    [Tags]  search
     &{plan}         Create Dictionary       title=Edson Teste       duration=12     price=19.99     total=R$ 239,88
 
     Remove Plan By Title      ${plan.title}
@@ -17,3 +16,14 @@ Cenario: Busca exata
     Search Plan By Title      ${plan.title}
     Plan Should Be Visible   ${plan.title}
     Total Items Should Be       1
+
+Cenario: Registro não Encontrado
+    [Tags]  search
+
+    ${title}                  Set Variable       Barão Zemo  
+    Remove Plan By Title            ${title}
+    Go to Plans
+    Search Plan By Title            ${title}
+    Register Should Not Be Found
+
+# Cenario: Buscar títulos por um único termo
