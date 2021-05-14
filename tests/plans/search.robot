@@ -18,7 +18,6 @@ Cenario: Busca exata
     Total Items Should Be       1
 
 Cenario: Registro não Encontrado
-    [Tags]  search
 
     ${title}                  Set Variable       Barão Zemo  
     Remove Plan By Title            ${title}
@@ -26,4 +25,6 @@ Cenario: Registro não Encontrado
     Search Plan By Title            ${title}
     Register Should Not Be Found
 
-# Cenario: Buscar títulos por um único termo
+Cenario: Buscar títulos por um único termo
+    [Tags]  search
+    
