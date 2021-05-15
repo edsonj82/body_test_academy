@@ -15,6 +15,7 @@ Cenario: Remover aluno cadastrado
     Go To Students
     Search Student By Name          ${student.name}
     Request Removal By Email       ${student.email}
+    #TODO: Fix Confirm Removal =  student(actions) => student(components)
     Confirm Removal
     Toaster Text Should Be         Aluno removido com sucesso.
     Student Should Not Visible      ${student.email}
@@ -29,5 +30,6 @@ Cenario: Desistir da exclusão
     # Reload
     Search Student By Name          ${student.name}
     Request Removal By Email       ${student.email}
+    #TODO: Fix Cancel Removal =  student(actions) => student(components)
     Cancel Removal
     Student Should Be Visible       ${student.email}

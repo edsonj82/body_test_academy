@@ -41,6 +41,20 @@ Go To Plan Update Form
     Click                       xpath=//td[contains(text(),'${plan}')]/..//a[@class='edit']
     Wait For elements State     css=h1 >> text=Edição de plano     visible         5
 
+Request Removal By Title
+    [Arguments]                 ${title}
+    Click                       xpath=//td[contains(text(),"${title}")]/../td/button[@id="trash"]
+
+Plan Should Not Visible
+    [Arguments]                 ${title}
+    Wait For Elements State     xpath=//td[contains(text(),"${title}")]   detached    5
+
+Confirm Removal
+    Click                       text=SIM, pode apagar!
+
+Cancel Removal
+    Click                       text=NÃO
+
 #####
 Search Plan By Title
     [Arguments]                 ${title}

@@ -9,27 +9,27 @@ Test Teardown       Take Screenshot
 
 ***Test Cases***
 Cenario: Remover plano cadastrado
-    [Tags]      remove
-
     &{plan}      Create Dictionary   title=Plano Gama  duration=6   price=10
     Insert Plan                     ${plan}
     Go To Plans
     Search Plan By Title            ${plan.title}
     Request Removal By Title        ${plan.title}
-    Confirm Removal
+    #TODO: Fix Confirm Removal =  plan(actions) => plan(components)
+    plans.Confirm Removal
     Toaster Text Should Be          Plano removido com sucesso
     Plan Should Not Visible         ${plan.title}
 
     [Teardown]                      Thinking And Take Screenshot  2
 
-***Keywords***
-Request Removal By Title
-    [Arguments]                 ${title}
-    Click                       xpath=//td[contains(text(),"${title}")]/../td/button[@id="trash"]
+Cenario: Desistir da exclusão
+    [Tags]      remove
 
-Confirm Removal
-    Click                       text=SIM, pode apagar!
+    &{plan}      Create Dictionary   title=Plano Hepta  duration=3   price=15
+    Insert Plan                     ${plan}
+    Go To Plans
 
-Plan Should Not Visible
-    [Arguments]                 ${title}
-    Wait For Elements State     xpath=//td[contains(text(),"${title}")]   detached    5
+    Search Plan By Title            ${plan.title}
+    Request Removal By Title        ${plan.title}
+    #TODO: Fix Cancel Removal =  plan(actions) => plan(components)
+    plans.Cancel Removal
+    Plan Should Be Visible          ${plan.title}
