@@ -26,7 +26,6 @@ Cenario: Registro não Encontrado
     Register Should Not Be Found
 
 Cenario: Buscar títulos por um único termo
-    [Tags]  search
     ${fixtures}     Get JSON            plans-search.json
     ${plans}        Set Variable        ${fixtures['plans']} 
     ${word}         Set Variable        ${fixtures['word']}

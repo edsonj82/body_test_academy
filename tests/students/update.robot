@@ -10,7 +10,6 @@ Test Teardown       Take Screenshot
 
 ***Test Cases***
 Cenario: Atualizar um aluno já cadastrado
-
     ${fixture}      Get JSON        students-update.json        
 
     ${kamalakhan}   Set Variable    ${fixture['before']}

@@ -19,6 +19,12 @@ Fill Plan Forms
     Fill Text                   ${DURATION_FIELD}           ${plan.duration}
     Fill Text                   ${PRICE_FIELD}             ${plan.price}
 
+Update a Plan
+    [Arguments]                 ${plan}
+    Fill Text                   ${TITLE_FIELD}            ${plan['title']}
+    Fill Text                   ${DURATION_FIELD}           ${plan['duration']}
+    Fill Text                   ${PRICE_FIELD}             ${plan['price']}
+    Submit Plan Form
 
 ##Links & Buttons
 Go To Form Plan
@@ -30,7 +36,10 @@ Total Plan Should Be
     [Arguments]     ${total}
     Get Attribute       ${TOTAL_FIELD}      value       ==      ${total}
 
-
+Go To Plan Update Form
+    [Arguments]                 ${plan}
+    Click                       xpath=//td[contains(text(),'${plan}')]/..//a[@class='edit']
+    Wait For elements State     css=h1 >> text=Edição de plano     visible         5
 
 #####
 Search Plan By Title
