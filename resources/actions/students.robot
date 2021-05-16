@@ -61,6 +61,12 @@ Cancel Removal
 
 ##Validation
 
+Check Type Field On Student Form
+    [Arguments]                     ${element}      ${type}
+    Go to Students
+    Go to Form Student
+    Field Should Be Type            ${element}      ${type}
+
 Student Should Be Visible
     [Arguments]                 ${email}
     Wait For Elements State     xpath=//td[contains(text(),"${email}")]   visible    5
@@ -68,4 +74,3 @@ Student Should Be Visible
 Student Should Not Visible
     [Arguments]                 ${email}
     Wait For Elements State     xpath=//td[contains(text(),"${email}")]   detached    5
-
