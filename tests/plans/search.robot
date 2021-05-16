@@ -10,26 +10,28 @@ Test Teardown       Take Screenshot
 Cenario: Busca exata
     &{plan}         Create Dictionary       title=Edson Teste       duration=12     price=19.99     total=R$ 239,88
 
-    Remove Plan By Title      ${plan.title}
-    Insert Plan              ${plan}
+    Remove Plan By Title        ${plan.title}
+    Insert Plan                 ${plan}
     Go To Plans     
-    Search Plan By Title      ${plan.title}
-    Plan Should Be Visible   ${plan.title}
+    Search Plan By Title        ${plan.title}
+    Plan Should Be Visible      ${plan.title}
     Total Items Should Be       1
 
 Cenario: Registro não Encontrado
 
-    ${title}                  Set Variable       Barão Zemo  
+    ${title}                        Set Variable       Barão Zemo  
     Remove Plan By Title            ${title}
     Go to Plans
     Search Plan By Title            ${title}
     Register Should Not Be Found
 
 Cenario: Buscar títulos por um único termo
-    ${fixtures}     Get JSON            plans-search.json
-    ${plans}        Set Variable        ${fixtures['plans']} 
-    ${word}         Set Variable        ${fixtures['word']}
-    ${total}         Set Variable        ${fixtures['total']}
+    ${fixtures}                 Get JSON            plans-search.json
+    ${plans}                    Set Variable        ${fixtures['plans']} 
+    ${word}                     Set Variable        ${fixtures['word']}
+    ${total}                    Set Variable        ${fixtures['total']}
+
+    Remove Plan By Title        Plano
 
     FOR     ${item}     IN      @{plans}
         Insert Plan     ${item}
@@ -41,4 +43,5 @@ Cenario: Buscar títulos por um único termo
     FOR     ${item}     IN      @{plans}
         Plan Title Should Be Visible    ${item['title']}
     END
+
     Total Items Should Be  ${total}    
