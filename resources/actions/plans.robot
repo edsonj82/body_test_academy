@@ -49,12 +49,6 @@ Plan Should Not Visible
     [Arguments]                 ${title}
     Wait For Elements State     xpath=//td[contains(text(),"${title}")]   detached    5
 
-Confirm Removal
-    Click                       text=SIM, pode apagar!
-
-Cancel Removal
-    Click                       text=NÃO
-
 #####
 Search Plan By Title
     [Arguments]                 ${title}
