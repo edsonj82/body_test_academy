@@ -8,7 +8,7 @@ Test Teardown       Take Screenshot
 
 ***Test Cases***
 Cenario: Busca exata
-    &{plan}         Create Dictionary       title=Edson Teste       duration=12     price=19.99     total=R$ 239,88
+    &{plan}         Create Dictionary       title=Plano Theotokus2       duration=12     price=19.99     total=R$ 239,88
 
     Remove Plan By Title        ${plan.title}
     Insert Plan                 ${plan}

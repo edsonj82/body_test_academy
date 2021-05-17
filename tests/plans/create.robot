@@ -9,7 +9,7 @@ Test Teardown       Take Screenshot
 ***Test Cases***
 Cenario: Calcular Preço Total do Plano
     
-    &{plan}         Create Dictionary       title=Edson Teste       duration=12     price=19,99     total=R$ 239,88
+    &{plan}         Create Dictionary       title=Plano Alfa       duration=12     price=19,99     total=R$ 239,88
 
     Go To Plans
     Go To Form Plan
@@ -17,7 +17,7 @@ Cenario: Calcular Preço Total do Plano
     Total Plan Should Be    ${plan.total}
 
 Cenario: Novo Plano
-    &{plan}         Create Dictionary       title=Edson Teste       duration=12     price=19,99     total=R$ 239,88
+    &{plan}         Create Dictionary       title=Plano Loyola       duration=12     price=19,99     total=R$ 239,88
 
     Go To Plans
     Go To Form Plan

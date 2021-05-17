@@ -3,18 +3,18 @@
     "total":3,
     "plans":[
         {
-            "title":"Plano Alpha",
+            "title":"Plano Loyola",
             "duration":12,
             "price":50
         },
 
         {
-            "title":"Plano Beta",
+            "title":"Plano Lisiex",
             "duration":12,
             "price":50
         },
         {
-            "title":"Plano Omega",
+            "title":"Plano Roma",
             "duration":12,
             "price":50
         }
