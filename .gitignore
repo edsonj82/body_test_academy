@@ -1,1 +1,5 @@
 logs
+logs/report.html
+logs/playwright-log.txt
+logs/output.xml
+logs/log.html

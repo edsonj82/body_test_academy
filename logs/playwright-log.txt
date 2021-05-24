@@ -1,61 +1,71 @@
-{"level":30,"time":"2021-05-17T14:43:45.385Z","pid":23457,"hostname":"Pantokrator","msg":"Listening on 53573"}
-{"level":30,"time":"2021-05-17T14:43:45.647Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-17T14:43:45.710Z","pid":23457,"hostname":"Pantokrator","msg":"Video path: undefined"}
-{"level":30,"time":"2021-05-17T14:43:45.710Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active page"}
-{"level":30,"time":"2021-05-17T14:43:48.797Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
-{"level":30,"time":"2021-05-17T14:43:49.270Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved attribute for element css=input[name=total] containing R$ 239,88"}
-{"level":30,"time":"2021-05-17T14:43:52.642Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element xpath=(//form//span)[1] containing Informe o título do plano"}
-{"level":30,"time":"2021-05-17T14:43:52.676Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element xpath=(//form//span)[2] containing Informe a duração do plano em meses"}
-{"level":30,"time":"2021-05-17T14:43:53.486Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-17T14:43:53.486Z","pid":23457,"hostname":"Pantokrator","msg":"Changing current active page"}
-{"level":30,"time":"2021-05-17T14:43:53.486Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active page"}
-{"level":30,"time":"2021-05-17T14:43:53.508Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-17T14:43:53.508Z","pid":23457,"hostname":"Pantokrator","msg":"Changing current active page"}
-{"level":30,"time":"2021-05-17T14:43:53.508Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active page"}
-{"level":30,"time":"2021-05-17T14:43:53.770Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-17T14:43:53.836Z","pid":23457,"hostname":"Pantokrator","msg":"Video path: undefined"}
-{"level":30,"time":"2021-05-17T14:43:53.836Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active page"}
-{"level":30,"time":"2021-05-17T14:43:56.741Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
-{"level":30,"time":"2021-05-17T14:44:00.136Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-17T14:44:00.136Z","pid":23457,"hostname":"Pantokrator","msg":"Changing current active page"}
-{"level":30,"time":"2021-05-17T14:44:00.136Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active page"}
-{"level":30,"time":"2021-05-17T14:44:00.156Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-17T14:44:00.157Z","pid":23457,"hostname":"Pantokrator","msg":"Changing current active page"}
-{"level":30,"time":"2021-05-17T14:44:00.157Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active page"}
-{"level":30,"time":"2021-05-17T14:44:00.369Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-17T14:44:00.457Z","pid":23457,"hostname":"Pantokrator","msg":"Video path: undefined"}
-{"level":30,"time":"2021-05-17T14:44:00.457Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active page"}
-{"level":30,"time":"2021-05-17T14:44:03.417Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
-{"level":30,"time":"2021-05-17T14:44:09.140Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-17T14:44:09.140Z","pid":23457,"hostname":"Pantokrator","msg":"Changing current active page"}
-{"level":30,"time":"2021-05-17T14:44:09.140Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active page"}
-{"level":30,"time":"2021-05-17T14:44:09.170Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-17T14:44:09.170Z","pid":23457,"hostname":"Pantokrator","msg":"Changing current active page"}
-{"level":30,"time":"2021-05-17T14:44:09.170Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active page"}
-{"level":30,"time":"2021-05-17T14:44:09.391Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-17T14:44:09.458Z","pid":23457,"hostname":"Pantokrator","msg":"Video path: undefined"}
-{"level":30,"time":"2021-05-17T14:44:09.458Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active page"}
-{"level":30,"time":"2021-05-17T14:44:12.236Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
-{"level":30,"time":"2021-05-17T14:44:16.122Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:16.158Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:16.192Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:16.225Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:16.260Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:16.296Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:16.647Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:16.683Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:16.719Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:16.759Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:16.796Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:16.831Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:16.873Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:16.910Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:16.943Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:16.978Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:17.020Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:17.055Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:17.093Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
-{"level":30,"time":"2021-05-17T14:44:17.125Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=#pagination .total containing Total: 4"}
+{"level":30,"time":"2021-05-17T15:52:23.679Z","pid":26489,"hostname":"Pantokrator","msg":"Listening on 53055"}
+{"level":30,"time":"2021-05-17T15:52:23.949Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:52:24.010Z","pid":26489,"hostname":"Pantokrator","msg":"Video path: undefined"}
+{"level":30,"time":"2021-05-17T15:52:24.011Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:52:28.416Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
+{"level":30,"time":"2021-05-17T15:52:38.351Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:52:38.352Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:52:38.352Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:52:38.370Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:52:38.370Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:52:38.370Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:52:38.618Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:52:38.686Z","pid":26489,"hostname":"Pantokrator","msg":"Video path: undefined"}
+{"level":30,"time":"2021-05-17T15:52:38.686Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:52:41.734Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
+{"level":30,"time":"2021-05-17T15:52:42.174Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved attribute for element css=input[name=total] containing R$ 239,88"}
+{"level":30,"time":"2021-05-17T15:52:45.578Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element xpath=(//form//span)[1] containing Informe o título do plano"}
+{"level":30,"time":"2021-05-17T15:52:45.613Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element xpath=(//form//span)[2] containing Informe a duração do plano em meses"}
+{"level":30,"time":"2021-05-17T15:52:46.380Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:52:46.380Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:52:46.380Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:52:46.397Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:52:46.397Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:52:46.397Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:52:46.664Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:52:46.736Z","pid":26489,"hostname":"Pantokrator","msg":"Video path: undefined"}
+{"level":30,"time":"2021-05-17T15:52:46.736Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:52:49.805Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
+{"level":30,"time":"2021-05-17T15:52:53.274Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:52:53.274Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:52:53.274Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:52:53.296Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:52:53.296Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:52:53.296Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:52:53.516Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:52:53.613Z","pid":26489,"hostname":"Pantokrator","msg":"Video path: undefined"}
+{"level":30,"time":"2021-05-17T15:52:53.613Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:52:56.522Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
+{"level":30,"time":"2021-05-17T15:53:02.492Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:53:02.492Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:53:02.493Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:53:02.514Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:53:02.514Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:53:02.514Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:53:02.748Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:53:02.824Z","pid":26489,"hostname":"Pantokrator","msg":"Video path: undefined"}
+{"level":30,"time":"2021-05-17T15:53:02.824Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:53:05.828Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
+================= Original suppressed error =================
+page.waitForSelector: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for selector "xpath=//td[contains(text(),"Plano Theotokus2")]" to be visible
+============================================================
+Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+Error
+    at Object.captureStackTrace (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+    at Connection.sendMessageToServer (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/connection.js:69:48)
+    at Proxy.<anonymous> (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/channelOwner.js:64:61)
+    at /home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/frame.js:202:42
+    at Frame._wrapApiCall (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/channelOwner.js:77:34)
+    at Frame.waitForSelector (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/frame.js:197:21)
+    at /home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:241:60
+    at Page._attributeToPage (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:231:20)
+    at Page.waitForSelector (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:241:21)
+    at Object.<anonymous> (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/index.js:68991:45) {
+  name: 'TimeoutError'
+}
+=============================================================
 ================= Original suppressed error =================
 page.waitForSelector: Timeout 5000ms exceeded.
 =========================== logs ===========================
@@ -76,20 +86,69 @@ Error
   name: 'TimeoutError'
 }
 =============================================================
-{"level":30,"time":"2021-05-17T14:44:32.932Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-17T14:44:32.932Z","pid":23457,"hostname":"Pantokrator","msg":"Changing current active page"}
-{"level":30,"time":"2021-05-17T14:44:32.932Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active page"}
-{"level":30,"time":"2021-05-17T14:44:32.960Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-17T14:44:32.960Z","pid":23457,"hostname":"Pantokrator","msg":"Changing current active page"}
-{"level":30,"time":"2021-05-17T14:44:32.960Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active page"}
-{"level":30,"time":"2021-05-17T14:44:33.189Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-17T14:44:33.262Z","pid":23457,"hostname":"Pantokrator","msg":"Video path: undefined"}
-{"level":30,"time":"2021-05-17T14:44:33.262Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active page"}
-{"level":30,"time":"2021-05-17T14:44:36.062Z","pid":23457,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
+{"level":30,"time":"2021-05-17T15:53:29.671Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:53:29.672Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:53:29.672Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:53:29.694Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:53:29.694Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:53:29.694Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:53:29.931Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:53:30.000Z","pid":26489,"hostname":"Pantokrator","msg":"Video path: undefined"}
+{"level":30,"time":"2021-05-17T15:53:30.000Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:53:33.011Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
+{"level":30,"time":"2021-05-17T15:53:36.135Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:53:36.135Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:53:36.135Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:53:36.151Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:53:36.151Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:53:36.151Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:53:36.414Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:53:36.480Z","pid":26489,"hostname":"Pantokrator","msg":"Video path: undefined"}
+{"level":30,"time":"2021-05-17T15:53:36.480Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:53:39.260Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
+================= Original suppressed error =================
+page.waitForSelector: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for selector "css=.Toastify__toast-body >> text=Email já existe no sistema." to be visible
+============================================================
+Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+Error
+    at Object.captureStackTrace (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+    at Connection.sendMessageToServer (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/connection.js:69:48)
+    at Proxy.<anonymous> (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/channelOwner.js:64:61)
+    at /home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/frame.js:202:42
+    at Frame._wrapApiCall (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/channelOwner.js:77:34)
+    at Frame.waitForSelector (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/frame.js:197:21)
+    at /home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:241:60
+    at Page._attributeToPage (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:231:20)
+    at Page.waitForSelector (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:241:21)
+    at Object.<anonymous> (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/index.js:68991:45) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2021-05-17T15:53:53.647Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element xpath=(//form//span)[1] containing Nome é obrigatório"}
+{"level":30,"time":"2021-05-17T15:53:53.687Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element xpath=(//form//span)[2] containing O e-mail é obrigatório"}
+{"level":30,"time":"2021-05-17T15:53:53.718Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element xpath=(//form//span)[3] containing idade é obrigatória"}
+{"level":30,"time":"2021-05-17T15:53:53.754Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element xpath=(//form//span)[4] containing o peso é obrigatório"}
+{"level":30,"time":"2021-05-17T15:53:53.787Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element xpath=(//form//span)[5] containing a Altura é obrigatória"}
+{"level":30,"time":"2021-05-17T15:53:54.167Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved attribute for element css=input[name=age] containing number"}
+{"level":30,"time":"2021-05-17T15:53:54.363Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved attribute for element css=input[name=weight] containing number"}
+{"level":30,"time":"2021-05-17T15:53:54.588Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved attribute for element css=input[name=feet_tall] containing number"}
+{"level":30,"time":"2021-05-17T15:53:54.953Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved attribute for element css=input[name=email] containing email"}
+{"level":30,"time":"2021-05-17T15:53:55.738Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:53:55.738Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:53:55.739Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:53:55.755Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:53:55.755Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:53:55.755Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:53:55.985Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:53:56.053Z","pid":26489,"hostname":"Pantokrator","msg":"Video path: undefined"}
+{"level":30,"time":"2021-05-17T15:53:56.053Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:53:59.169Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
 ================= Original suppressed error =================
 page.click: Timeout 10000ms exceeded.
 =========================== logs ===========================
-waiting for selector "xpath=//td[contains(text(),'12')]/..//a[@class='edit']"
+waiting for selector "xpath=//td[contains(text(),"cintia@xpto.com")]/../td/button[@id="trash"]"
 ============================================================
 Note: use DEBUG=pw:api environment variable to capture Playwright logs.
 Error
@@ -106,9 +165,119 @@ Error
   name: 'TimeoutError'
 }
 =============================================================
-{"level":30,"time":"2021-05-17T14:44:50.841Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-17T14:44:50.841Z","pid":23457,"hostname":"Pantokrator","msg":"Changing current active page"}
-{"level":30,"time":"2021-05-17T14:44:50.841Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active page"}
-{"level":30,"time":"2021-05-17T14:44:50.860Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active context"}
-{"level":30,"time":"2021-05-17T14:44:50.860Z","pid":23457,"hostname":"Pantokrator","msg":"Changing current active page"}
-{"level":30,"time":"2021-05-17T14:44:50.860Z","pid":23457,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:54:13.899Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:54:13.899Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:54:13.899Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:54:13.920Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:54:13.920Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:54:13.920Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:54:14.132Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:54:14.190Z","pid":26489,"hostname":"Pantokrator","msg":"Video path: undefined"}
+{"level":30,"time":"2021-05-17T15:54:14.190Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:54:17.338Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
+================= Original suppressed error =================
+page.click: Timeout 10000ms exceeded.
+=========================== logs ===========================
+waiting for selector "xpath=//td[contains(text(),"izabel@xpto.com")]/../td/button[@id="trash"]"
+============================================================
+Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+Error
+    at Object.captureStackTrace (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+    at Connection.sendMessageToServer (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/connection.js:69:48)
+    at Proxy.<anonymous> (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/channelOwner.js:64:61)
+    at /home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/frame.js:279:34
+    at Frame._wrapApiCall (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/channelOwner.js:77:34)
+    at Frame.click (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/frame.js:278:21)
+    at /home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:447:60
+    at Page._attributeToPage (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:231:20)
+    at Page.click (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:447:21)
+    at Object.<anonymous> (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/index.js:68991:45) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2021-05-17T15:54:30.068Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:54:30.069Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:54:30.069Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:54:30.088Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:54:30.088Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:54:30.088Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:54:30.326Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:54:30.403Z","pid":26489,"hostname":"Pantokrator","msg":"Video path: undefined"}
+{"level":30,"time":"2021-05-17T15:54:30.403Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:54:33.562Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
+================= Original suppressed error =================
+page.waitForSelector: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for selector "xpath=//td[contains(text(),"Steve Jobs")]" to be visible
+============================================================
+Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+Error
+    at Object.captureStackTrace (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+    at Connection.sendMessageToServer (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/connection.js:69:48)
+    at Proxy.<anonymous> (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/channelOwner.js:64:61)
+    at /home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/frame.js:202:42
+    at Frame._wrapApiCall (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/channelOwner.js:77:34)
+    at Frame.waitForSelector (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/frame.js:197:21)
+    at /home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:241:60
+    at Page._attributeToPage (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:231:20)
+    at Page.waitForSelector (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:241:21)
+    at Object.<anonymous> (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/index.js:68991:45) {
+  name: 'TimeoutError'
+}
+=============================================================
+================= Original suppressed error =================
+page.waitForSelector: Timeout 5000ms exceeded.
+=========================== logs ===========================
+waiting for selector "css=table tbody tr >> text=David Guetta" to be visible
+============================================================
+Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+Error
+    at Object.captureStackTrace (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+    at Connection.sendMessageToServer (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/connection.js:69:48)
+    at Proxy.<anonymous> (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/channelOwner.js:64:61)
+    at /home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/frame.js:202:42
+    at Frame._wrapApiCall (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/channelOwner.js:77:34)
+    at Frame.waitForSelector (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/frame.js:197:21)
+    at /home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:241:60
+    at Page._attributeToPage (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:231:20)
+    at Page.waitForSelector (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:241:21)
+    at Object.<anonymous> (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/index.js:68991:45) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2021-05-17T15:54:57.216Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:54:57.216Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:54:57.216Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:54:57.232Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:54:57.232Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:54:57.232Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:54:57.446Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:54:57.514Z","pid":26489,"hostname":"Pantokrator","msg":"Video path: undefined"}
+{"level":30,"time":"2021-05-17T15:54:57.514Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:55:00.406Z","pid":26489,"hostname":"Pantokrator","msg":"Retrieved text for element css=aside strong containing Administrador"}
+================= Original suppressed error =================
+page.click: Timeout 10000ms exceeded.
+=========================== logs ===========================
+waiting for selector "xpath=//td[contains(text(),'kamalakhan@gmail.com')]/..//a[@class='edit']"
+============================================================
+Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+Error
+    at Object.captureStackTrace (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+    at Connection.sendMessageToServer (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/connection.js:69:48)
+    at Proxy.<anonymous> (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/channelOwner.js:64:61)
+    at /home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/frame.js:279:34
+    at Frame._wrapApiCall (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/channelOwner.js:77:34)
+    at Frame.click (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/frame.js:278:21)
+    at /home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:447:60
+    at Page._attributeToPage (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:231:20)
+    at Page.click (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/playwright/lib/client/page.js:447:21)
+    at Object.<anonymous> (/home/edson/.local/lib/python3.8/site-packages/Browser/wrapper/index.js:68991:45) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2021-05-17T15:55:17.441Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:55:17.441Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:55:17.441Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}
+{"level":30,"time":"2021-05-17T15:55:17.462Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active context"}
+{"level":30,"time":"2021-05-17T15:55:17.463Z","pid":26489,"hostname":"Pantokrator","msg":"Changing current active page"}
+{"level":30,"time":"2021-05-17T15:55:17.463Z","pid":26489,"hostname":"Pantokrator","msg":"Changed active page"}

@@ -7,8 +7,3 @@
 5) Adicionar, comitar e publicar as alterações
 
 API Produção = https://bodytest-api.herokuapp.com
-
-## Comandos para publicar na Heroku
-git add .
-git commit -m "Publish body-test version 2.0"
-git push heroku master
