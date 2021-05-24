@@ -7,3 +7,7 @@
 5) Adicionar, comitar e publicar as alterações
 
 API Produção = https://bodytest-api.herokuapp.com
+
+Web: https://theotokus-bodytest-web.herokuapp.com/
+
+Api: https://theotokus-bodytest-api.herokuapp.com/
