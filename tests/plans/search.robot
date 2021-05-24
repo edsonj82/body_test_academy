@@ -8,7 +8,8 @@ Test Teardown       Take Screenshot
 
 ***Test Cases***
 Cenario: Busca exata
-    &{plan}         Create Dictionary       title=Plano Theotokus2       duration=12     price=19.99     total=R$ 239,88
+    &{plan}         Create Dictionary       title=Plano Alfa       duration=12     price=19.99     total=R$ 239.88
+
 
     Remove Plan By Title        ${plan.title}
     Insert Plan                 ${plan}
@@ -25,7 +26,7 @@ Cenario: Registro não Encontrado
     Search Plan By Title            ${title}
     Register Should Not Be Found
 
-Cenario: Buscar títulos por um único termo
+Cenario: Buscar títulos já cadastrado por um único termo
     ${fixtures}                 Get JSON            plans-search.json
     ${plans}                    Set Variable        ${fixtures['plans']} 
     ${word}                     Set Variable        ${fixtures['word']}

@@ -9,7 +9,8 @@ Test Teardown       Take Screenshot
 ***Test Cases***
 Cenario: Busca exata
 
-     &{student}      Create Dictionary   name=Steve Jobs  email=jobs@yahoo.com   age=51  weight=78   feet_tall=1.52 
+    &{student}      Create Dictionary   name=Edson José dos Santos  email=edson@theotokus.com   age=39  weight=81   feet_tall=1.82
+ 
 
     Remove Student By Name      ${student.name}
     Insert Student              ${student}

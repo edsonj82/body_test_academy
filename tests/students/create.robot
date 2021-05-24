@@ -23,7 +23,7 @@ Cenario: Novo aluno
 
 Cenario: Não deve permitir email duplicado
 
-    &{student}      Create Dictionary   name=Ricardo de Mauro  email=ricardo@theotokus.com   age=34  weight=98   feet_tall=1.75  
+    &{student}      Create Dictionary   name=Ricardo de Mauro  email=edson@theotokus.com   age=34  weight=98   feet_tall=1.75  
         
     Insert Student              ${student}
 

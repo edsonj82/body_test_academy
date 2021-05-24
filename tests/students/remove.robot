@@ -8,9 +8,21 @@ Test Setup          Start Admin Session
 Test Teardown       Take Screenshot
 
 ***Test Cases***
+Cenario: Desistir da exclusão
+
+    &{student}      Create Dictionary   name=Edson José dos Santos  email=edson@theotokus.com   age=39  weight=81   feet_tall=1.82
+    
+    Insert Student                  ${student}
+    Go To Students
+    # Reload
+    Search Student By Name          ${student.name}
+    Request Removal By Email        ${student.email}
+    Cancel Removal
+    Student Should Be Visible       ${student.email}
+
 Cenario: Remover aluno cadastrado
 
-    &{student}      Create Dictionary   name=Cintia Rodrigues  email=cintia@xpto.com   age=30  weight=60   feet_tall=1.71
+    &{student}      Create Dictionary   name=Edson José dos Santos  email=edson@theotokus.com   age=39  weight=81   feet_tall=1.82
     
     Insert Student                  ${student}
     Go To Students
@@ -21,15 +33,3 @@ Cenario: Remover aluno cadastrado
     Student Should Not Visible      ${student.email}
 
     [Teardown]                      Thinking And Take Screenshot  2
-
-Cenario: Desistir da exclusão
-
-    &{student}      Create Dictionary   name=Izabel Santos  email=izabel@xpto.com   age=63  weight=80   feet_tall=1.56
-    
-    Insert Student                  ${student}
-    Go To Students
-    # Reload
-    Search Student By Name          ${student.name}
-    Request Removal By Email        ${student.email}
-    Cancel Removal
-    Student Should Be Visible       ${student.email}
