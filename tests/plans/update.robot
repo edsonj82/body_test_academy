@@ -13,8 +13,8 @@ Cenario: Atualizar um plano já cadastrado
     ${before}       Set Variable    ${fixture['before']}
     ${after}        Set Variable    ${fixture['after']}
 
-    Remove Plan By Title            ${fixture['before']}
-    Remove Plan By Title            ${fixture['after']}
+    # Remove Plan By Title            ${fixture['before']}
+    # Remove Plan By Title            ${fixture['after']}
 
     Insert Plan                     ${before}
     Go To Plans

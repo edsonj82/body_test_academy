@@ -10,7 +10,7 @@ Test Teardown       Take Screenshot
 ***Test Cases***
 Cenario: Desistir da exclusão
 
-    &{plan}      Create Dictionary   title=Plano Loyola  duration=12   price=19.99
+    &{plan}      Create Dictionary   title=Plano Alfa  duration=12   price=19.99
     Insert Plan                     ${plan}
     Go To Plans
 
@@ -21,7 +21,7 @@ Cenario: Desistir da exclusão
 
 Cenario: Remover plano cadastrado
 
-    &{plan}      Create Dictionary   title=Plano Loyola  duration=12   price=19.99
+    &{plan}      Create Dictionary   title=Plano Alfa  duration=12   price=19.99
     Insert Plan                     ${plan}
     Go To Plans
     Search Plan By Title            ${plan.title}

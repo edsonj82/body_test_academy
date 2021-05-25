@@ -1,11 +1,11 @@
 {
     "before": {
-        "title":"Plano Alpha2",
+        "title":"Plano Alpha",
         "duration":12,
         "price":50
     },
     "after": {
-        "title":"Plano Theotokus2",
+        "title":"Plano Theotokus",
         "duration":20,
         "price":30
     }
