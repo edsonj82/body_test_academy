@@ -8,7 +8,7 @@ Test Teardown       Take Screenshot
 
 ***Test Cases***
 Cenario: Busca exata
-    &{plan}         Create Dictionary       title=Plano Alpha       duration=12     price=19.99     total=R$ 239.88
+    &{plan}         Create Dictionary       title=Zeta       duration=12     price=19.99     total=R$ 239.88
 
 
     Remove Plan By Title        ${plan.title}

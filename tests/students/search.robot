@@ -9,7 +9,7 @@ Test Teardown       Take Screenshot
 ***Test Cases***
 Cenario: Busca exata
 
-    &{student}      Create Dictionary   name=Edson José dos Santos  email=edson@theotokus.com   age=39  weight=81   feet_tall=1.82
+    &{student}      Create Dictionary   name=Izabel Lourenço dos Santos  email=izabel@theotokus.com   age=73  weight=81   feet_tall=1.56
  
 
     Remove Student By Name      ${student.name}
