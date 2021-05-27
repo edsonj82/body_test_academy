@@ -1,5 +1,5 @@
 ***Settings***
-Documentation       Gestão de MAtriculas
+Documentation       Gestão de Matriculas
 
 Resource            ${EXECDIR}/resources/base.robot
 
@@ -10,8 +10,8 @@ Test Teardown       Take Screenshot
 Cenario: Deve exibir data inicial e final conforme o plano escolhido
     Go To Enrolls
     Go To Form Enroll
+    Select Student      John Connor
+    Select Plan         Plano Lisiex
 
-    Fill Text       css=input[aria-label="student_id"]      John Connor
-    sleep           5
-    ${code}         Get Page Source
-    Log             ${code}         
+    # ${code}         Get Page Source
+    # Log             ${code}         
