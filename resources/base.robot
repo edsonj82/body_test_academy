@@ -8,6 +8,7 @@ Library     libs/DeloreanLibrary.py
 
 Resource    actions/auth.robot
 Resource    actions/plans.robot
+Resource    actions/enrolls.robot
 Resource    actions/nav.robot
 Resource    actions/students.robot
 Resource    actions/components.robot
