@@ -6,13 +6,16 @@ Documentation           Ações de Gestão de Matrículas
 ##Forms
 Select Student
     [Arguments]                 ${name}
-    Fill Text       css=input[aria-label="student_id"]      ${name}
+    Fill Text       css=input[aria-label="student_id"]          ${name}
     Click           css=div[id*=option] >> text=${name}    
 
 Select Plan
     [Arguments]                 ${title}
-    Fill Text       css=input[aria-label="plan_id"]      ${title}
+    Fill Text       css=input[aria-label="plan_id"]             ${title}
     Click           css=div[id*=option] >> text=${title}    
+
+Submit Enrolls Form
+    Click           css=button[form=formEnrollment]
 
 ##Links & Buttons
 Go To Form Enroll

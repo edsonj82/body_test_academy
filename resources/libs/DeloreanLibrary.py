@@ -24,7 +24,7 @@ class DeloreanLibrary():
         conn.commit()
         conn.close()
 
-    def remove_student_by_name(self,name):
+    def remove_student_by_name(self, name):
     
         query = "delete from students where name LIKE '%{}%'".format(name)
         info(query)
@@ -36,13 +36,12 @@ class DeloreanLibrary():
         conn.commit()
         conn.close()
 
-    def insert_student(self,student):
+    def insert_student(self, student):
         self.remove_student(student['email'])
 
-        query = ("insert into students(name, email, age, weight, feet_tall, created_at, updated_at)"
+        query = ("insert into students (name, email, age, weight, feet_tall, created_at, updated_at)"
             "values('{}','{}',{},{},{},NOW(),NOW());"
-            .format(student['name'],student['email'],student['age'],student['weight'],student['feet_tall'])
-        )
+            .format(student['name'], student['email'], student['age'], student['weight'], student['feet_tall']))
         info(query)
 
         conn = self.connect()
@@ -65,7 +64,7 @@ class DeloreanLibrary():
         conn.commit()
         conn.close()
 
-    def remove_plan_by_title(self,title):
+    def remove_plan_by_title(self, title):
     
         query = "delete from plans where title LIKE '%{}%'".format(title)
         info(query)
@@ -77,12 +76,12 @@ class DeloreanLibrary():
         conn.commit()
         conn.close()
 
-    def insert_plan(self,plan):
+    def insert_plan(self, plan):
         self.remove_plan(plan['title'])
 
         query = ("insert into plans(title, duration, price, created_at, updated_at)"
             "values('{}',{},{}, NOW(), NOW());"
-            .format(plan['title'],plan['duration'],plan['price'])
+            .format(plan['title'], plan['duration'], plan['price'])
         )
         info(query)
 

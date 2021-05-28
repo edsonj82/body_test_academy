@@ -22,3 +22,21 @@ Cenario: Deve exibir data inicial e final conforme o plano escolhido
     Select Plan                 ${plan_enroll['title']}
     Start Date Should Today
     End Date Should Be          ${fixture['days']}
+
+Cenario: Deve matricular um aluno em um plano
+    ${fixture}                  Get JSON            enroll-create.json 
+    
+    ${student_enroll}           Set Variable        ${fixture['student']}
+    ${plan_enroll}              Set Variable        ${fixture['plan']}
+
+    Insert Student              ${student_enroll}
+    Insert Plan                 ${plan_enroll}      
+
+    Go To Enrolls
+    Go To Form Enroll
+    Select Student              ${student_enroll['name']}
+    Select Plan                 ${plan_enroll['title']}
+    Submit Enrolls Form         
+    Toaster Text Should Be      Matrícula cadastrada com sucesso
+
+    [Teardown]          Thinking And Take Screenshot  5
