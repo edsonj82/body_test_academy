@@ -4,6 +4,7 @@ Documentation           Tudo começa aqui, meu arquivo base do projeto de automa
 Library     Browser
 Library     Collections
 Library     OperatingSystem
+Library     DateTime
 Library     libs/DeloreanLibrary.py
 
 Resource    actions/auth.robot

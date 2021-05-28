@@ -8,10 +8,17 @@ Test Teardown       Take Screenshot
 
 ***Test Cases***
 Cenario: Deve exibir data inicial e final conforme o plano escolhido
+    ${fixture}                  Get JSON            enroll-dates.json 
+    
+    ${student_enroll}           Set Variable        ${fixture['student']}
+    ${plan_enroll}              Set Variable        ${fixture['plan']}
+
+    Insert Student              ${student_enroll}
+    Insert Plan                 ${plan_enroll}      
+
     Go To Enrolls
     Go To Form Enroll
-    Select Student      John Connor
-    Select Plan         Plano Lisiex
-
-    # ${code}         Get Page Source
-    # Log             ${code}         
+    Select Student              ${student_enroll['name']}
+    Select Plan                 ${plan_enroll['title']}
+    Start Date Should Today
+    End Date Should Be          ${fixture['days']}

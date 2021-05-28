@@ -1,0 +1,15 @@
+{
+    "student":{
+        "name":"John Connor",
+        "email":"john@sky.com",
+        "age":16,
+        "weight":75,
+        "feet_tall":1.75
+    },
+    "plan":{
+        "title":"Plano Lisiex",
+        "duration":12,
+        "price":50.00
+    },
+    "days": 365
+}
