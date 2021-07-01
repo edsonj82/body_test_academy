@@ -13,3 +13,8 @@ test:
     - rfbrowser init
     - robot -d ./logs -v headless:true -v browser:chromium tests\
     #robot -d ./logs -i admin -v headless:false -v browser:firefox tests\
+
+  artfacts:
+    when: always
+    paths:
+      - logs/*
